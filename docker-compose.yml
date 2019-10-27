@@ -1,0 +1,28 @@
+drupal:
+    image: drupal:latest
+    volumes_from:
+        - storage-drupal
+    links:
+        - "db:mysql"
+    ports:
+        - "80:80"
+db:
+    image: mysql:latest
+    volumes_from:
+        - storage-mysql
+    environment:
+        - MYSQL_USER=alejandrocn7
+        - MYSQL_PASSWORD=alejandrocn7
+        - MYSQL_DATABASE=dbPrueba
+        - MYSQL_ROOT_PASSWORD=alejandrocn7
+storage-drupal:
+    image: drupal:latest
+    volumes:
+        - /var/www/html/modules
+        - /var/www/html/profiles
+        - /var/www/html/themes
+        - /var/www/html/sites
+storage-mysql:
+    image: mysql:latest
+    volumes:
+        - /var/lib/mysql
