@@ -11,6 +11,7 @@ doc/*.idx
 doc/*.lof
 doc/*.log
 doc/*.ptc
+doc/*.xml
 
 # Ignore everything but the "sites" folder ( for non core developer )
 .htaccess
