@@ -1,0 +1,109 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Categorizaci\IeC {\'o}n de tipos de aprendizajes en Machine Learning.}}{14}{figure.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Estructura de conceptos dentro de la Inteligencia Artificial.}}{15}{figure.1.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema simplificado de una red neuronal \cite {article:redNeuronal}}}{23}{figure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Funci\IeC {\'o}n sigmoide en plano bidimensional. Extra\IeC {\'\i }da de origen \cite {article:redNeuronal2}.}}{25}{figure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Funci\IeC {\'o}n ReLU en plano bidimensional. Extra\IeC {\'\i }da de origen \cite {article:redNeuronal2}.}}{26}{figure.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de proceso de gradiente descendente estoc\IeC {\'a}stico en una funci\IeC {\'o}n f de un solo par\IeC {\'a}metro. Imagen extra\IeC {\'\i }da de origen \cite {article:ejemploGDS}.}}{28}{figure.2.4}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Datos a manejar en aprendizaje por refuerzo por un agente. Imagen extra\IeC {\'\i }da y posteriormente modificada de origen \cite {article:RLwikipedia}.}}{32}{figure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ciclos de aprendizaje por refuerzo (aunque se podr\IeC {\'\i }a usar m\IeC {\'a}s de un episodio en cada vuelta).}}{33}{figure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema de representaci\IeC {\'o}n de la experiencia en aprendizaje por refuerzo.}}{35}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces La ventaja se incluye en la experiencia, pero es introducida al final del episodio, cuando ya se sabe todas las recompensas.}}{40}{figure.3.4}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ruido en el espacio de acciones (izquierda) frente a ruido en los par\IeC {\'a}metros de la red (derecha). Extra\IeC {\'\i }da de origen. \cite {article:DDPG_2}}}{48}{figure.4.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica del problema MountainCar v0 de OpenAI Gym.}}{52}{figure.5.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Iniciando asistente para creaci\IeC {\'o}n de m\IeC {\'a}quina virtual.}}{56}{figure.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Creando una m\IeC {\'a}quina virtual.}}{56}{figure.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Configurando la m\IeC {\'a}quina virtual para el proyecto.}}{57}{figure.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Consultando latencias de las distintas regiones de Google. Obtenidas de su p\IeC {\'a}gina web \cite {article:ping}}}{58}{figure.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Indicando Sistema operativo y memoria SSD a la m\IeC {\'a}quina virtual.}}{59}{figure.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Comprobando que la m\IeC {\'a}quina virtual ha sido creada con \IeC {\'e}xito.}}{60}{figure.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Entrando en la m\IeC {\'a}quina virtual.}}{60}{figure.6.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Muestra de uso de GPU al entrenar con los baselines.}}{64}{figure.6.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Pasando el script a la m\IeC {\'a}quina virtual para abastecerla.}}{64}{figure.6.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Probando agente entrenado en entorno simulado \textit {MountainCar-v0}.}}{66}{figure.6.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Esquema de metodolog\IeC {\'\i }a de trabajo entre mi equipo personal y la m\IeC {\'a}quina virtual creada}}{67}{figure.6.11}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 3 y en \textit {MountainCar-v0}}}{72}{figure.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Recompensas obtenidas durante entrenamiento(versi\IeC {\'o}n suavizada de la figura \ref {fig:mountain1}). Algoritmo DQN, semilla 3 y en \textit {MountainCar-v0}}}{73}{figure.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 3 y en \textit {MountainCar-v0}.}}{74}{figure.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 13 y en \textit {MountainCar-v0}.}}{75}{figure.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Recompensas obtenidas durante entrenamiento(versi\IeC {\'o}n suavizada de la figura \ref {fig:mountain4}). Algoritmo DQN, semilla 13 y en \textit {MountainCar-v0}.}}{75}{figure.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 13 y en \textit {MountainCar-v0}.}}{76}{figure.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 46 y en \textit {MountainCar-v0}.}}{76}{figure.7.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Recompensas obtenidas durante entrenamiento(versi\IeC {\'o}n suavizada de la figura \ref {fig:mountain7}). Algoritmo DQN, semilla 46 y en \textit {MountainCar-v0}.}}{77}{figure.7.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 46 y en \textit {MountainCar-v0}.}}{77}{figure.7.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Porcentaje de tiempo empleado en explorar para algoritmo DQN en \textit {MountainCar-v0}.}}{79}{figure.7.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Resumen general de progreso de algoritmo DQN en \textit {MountainCar-v0}.}}{80}{figure.7.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Recompensa obtenida con el algoritmo PPO2 en \textit {MountainCar-v0}, independientemente de la semilla iteraciones y otros par\IeC {\'a}metros.}}{81}{figure.7.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 3 y en \textit {MountainCar-v0}.}}{86}{figure.7.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3 y en \textit {MountainCar-v0}.}}{87}{figure.7.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 13 y en \textit {MountainCar-v0}.}}{87}{figure.7.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 13 y en \textit {MountainCar-v0}.}}{88}{figure.7.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 46 y en \textit {MountainCar-v0}.}}{88}{figure.7.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Gr\IeC {\'a}fica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 46 y en \textit {MountainCar-v0}.}}{89}{figure.7.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.19}{\ignorespaces Gr\IeC {\'a}fica general obtenida durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3, 13 y 46 simult\IeC {\'a}neamente y en \textit {MountainCar-v0}.}}{90}{figure.7.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Gr\IeC {\'a}fica comparativa de los tres algoritmos: DQN, PPO2 y DDPG en \textit {MountainCar-v0}.}}{91}{figure.7.20}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\contentsfinish 
