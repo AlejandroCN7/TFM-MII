@@ -18,7 +18,9 @@
 %----------------------------------------------------------------------------------------
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
@@ -501,6 +503,21 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 
 % Modificado Alejandro Campoy Nieves
+\usepackage{lmodern}  % for bold teletype font
+\usepackage{amsmath}  % for \hookrightarrow
+\usepackage{nccmath}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{gray},
+	keywordstyle=\color{cyan},
+	basicstyle=\small,
+	columns=fullflexible,
+	frame=single,
+	breaklines=true
+}
+\DeclareMathOperator*{\E}{\mathbb{E}}
+
 %______________________________________________________________________________________
 %\usepackage{hyperref}
 %\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor=ocre,bookmarks=true,bookmarksopen=false}

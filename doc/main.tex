@@ -48,21 +48,8 @@
 
 %\hypersetup{pdftitle={Title},pdfauthor={Author}} % Uncomment and fill out to include PDF metadata for the author and title of the book
 
-\usepackage{xcolor}
-\usepackage{listings}
-\usepackage{lmodern}  % for bold teletype font
-\usepackage{amsmath}  % for \hookrightarrow
-\usepackage{nccmath}
-\lstset{basicstyle=\ttfamily,
-	showstringspaces=false,
-	commentstyle=\color{gray},
-	keywordstyle=\color{cyan},
-	basicstyle=\small,
-	columns=fullflexible,
-	frame=single,
-	breaklines=true
-}
-\DeclareMathOperator*{\E}{\mathbb{E}}
+
+
 
 %\usepackage[backend=biber]{biblatex}
 \addbibresource{bibliography.bib}
@@ -147,7 +134,7 @@ En este trabajo se describirán los fundamentos del DRL, se estudiarán los aspe
 \usechapterimagetrue
 \chapterimage{IA.jpg} % Chapter heading image
 
-\chapter{Introducción}\label{sec:introduccion}
+\chapter{Contexto}\label{sec:introduccion}
 
 La \textbf{Inteligencia Artificial} (IA) es una de las ramas o disciplinas de la informática relativamente más jóvenes que existen a día de hoy, nació en la década de 1960. Es el concepto más abstracto, genérico y amplio que podemos encontrar; se trata de una combinación de técnicas que nos permiten emular el comportamiento y capacidades de los seres humanos para resolver problemas de cualquier tipo. Incluyendo en este concepto cosas como planificación, reconocimiento de objetos, sonidos, hablar, traducir, etc.\cite{article:IA} \\
 
@@ -190,7 +177,7 @@ Cuando se usa Deep Learning dentro del paradigma de aprendizaje por refuerzo, es
 
 Tanto mi tutor, Juan Gómez Romero, como yo, hemos decido investigar de una forma más exhaustiva sobre todo lo que significa el \textbf{Aprendizaje por refuerzo profundo}. Tanto en el Grado de Ingeniería Informática como en el Máster, la información que se aportaba sobre este tema era simplemente un par de frases dando su definición. Nunca hemos abordado o resuelto, tanto de forma teórica como práctica, problemas en los que la mejor metodología que se puede usar dentro del Machine Learning sea esa. Como sí ha ocurrido con AlphaGo o AlphaStar, los cuales serán analizados en este trabajo. Personalmente, me resulta muy interesante a nivel académico debido al total desconocimiento desde el que parto como estudiante y sobre el cual me gustaría avanzar y ver las posibilidades que ofrece.
 
-\section{Aprendizaje por refuerzo profundo en la actualidad}\label{sec:DRL2}
+\section{Motivación}\label{sec:DRL2}
 
 El aprendizaje por refuerzo profundo ha sido demostrado como la mejor tecnología actual para resolver ciertos problemas o, de forma más concreta, algunos juegos y videojuegos competitivos. Son el caso de \textbf{AlphaGo} y \textbf{AlphaStar}, elaborados por la empresa \href{https://deepmind.com/}{DeepMind} de Google.\cite{article:DeepMind} \\
 
@@ -202,14 +189,14 @@ En este Trabajo fin de Máster se va a tratar de arrojar algo de luz a este para
 
 Una vez hecho esto, vamos a enfocarlo y a tratar de explicar de una forma algo más abstracta cómo funcionan las arquitecturas basadas en aprendizaje por refuerzo profundo de estos agentes que suponen la actual cumbre de este tipo de tecnologías. \\
 
-\section{Objetivos}\label{sec:objetivos}
+\section{Objetivos del proyecto}\label{sec:objetivos}
 
 Los objetivos principales que se van a tratar de abordar en este trabajo son: \\
 
 \begin{enumerate}
-	\item Entender los \textbf{conceptos principales} de la Inteligencia Artificial, concretamente todo lo relacionado con el aprendizaje por refuerzo profundo. \\
+	\item Entender los \textbf{conceptos principales} de la Inteligencia Artificial, concretamente todo lo relacionado con el aprendizaje por refuerzo. \\
 	
-	\item Entender, de una forma clara, el \textbf{funcionamiento y metodología} que siguen las \textbf{técnicas} más importantes de este campo. \\
+	\item Entender, de una forma genérica, el \textbf{funcionamiento y metodología} que siguen las \textbf{técnicas} más importantes de este campo. \\
 	
 	\item Descubrir las posibilidades que nos da \textbf{gym} \cite{article:gym} para la construcción de \textbf{entornos o simulaciones} en los que entrenar a nuestros agentes sin la necesidad de espacios físicos reales para ciertos problemas. \\
 	
@@ -217,7 +204,7 @@ Los objetivos principales que se van a tratar de abordar en este trabajo son: \\
 	
 	\item Saber aplicar las diferentes técnicas en los distintos entornos mencionados anteriormente y saber ajustarlos al máximo. \\
 	
-	\item Monitorizar el proceso de aprendizaje y la experiencia obtenida por el agente a medida que realiza intentos en el entorno con la finalidad de validar su progreso y determinar \textbf{cuando el agente está mejorando a partir de sus aciertos y errores}. \\
+	\item Monitorizar el proceso de aprendizaje y la experiencia obtenida por el agente con la finalidad de validar su progreso y determinar cuando está logrando aprender. \\
 	
 	\item Analizar, desde el punto de vista científico y técnico, problemas considerados ya resueltos gracias al paradigma de aprendizaje profundo por refuerzo tales como \textbf{AlphaGo} y \textbf{AlphaStar}. \\
 	
@@ -226,9 +213,41 @@ Los objetivos principales que se van a tratar de abordar en este trabajo son: \\
 	\item Reflexionar sobre las conclusiones que se pueden extraer del cumplimiento de los objetivos anteriores y considerar posibles mejoras futuras del trabajo realizado durante este proyecto.
 \end{enumerate}
 
-\section{Planificación}\label{sec:planificacion}
+\section{Estructura del proyecto}\label{sec:planificacion}
 
-%Metería el diagrama de Gantt (ver el que hice en el tfg a ver si lo puedo averiguar de la misma manera)
+Este proyecto está formado por 11 capítulos repartidos en 5 partes, junto con un apéndice formado por otros 3 capítulos más.
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.8]{captures/estructuraProyecto.png}
+	\caption{Modelo de cascada.}
+	\label{fig:estructuraProyecto} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:IA}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Estas partes son: \\
+
+\begin{itemize}
+	\item \textbf{Introducción}: Se habla del contexto, motivaciones y objetivos que se esperan del proyecto. \\
+	
+	\item \textbf{Descripción de Tecnologías}: Tecnologías que se combinan y usan para resolver problemas de IA, tales como deep learning(DL), aprendizaje por refuerzo(RL) y la combinación de ambas; aprendizaje por refuerzo profundo(DRL).\\
+	
+	\item \textbf{Desarrollo y experimentación}: Se trata las herramientas y recuros actuales que existen para aplicar estas técnicas y se analizan los resultados obtenidos en varios entornos seleccionados.\\
+	
+	\item \textbf{Estado del arte}: Se razonará sobre hasta donde han sido capaz de llegar estas técnicas y qué podemos esperar de ellas en el futuro. Analizando agentes muy novedoso como \textit{AlphaGo} y \textit{AlphaStar}. \\
+	
+	\item \textbf{Posibles Mejoras y conclusiones}: Se realiza un análisis crítico del trabajo y se exponen las sensaciones y conceptos adquiridos. \\
+	
+	\item Además, se ha añadido un apéndice con información relevante sobre \textbf{configuración en la nube}, \textbf{uso de la máquina virtual} y \textbf{Stable Baselines} como herramienta alternativa.
+\end{itemize}
+
+El planteamiento final del proyecto puede observarse de una forma más detallada en el diagrama de Gantt de la figura \ref{fig:gantt}:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.75]{captures/gantt.pdf}
+	\caption{Diagrama de Gantt.}
+	\label{fig:gantt} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:IA}} % Uncomment to add the figure to the table of contents
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	PART 2
@@ -283,7 +302,7 @@ La capa de salida recoge los datos de la última capa oculta y los procesa para 
 
 Las conexiones de los nodos de una capa a otra son definidos por los \textbf{pesos}($w_i$). Estos pesos son utilizados por los nodos para dar la salida siguiente, tal y como se ve en la figura \ref{fig:redNeuronal}.
 
-\section{Funciones de activación (h)}\label{sec:activacion}
+\section{Funciones de activación(h)}\label{sec:activacion}
 
 Cada neurona no transmite la entrada que recibe a las siguientes de forma directa. Antes de hacer esto, procesa dicha entrada. Esto se realiza mediante la \textbf{función de activación}. Estas pueden ser de muchos tipos y determina cuando la neurona se \textbf{excita o no} en función de las entradas que recibe junto con su ponderación (ya que su entrada se compone de las salidas de las neuronas de la capa anterior)\cite{article:redNeuronal2}. \\
 
@@ -393,6 +412,64 @@ Los \textbf{algoritmos de optimización} buscan concretamente esto. Usando los v
 \end{itemize}
 
 En definitiva, las redes neuronales son tan amplias como artículos tiene publicados al respecto y experimentos se han realizado desde su aparición. Solo se pretende dar una vista general de su arquitectura y como funcionan. 
+
+\section{Redes Neuronales Convolucionales(CNN)}\label{sec:convolucional}
+
+Las redes neuronales convolucionales(CNN) son muy similares a las redes ordinarias. De hecho, se pueden entender como una extensión de éstas. Definimos a las redes neuronales vistas hasta este punto como la parte \textbf{densa}. De ellas no se puede saber la metodología de razonamiento, sólo la calidad de los resultados que ofrecen, por lo que es complicado predecir un comportamiento de estas redes. \\
+
+En las redes convolucionales, se supone que las entradas que recibe son directamente imágenes, por ejemplo, en el reconocimiento de dígitos manuscritos. Este tipo de redes mejoran el tratamiento de estos datos, tanto en rendimiento como en calidad de las respuestas. \\
+
+Una imagen tiene una dimensión predeterminada, supongamos por ejemplo 800x800. Esto supone un total de 640000 elementos en el vector de características para cada muestra, eso asumiendo que la imagen es en escala de grises. Si es a color, cada pixel tiene una tripleta de valores RGB, lo que supone $640000*3=1920000$ valores por muestra de entrada. Contar con tantos parámetros desde la capa de entrada ya supone un gran límite para la red, existiendo mayor facilidad y tendencia al sobreajuste. \\
+
+La parte \textbf{convolucional} de la red puede ser entendida como una etapa de \textbf{preprocesamiento} de las imágenes para extraer las características más importantes de las mismas, y estas son las que llegarían a la parte \textbf{densa} de la red, como se estaba mencionando anteriormente. \\
+
+Vamos a ver de forma resumida las distintas capas que constituyen esta parte convolucional de la red.
+
+\subsection{Capa convolucional}\label{sec:convolucional2}
+
+Estas capas realizan un proceso llamado \textbf{convolución}. Reciben la imagen como entrada y luego aplica sobre ella un \textbf{filtro} o \textbf{kernel} que nos devuelve una matriz de datos, como la imagen, solo que con una características concretas destacadas. Por ejemplo, un filtro puede ser usado para la detección de bordes de una imagen únicamente. \\
+
+Ese filtro tiene una \textbf{dimensión}(5x5, por ejemplo) lo cual hace que esos mapas de características mencionados reduzcan la cantidad de parámetros(dimensión de la matriz).\\
+
+Una capa convolucional, a su vez, puede tener más de un filtro, lo que se conoce como \textbf{canales}(channels) del mapa de características. La idea es que cada filtro detecte características específicas de la imagen(bordes, patrones, etc).
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{captures/convolucional.png}
+	\caption{Aplicación de capa convolucional a imágen de entrada.}
+	\label{fig:convolucional} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+En la figura \ref{fig:convolucional}, tendríamos 32 filtros 5x5 diferentes, dado que obtenemos 32 matrices 24x24 a partir de una sola imagen 28x28.
+
+\subsection{Capa de reducción o Pooling}\label{sec:pooling}
+
+Esta capa suele situarse siempre inmediatamente después de una capa convolucional, aunque también es posible realizar más de una capa pooling seguida. Su utilidad, en resumen, consiste en reducir las dimensiones de los mapas de características que se mencionaban anteriormente aún más. Irremediablemente, al realizar este proceso, se pierde información por el camino. Aunque el sentido común pueda determinar en un principio que esto es negativo, generalmente es positivo. \\
+
+La disminución en el tamaño o dimensión de los mapas de características produce una reducción de sobrecarga en el cálculo en las capas venideras, haciendo viable el procesamiento de imágenes con una resolución mayor. Además, es una representación más \textbf{genérica} del problema que se trata de resolver, por lo que implícitamente reduce la tendencia al sobreajuste por parte de la red. \\
+
+Hablando sobre la operación de reducción concretamente, se suele dividir la imagen en \textit{submarcos} o un conjunto de rectángulos. En cada una de estas \textit{subzonas}, se suelen utilizar la operación de \textbf{Max-Pooling}, la cual quiere decir que nos quedamos con el valor más alto, como se aprecia en la figura siguiente:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{captures/pooling.jpg}
+	\caption{Aplicación de capa Max-Pooling a mapa de características.}
+	\label{fig:pooling} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+\subsection{Capa Flatten}\label{sec:flatten}
+
+Una vez la imagen haya sido tratada en sucesivas capas convolucionales y Pooling, cada vez tendremos más canales de menor dimensión con características más aisladas y específicas del problema. Solo queda conectarla con la parte densa, para tratar esas características como veíamos anteriormente; capa de entrada, capas ocultas o intermedias y las capa de salida. ¿Cómo podemos juntar estas partes? \\
+
+Ese es el propósito de la \textbf{capa Flatten}. Explicado de forma simple, coge todas las características y las concatena en un único \textbf{vector de características}. La capa de entrada de la parte densa tendrá una neurona por cada una de estas características.
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{captures/flatten.png}
+	\caption{Adaptación de parte convolucional a parte densa con uso de capa Flatten.}
+	\label{fig:flatten} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
+\end{figure} 
+
 
 \chapterimage{RL.jpg}
 \chapter{Aprendizaje por refuerzo(RL)}\label{sec:RL}
@@ -661,7 +738,7 @@ q_\pi(s,a)&=\E\pi\left[\sum^\infty_{k=0}\gamma^kR_{t+k+1}|S_t=s,A_t=a\right]
 
 Vemos que la nomenclatura es muy similar a la función \textit{estado-valor}, dado que el objetivo es el mismo solo que teniendo en cuenta una acción en ese estado antes de calcular esa recompensa acumulada. Esto puede ayudar a considerar el \textbf{dinamismo} del entorno y como cambia la expectativa de recompensa final acumulada obtenida a partir de las acciones que se realizan.
 
-\subsection{Ecuación de Bellman}
+\subsection{Ecuación de Bellman}\label{sec:bellman}
 
 La función de \textit{estado-valor} puede ser expresada \textbf{recursivamente}. Esto es conocido como \textbf{Ecuación de Bellman}:
 
@@ -945,11 +1022,11 @@ Vamos a ver algunas de las formas más importantes en las que se ha conseguido i
 
 \section{Métodos Basados en Valor: Deep Q-Network(DQN)}\label{sec:DQN}
 
-Es el primer algoritmo DRL que vamos a ver. DQN es uno de los algoritmos más populares que hay dentro de este ámbito, siendo el inicio de una serie de investigaciones e innovaciones que marcaron un antes y un después en el mundo del RL. Con esta técnica fue la primera vez que se pudo crear un agente en ATARI capaz de resolverlo a partir de los píxeles crudos, de la propia imagen. Esto resulta muy interesante, las observaciones que el agente hacía del problema es exactamente igual a las que hace un humano, observar los píxeles de una imagen, en lugar de pensar anteriormente un formato de input específico para las observaciones del entorno. \\
+Es el primer algoritmo DRL que vamos a analizar. DQN es uno de los algoritmos más populares que hay dentro de este ámbito, siendo el inicio de una serie de investigaciones e innovaciones que marcaron un antes y un después en el mundo del RL. Con esta técnica fue la primera vez que se pudo crear un agente en ATARI capaz de resolverlo a partir de los píxeles crudos, de la propia imagen. Esto resulta muy interesante, las observaciones que el agente hacía del problema es exactamente igual a las que hace un humano, observar los píxeles de una imagen, en lugar de pensar anteriormente un formato de input específico para las observaciones del entorno. \\
 
 Es una estrategia \textbf{basado en valor}(\textit{value-based}). Esta estrategia parte de la técnica de RL Q-Learning visto en el apartado \ref{sec:qlearning}, utilizando como funciones optimizables redes neuronales, vistas en el apartado \ref{sec:deeplearning}, lo que es comúnmente conocido como \textbf{Deep Q-Learning}.\\
 
-El principal cambio reside en su función Q, modelándose como una \textbf{función no lineal}(redes neuronales), lo cual permite trabajar con estados y acciones continuos como ya hemos comentado anteriormente. \\
+El principal cambio reside en su función Q, modelándose como una \textbf{función no lineal}, lo cual permite trabajar con estados y acciones continuos como ya hemos comentado anteriormente. \\
 
 Sabemos que para esta estrategia se tienen dos políticas diferentes; la generadora de experiencia y la objetivo. Sin embargo, esto no equivale a dos redes neuronales distintas. La arquitectura de la red neuronal como tal es la misma, lo que se cambia es el \textbf{conjunto de pesos} que define su comportamiento. Teniendo dos conjuntos de pesos diferentes, uno para cada cometido que hemos explicado. \\
 
@@ -964,9 +1041,9 @@ Para elegir una acción, podríamos coger la que tuviera un valor estimado más 
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-El símbolo $\theta$ hace referencia al conjunto de pesos. \\
+El símbolo $\Theta$ hace referencia al conjunto de pesos. \\
 
-Por otra parte, podemos enfrentarnos a un problema que tenga acciones continuas y, por tanto, sean infinitas. La opción aquí sería incluir la acción como entrada de la red. Entonces, la salida sería $Q(s,a;\theta)$ para esa acción concreta. Si queremos $Q$ para otra acción, la parte de entrada de $s$ sería la misma y habría que modificar $a$. Al ser el número de acciones infinita, no podemos calcular todas las posibles acciones a partir de la entrada $s$ como en el caso anterior. Lo vemos a continuación en la figura \ref{fig:RNcontinua}.
+Por otra parte, podemos enfrentarnos a un problema que tenga acciones continuas y, por tanto, sean infinitas. La opción aquí sería incluir la acción como entrada de la red. Entonces, la salida sería $Q(s,a;\theta)$ para esa acción concreta. Si queremos $Q$ para otra acción, la parte de entrada de $s$ sería la misma y habría que modificar $a$. Al ser el número de acciones infinita, no podemos calcular todas las posibles acciones a partir de la entrada $s$ como en el caso anterior. Esto hace que DQN no sea apropiada para resolver este tipo de problemas, se puede adaptar \textbf{discretizando} el espacio de acciones, pero esto limita y simplifica en exceso la complejidad del problema. Lo vemos a continuación en la figura \ref{fig:RNcontinua}.
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{captures/RNcontinua.png}
@@ -974,6 +1051,8 @@ Por otra parte, podemos enfrentarnos a un problema que tenga acciones continuas 
 	\label{fig:RNcontinua} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
 \end{figure}
+
+Uno de los principales inconvenientes en las métodos basados en valor, es la \textbf{divergencia}, aunque hay propuestas científicas para prevenirla, no hay investigaciones sobre ello sólidas que permitan garantías totales. \\
 
 En definitiva, el principal cambio entre Q-Learning y Deep Q-learning es la \textbf{sustitución} de la función-valor tabla por una red neuronal, con el potencial que esta nos ofrece frente a la anterior. ¿Pero como repercute dicho cambio en el proceso de entrenamiento? \\
 
@@ -1035,6 +1114,22 @@ En resumen, los pesos $\Theta^-$, los cuales forman la red de la \textbf{políti
 
 En el apartado \ref{sec:qlearning} se habló de las ventajas de tener dos políticas en lugar de una, eso se mantiene. La diferencia de todo esto es que buscamos las actualizaciones de los dos conjuntos de pesos de ambas políticas en lugar de cambiar valores en una función-tabla. \\
 
+\begin{verbatim}
+for i={0,...,n_episodios}
+   for t={0,...,n_entrenamiento}
+
+      Elegir acción con política generadora de experiencia
+      Aplicar acción y obtener estado siguiente y recompensa
+      Almacenar estado, acción, recompensa y estado siguiente en memoria D
+
+      Muestrear un mini-batch de experiencias de tamaño n_batch de la memoria D
+      Obtener salida de predicción de cada experiencia usando política objetivo
+      Optimizar red generadora de experiencia con gradiente descendente
+
+      Cada C iteracciones , actualizar red objetivo a partir de la generadora
+        de experiencia
+\end{verbatim}
+
 Al igual que hablamos de \textit{Double Q-Learning}, existe el \textbf{Double DQN}, tratando de mejorar el inconveniente de \textbf{sobreajuste} muy común en los métodos basados en valor, ya que la política objetivo elige siempre ese máximo. También existen otras propuestas como el uso de la \textbf{ventaja} visto en el apartado \ref{sec:ventaja}, junto con otras muchas variaciones de esta estrategia, aunque no son objetivo de este trabajo.
 
 \section{Métodos basados en política: REINFORCE}
@@ -1065,22 +1160,58 @@ El algoritmo REINFORCE tradicional se basa en una red neuronal la cual es entren
 
 $U(\Theta)$ es conocida como la función ``\textbf{máximo beneficio}'' es la que estamos tratando de maximizar. Generamos $K$ trayectorias $x^{(i)}$ de longitud $n$ según la política $\pi_ \Theta$. Calculamos la recompensa $R^i$ por cada una de las trayectorias y actualizamos el conjunto de pesos $\Theta$ para estimar el gradiente de esa función de máximo beneficio de la que hablábamos. \\
 
-Existen muchas variantes como VPG aunque, de nuevo, no es el objetivo de este trabajo.
+Existen muchas variantes como VPG aunque, de nuevo, no es el objetivo de este trabajo.\\
+
+\begin{verbatim}
+While no resuelto
+    Generar K trayectorias de longitud n según política
+    Calcular recompensa obtenida para cada trayectoria
+    Actualizar pesos de la red para estimar el gradiente de la
+      función "Máximo beneficio"
+\end{verbatim}
+
+\subsection{Proximal Policy Optimization(PPO2)}
+
+Proponen una nueva familia de métodos de \textbf{gradiente de políticas} para el aprendizaje por refuerzo , que alternan entre el muestreo de datos a través de la interacción con el entorno(experiencia) y la optimización de una función objetivo mediante el \textbf{ascenso de gradiente estocástico}. \\
+
+Mientras que los métodos estándar de gradiente de políticas realizan una actualización de los pesos en la red neuronal por muestra de datos, se propone una \textbf{función objetivo más novedosa} que organizan esas actualizaciones y múltiples épocas en mini-bath o mini-lotes, es decir, por \textbf{aproximación}. \\
+
+Para esta técnica, se utiliza los valores de ventaja (apartado \ref{sec:ventaja}), la política antigua se ejecuta durante un periodo T(menos de un episodio) en la que se estima esos valores de ventaja. Cuando finaliza, optimiza los pesos de la política en épocas organizadas en \textit{mini-batches} y finalmente se sustituye esta política nueva por la antigua. \\
+
+Esta estrategia presenta un buen equilibrio entre calidad de las actualizaciones de sus parámetros con el tiempo de aprendizaje. Supera a otros métodos de gradiente de políticas online, muestra por muestra, incluyendo además mejoras de simplicidad en la implementación y más generalizables en su uso. \\
+
+Estos métodos son fundamentales para los avances actuales en el uso de redes neuronales profundas para el control y aprendizaje por refuerzo de locomoción 3D y \textit{Go}, entre otros. Sin embargo, supone un \textbf{desafío} porque presentan una sensibilidad notable a la elección del tamaño de esos periodos T y tamaños de los \textit{mini-batches} anteriormente mencionados. Demasiado pequeño, y el aprendizaje es inconvenientemente lento. Demasiado grande, y la señal se ve demasiado afectada por el ruido(exploración). \\
+
+Una diferencia importante entre PPO y PPO2 en los baselines de OpenAI, es que el segundo incorpora una implementación de \textbf{activación de GPU}. Esto hace que el aprendizaje se produzca unas \textbf{tres veces más rápido} que en el PPO estándar, siempre que haya disponibilidad de recursos para explotarlo. \\
+
+Además, esta versión incluye una variante de la función objetivo que es muy novedosa debido a que no se se suele encontrar en otros algoritmos. Implementa una forma de actualizar la política compatible con el gradiente descendente estocástico, mientras que simplifica el algoritmo eliminando la perdida de KL, la cual tiene propagación hacia atrás y es costosa, y la necesidad de realizar actualizaciones adaptativas. \\
+
+Como vemos en su pseudocódigo, es sorprendentemente sencillo para lo que es capaz de hacer. \cite{article:PPO2_1} \cite{article:PPO2}
+
+\begin{verbatim}
+for i=1,2... 
+
+   for actor=1,2,...
+      Ejecutar política antigua en entorno durante T time-steps
+      Calcular el valor de ventaja estimadas durante T
+   
+   Optimizar la función objetivo con K épocas y batch-sizes de tamaño M
+\end{verbatim}
 
 \section{Métodos actor-critic}
 
 Llegados a este punto, conocemos los métodos basados en valor y basados en políticas. Sabemos cuales son las ventajas principales de cada uno de ellos. No obstante, vamos a centrarnos en los inconvenientes de cada uno.
 
-De forma resumida, REINFORCE se basa en \textbf{actuar}, ya que calcula las probabilidades de todas las acciones para que nos conduzcan a un buen resultado final. Esto tiene el principal inconveniente de que si una trayectoria conduce a un mal resultado final, puede \textbf{contener buenas acciones} que no están siendo reforzadas en su actualización de pesos(recordemos que se actualiza al final de cada episodio). \\
+De forma resumida, REINFORCE se basa en \textbf{actuar}, ya que calcula las probabilidades de todas las acciones para que nos conduzcan a un buen resultado final. Esto tiene un principal inconveniente, si una trayectoria conduce a un mal resultado final, puede \textbf{contener buenas acciones} que no están siendo reforzadas en su actualización de pesos(recordemos que se actualiza al final de cada episodio). \\
 
-Por otro lado, DQN se centra en \textbf{estimar} los valores de recompensas que nos vamos a encontrar en el futuro a partir de un estado y una acción realizada en el entorno. El principal inconveniente de éste es que calcula las estimaciones a partir de estimaciones, lo cual introduce \textbf{sesgo} en el aprendizaje. \\
+Por otro lado, DQN se centra en \textbf{estimar} los valores de recompensas que nos vamos a encontrar en el futuro a partir de un estado o estado-acción realizada en el entorno. El principal inconveniente de éste es que calcula las estimaciones a partir de estimaciones, lo cual introduce \textbf{sesgo} en el aprendizaje. \\
 
-La propuesta que se va a analizar a continuación es una \textbf{combinación de las dos anteriores}, de ahí su nombre \textbf{actor-critic}(una parte actúa y la otra estima). Entonces, hace uso de dos redes:
+La propuesta que se va a analizar a continuación es una \textbf{combinación de las dos anteriores}, de ahí su nombre \textbf{actor-critic}(una parte actúa y la otra estima). Entonces, hace uso de dos redes: \\
 
 \begin{itemize}
-	\item \textbf{Actor:} Similar a la red REINFORCE.\\
+	\item \textbf{Actor:} Trata de seleccionar la mejor acción posible para el estado en el que se encuentra.\\
 	
-	\item \textbf{Critic: Similar a la red DQN}. 
+	\item \textbf{Critic:} Indica la estimación de recompensa acumulada que se espera a partir del estado actual ($V(S;\Theta_\upsilon)$) \\
 \end{itemize}
 
 La principal ventaja es que \textbf{acelera} el aprendizaje, al mismo tiempo que \textbf{evita sesgos} en sus estimaciones, por lo que lo hace más estable.
@@ -1094,7 +1225,76 @@ La principal ventaja es que \textbf{acelera} el aprendizaje, al mismo tiempo que
 
 El actor recibe un estado $s$, que a su vez provoca una acción $a$ por parte el mismo. Esa acción es realizada en el entorno, transitando a un estado nuevo $s'$, ese estado es analizado por el crítico el cual realiza la estimación, recogida por el agente de nuevo. \\
 
-Lo más importante es que el actor aprende teniendo en cuenta las estimaciones del crítico, el cual aprende de forma directa de la experiencia generada. La explicación detallada de esta técnica depende directamente del algoritmo concreto que estemos hablando como, por ejemplo, A3C (aprendizaje asíncrono) o A2C(aprendizaje síncrono), aunque no entraremos en mayor detalle.
+Lo más importante es que el actor aprende teniendo en cuenta las estimaciones del crítico, el cual aprende de forma directa utilizando las encuaciones de Bellman vistas en el apartado \ref{sec:bellman}. La explicación detallada de esta técnica depende directamente del algoritmo concreto que estemos hablando como, por ejemplo, A3C (aprendizaje asíncrono) o A2C(aprendizaje síncrono), aunque no entraremos en mayor detalle.
+
+\subsection{Deep Deterministic Policy Gradient(DDPG)}
+
+Este es un algoritmo que combina las técnicas de actor-critic junto con DQN. No es posible aplicar Q-Learning directamente a un problema con espacio de acciones continuo, es imposible hacer estimaciones de todo ese espacio. \\
+
+Entonces, se propone una arquitectura actor-critic en la cual la parte crítica es DQN en lugar de $V(s;\Theta)$ (se estima Q). Para ello se utiliza una \textbf{memoria de experiencias} al igual que en la propia DQN. \\
+
+Se dispone de un \textbf{actor} el cual se rige por una política $\pi(s;\Theta_\pi)$, en lugar de estimar la probabilidad de cada acción, devuelve directamente la acción seleccionada(un valor numérico de $a$). \\
+
+La parte crítica es la función $Q$, puede hacerse para un espacio de acciones continua como se ilustró en la figura \ref{fig:RNcontinua}. El único inconveniente es que no se puede estimar el espacio de acciones A en su totalidad, dado que es infinito. \\
+
+Al no tener valores de V, se ajusta directamente para maximizar Q obtenido con una acción y con esa información se entrena la red actor. \\
+
+Ambas redes son dobles, como DQN, haciendo las actualizaciones más suaves con la ayuda de una red objetivo(\textit{target}), propias de los métodos \textit{off-policy}.\\
+
+Esto tiene una ventaja para la \textbf{exploración}. Puede tratar el problema de exploración independientemente del algoritmo de aprendizaje. Se introduce \textbf{ruido} en los pesos de la red directamente, en lugar del espacio de acciones:
+
+\begin{equation*}
+\pi'(S_t)=\pi(S_t;\Theta_\pi)+N
+\end{equation*}
+
+Siendo N la representación del ruido añadido en esos parámetros.\\
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{captures/noise.png}
+	\caption{Ruido en el espacio de acciones (izquierda) frente a ruido en los parámetros de la red (derecha). Extraída de origen. \cite{article:DDPG_2}}
+	\label{fig:noise} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Esta técnica ha demostrado mejorar la exploración de los agentes obteniendo mejores resultados. Introducir ruido en los parámetros provoca que la exploración sea consistente a través del paso del tiempo, mientras que agregar el ruido en el espacio de acción conduce a una exploración \textbf{más impredecible} que no esta correlacionada con los parámetros \\
+
+¿Cuánto y cómo se modifica esos pesos de la red? Los investigadores tienen que enfrentarse a tres problemas principales: \\
+
+\begin{enumerate}
+	\item Diferentes niveles de la red neuronal tienen \textbf{diferentes sensibilidades}. \\ 
+	
+	\item La sensibilidad de los pesos de la política también puede variar dependiendo del \textbf{progreso del aprendizaje} por el que se encuentre el agente, siendo más difícil predecir las repercusiones que tendrán cambiar sus pesos. \\ 
+	
+	\item Escoger la correcta escala de ruido es bastante complicado, ya que entender cómo influye en las decisiones del agente la modificación de esos parámetros es una tarea prácticamente imposible, las redes neuronales sirven para dar respuesta, no para describir cómo piensa el agente. \\
+\end{enumerate}
+
+Se usa normalización en las capas para solventar el primer problema, situando a todos los parámetros en una escala unificada. En cuanto al segundo y tercer problema, se combate utilizando una \textbf{planificación adaptativa}. \\
+
+Consiste en determinar el rango modificable de los parámetros en función de su espacio de valores. Funciona midiendo la perturbación en la toma de decisiones del agente dado los parámetros y por tanto, definiendo de una forma automática cómo pueden ser variados. \cite{article:DDPG} \cite{article:DDPG_2}
+
+\begin{verbatim}
+Iniciar aleatoriamente la red crítica y actor con un conjunto de pesos diferentes.
+Iniciar la red objetivo para la parte crítica
+Iniciar una memoria de experiencia
+
+for episodio i=1,...,T
+
+   Iniciar proceso aleatorio de ruido N 
+   Recibir estado inicial de la observación
+   
+   for t=1,...,T
+   
+      Seleccionar acción acorde con la política actor y el ruido de exploración
+      Ejecutar acción y obtener recompensa y estado siguiente
+      Almacenar tupla de experiencia en memoria
+      Muestrear un mini-batch de N transiciones de la memoria de experiencia
+      Obtener etiqueta aproximada con red objetivo
+      Actualizar crítico minimizando función de perdida
+      Actualizar actor utilizando política de gradientes estocástica
+      
+      Actualizar la red objetivo
+
+\end{verbatim}
 
 %Aquí hay una definición de recomensa, recompensa acumulada y estimación de recompensa que quizás es muy interesante de poner.
 
@@ -1419,7 +1619,7 @@ Se entiende como un \textbf{estado final} en el entorno cuando han ocurrido 200 
 
 %La carreta puede tardar más o menos pasos en conseguir su objetivo ¿Cuando se considera un resultado razonable? La suma de recompensas desde el estado inicial hasta el estado final del entorno siempre será 1 menos el número de pasos realizados por la carreta. Ya que cada paso resta 1 y solo suma 1 una vez alcanza la meta. \\
 
-La recompensa acumulada, por tanto, será -200 cuando no consigue su objetivo y un valor negativo mayor que -200 cuando si lo alcanza. %OpenAI Gym determina como resultado satisfactorio una recompensa total de -110 o mayor de media en 100 episodios.\cite{article:mountain} \\
+La recompensa acumulada, por tanto, será -200 cuando no consigue su objetivo y un valor negativo mayor que -200 cuando si lo alcanza. OpenAI Gym determina como \textbf{resultado satisfactorio} una recompensa total de -110 o mayor de media cada 100 episodios.\cite{article:mountain} \\
 
 \section{MountainCarContinuous-v0}\label{sec:mountaincarcontinuo}
 
@@ -1429,10 +1629,89 @@ En otras palabras, la acción se representa con un \textbf{valor real}; siendo e
 
 La otra diferencia reside en su definición de \textbf{función de recompensa}, siendo la recompensa acumulada igual al valor 100 menos la suma cuadrática de los \textit{time-steps} sucedidos hasta alcanzar la meta. Añadir un número máximo de \textit{time-steps} que pueden sucederse es altamente recomendable para evitar que suceda un episodio infinito en el que no logra alcanzar la meta. \\
 
-%Se considera como resuelto cuando se obtiene una media de recompensas por encima de 90 en los episodios.
-Este entorno ha sido utilizado específicamente para el algoritmo DDPG, recordemos que este algoritmo solo funciona con entornos continuos y no discretos, por lo que esta adaptación era necesaria.\cite{article:mountaincontinuous}.
+Se considera como \textbf{resuelto} cuando se obtiene una media de recompensas por encima de 90 en los episodios. Este entorno ha sido utilizado específicamente para el algoritmo DDPG, recordemos que este algoritmo solo funciona con entornos continuos y no discretos, por lo que esta adaptación era necesaria.\cite{article:mountaincontinuous}.
 
 \section{Super Mario Bros}
+
+Es un famoso videojuego de plataformas, generalmente conocido. Fue diseñado por la compañía Nintendo en el año 1983 para la videoconsola Nintendo Entertainment System (NES). El objetivo es llegar al final de las fases que tiene prediseñadas sin ``morir'' antes, cada una de ellas con sus obstáculos y dificultades propias.\\
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.35]{captures/mario.jpg}
+	\caption{Entorno del videojuego Super Mario Bros.}
+	\label{fig:mario} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Este consta de una mayor complejidad que el entorno anterior; obstáculos, enemigos de distinto tipo, agujeros que saltar, tuberías por las que meterse... Por defecto, \textit{OpenAI baselines} no incorpora un entorno adaptado para su computación con técnicas DRL. Se ha hecho uso de la librería \textit{gym-retro}\cite{article:gymretro} para adaptarlo a este framework y programarlo bajo las mismas librerías que usamos para el problema anterior. Esta librería lo importa a partir de la ROM original de NES, la cual se puede descargar previamente. \\
+
+Se han encontrado algunas dificultades para acceder a las especificaciones del entorno. Resulta que no hay mucha documentación sobre los entornos que se importan a través de \textit{gym-retro}, al menos no de forma directa. \\
+
+Se accedió a las librerías de OpenAI, concretamente a las del archivo \textit{run.py} y fue modificado para que se obtuviera los datos de los estados por terminal:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.4]{captures/estado_mario.png}
+	\caption{Entrada del agente en Super Mario Bros.}
+	\label{fig:entradamario} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Por lo obtenido en la figura \ref{fig:entradamario}, da la sensación de que se trata una imagen con 3 canales de color(RGB) normalizados a valores entre 0 y 1(en lugar a 0 y 255 que corresponde a un byte). \\
+
+Si observamos el código de gym-retro HIPERENLACE, existe una definición de las \textbf{observaciones} o estados del entorno. Pueden ser imágenes RGB o un volcado de RAM, parece que por defecto se utiliza imágenes RGB como se estaba comentando. \\
+
+Si se hace memoria del apartado \ref{sec:convolucional}, sabremos que las mejores redes neuronales que se pueden utilizar por debajo para este problema son las CNNs. El tipo de red es seleccionable. Por defecto, es CNN para este entorno, aunque puede ser cambiado a otros tipos. \\
+
+Entonces, estamos hablando de que el agente interpreta el entorno de una forma muy similar a los humanos. En lugar de tener un conjunto de variables estructuradas que define las observaciones, con información concreta, tiene una matriz con los valores RGB, siendo equivalente a observar la pantalla de la videoconsola directamente. Los humanos interpretamos esos valores de frecuencia como colores y el agente lo hace con valores numéricos, pero la filosofía es la misma. \\
+
+Las \textbf{acciones} que puede hacer el agente son referentes únicamente al movimiento de Mario en el nivel:\\
+
+\begin{itemize}
+	\item Nada
+	\item A
+	\item B
+	\item derecha
+	\item derecha + A
+	\item derecha + B
+	\item derecha + A + B
+	\item izquierda
+	\item izquierda + A
+	\item izquierda + B
+	\item izquierda + A + B
+	\item abajo
+	\item arriba\\
+\end{itemize}
+
+Siendo A la acción de saltar y B la acción de esprintar/lanzar bola de fuego cuando Mario se encuentra en una situación que lo permite.\\
+
+Las acciones son discretas, aunque algunas de ellas se obtienen combinando más de una acción. Por ejemplo, la acción derecha+A desencadena un salto al mismo tiempo que se desplaza a la derecha, dos acciones que se pueden realizar por separado y que el resultado no sería el mismo. \\
+
+En este videojuego, los saltos pueden ser más prolongados o menos. Esto se consigue dejando pulsado el botón de salto(A) durante más tiempo. El tiempo se encuentra discretizado(t). Entonces, en este entorno tener la acción A establecida en más de un \textit{time-step} consecutivo, equivale a un salto prolongado. \\
+
+El juego original funciona a 25 FPS's, lo cual significa que cada segundo de juego tenemos 25 frames o inputs. Estos frames van a ser muy similares entre ellos, tanto en estados,recompensas, o acción a realizar. Esto retrasa mucho el entrenamiento. Para simplificar este proceso, se realizá la omisión de frames estocásticos donde cada n-simo frame se utiliza como estado y las acciones son iguales a las anteriores con una probabilidad $p$ predefinida, para favorecer esas prolongaciones en los saltos, por ejemplo. Es una forma de tener menos datos con los que trabajar al mismo tiempo que no se compromete la eficacia del proceso de entrenamiento.\\
+
+En cuanto a las \textbf{recompensas}, la función de recompensa acumulada es: 
+
+\begin{equation*}
+R=V+T+D+S
+\end{equation*}
+
+\begin{itemize}
+	\item \textbf{V}: Es la diferencia de la posición del agente en la coordenada x entre estados. Cuanto más se desplace hacia la derecha, mejor. \\
+	
+	\item \textbf{T}: Es la diferencia del tiempo de juego entre frames. \\
+	
+	\item \textbf{D}: Es un valor que penaliza un agente cuando muere en un estado. Esto favorece a que el agente trate de no morir bajo ningún concepto. \\
+	
+	\item \textbf{S}: Es la diferencia de puntuación del juego entre frames. \\
+\end{itemize}
+
+Esta función asume que el objetivo del juego es moverse a la derecha, ya que la meta en todos los modelos de nivel se encuentra en esa dirección, tan rápido como sea posible, sin morir y obteniendo todos los puntos que pueda en el proceso. Es importante que cada uno de los valores que lo componen estén debidamente estudiados y escalados, ya que el agente puede encontrar una mejor opción en detenerse obteniendo puntos y tratar de llegar a la meta cuando apenas le queda tiempo restante. Es la importancia que ya se ha mencionado en más de una ocasión de definir el problema lo mejor posible para que el proceso de aprendizaje sea adecuado. \\
+
+Es interesante que en el valor de recompensa acumulada no se especifique de forma implícita que debe llegar al final del nivel. Al tratar de maximizar todo lo posible esa función de recompensa, lo conseguirá de forma indirecta. \\
+
+%Hablar de la otra posibilidad de coger la alternativa de gym directa con diccionario para el formato de entrada (más inetersante la que he utilizado yo)
+
+Existen otras variantes del entorno de Super Mario Bros en Gym que pueden interpretar el problema de una forma distinta. Por ejemplo, en lugar de usar la imagen directamente, considerar un diccionario de información que define un estado del entorno de forma estructurada. En lugar de un conjunto de pixeles, estamos hablando de un conjunto de variables con la posición de Mario, enemigos, monedas, tiempo restante, vidas, etc.
 
 \chapterimage{google-cloud.jpg}
 \chapter{Entorno de desarrollo}\label{sec:cloud}
@@ -1467,266 +1746,398 @@ Entrenamos los modelos y obtenemos los logs en la máquina virtual. Después, se
 \chapterimage{grafica.png}
 \chapter{Experimentación: Resultados Obtenidos}
 
-En este apartado, vamos a mostrar los resultados que hemos obtenido de los algoritmos, entornos de gym y entorno de trabajo que hemos explicado en este proyecto. \\
+En este capítulo, vamos a mostrar y discutir sobre los resultados que hemos obtenido de los algoritmos, entornos de gym y entorno de trabajo que hemos explicado en este proyecto. \\
 
 Para más información sobre los logs y su visualización en el proceso de aprendizaje de los agentes que veremos a continuación, se puede consultar el apéndice de esta documentación(\ref{sec:logs} y \ref{sec:visualizarlogs}).
 
-\section{MountainCar-v0}\label{sec:exp:mountaincar}
-
-Comenzamos con el problema más sencillo que hemos utilizado (apartado \ref{sec:mountaincar}). A pesar de su simpleza, podemos entender que dependiendo del problema, y de como lo interpretamos para el agente, esto puede hacer que algunas técnicas no sean efectivas o que den resultados mejores o peores. Lo veremos a continuación. \\
-
-\subsection{DQN}\label{sec:mountain:DQN}
-
-He realizado diferentes pruebas de entrenamiento. Voy a mostrar aquellos modelos que me han parecido más interesantes. También realicé el mismo entrenamiento haciendo uso de semillas diferentes(3, 13 y 46). De esta forma, podía reentrenar el modelo en caso de que hubiera algún error y podía valorar la importancia de la aleatoriedad en cada técnica. \\
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}}
-	\label{fig:mountain1} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Esta es la primera gráfica que aprendí a generar a partir de los \textit{logs}. Con ella podemos observar las recompensas que fue obteniendo el agente en cada \textit{timestep} que realizaba de experimentación. En el caso de la figura \ref{fig:mountain1}, vemos que consiguió resolverlo tempranamente en un caso aislado, además en pocos pasos, ya que tardo unos 90 \textit{timesteps}(recompensa de -90). Lo cual quiere decir que aprovecho el momentum muy bien para conseguir subir. \\
-
-Sin embargo, por como es la gráfica, todo apunta a que fue un caso \textbf{casual}. Realmente comienza a tener más aciertos y de una forma más continua y estable posteriormente, como se puede apreciar en los picos más juntos en las otras zonas de la gráfica. Esto me hace pensar que denota un mejor entendimiento por parte del agente de como tiene que \textbf{comportarse} para conseguir su objetivo, resolverlo con \textbf{suerte} más que con conocimiento de lo que está haciendo no podemos considerarlo como éxito, aunque tampoco estoy diciendo que la primera vez lo resuelva de forma 100\% aleatoria ya que es prácticamente imposible.
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5_suave.png}
-	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain1}). Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}}
-	\label{fig:mountain2} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-El siguiente objetivo que busqué fue el tratar, de alguna manera, de suavizar aquellas subidas que no estaban tan motivadas por un buen conocimiento. Por ello, construimos una gráfica a partir de la anterior, solo que \textbf{suavizada}. Cada punto tiene un valor que depende de los valores que tiene alrededor, son influidos por sus vecinos. \\
-
-El resultado es la figura \ref{fig:mountain1}. Fijémonos en el primer éxito que tiene. Ahora la subida en la recompensa es muy pequeña en comparación de las que hay más adelante, justo lo que sospechábamos. \\
-
-Podemos ir más allá. En lugar de utilizar un suavizado de los datos de las recompensas, utilizar directamente las medias obtenidas por episodios, de los cuales hablamos en el apartado \ref{sec:logs}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5_resumen.png}
-	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain3} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-La figura \ref{fig:mountain3}, tiene el mismo objetivo que lo explicado anteriormente, dar más valor a aquellos éxitos que son resultado de un aprendizaje real y menos de la aleatoriedad, solo que aún más extremo. \\
-
-Vemos que ahora la primera subida apenas es apreciable directamente, sin embargo, las otras dos zonas que tenía muchos éxitos son aún mas escarpadas. Como resumen de estas pruebas para la semilla 3 en DQN y \textit{MountainCar-v0}, llegamos a la conclusión de que durante el entrenamiento pasa por \textbf{dos etapas}. Hay una primera subida general de los resultados, que luego se desploma, seguramente porque no consigue actualizarse correctamente a partir de esos éxitos y se actualiza a una versión peor de sí mismo. No obstante, luego es capaz de recuperarse cuando vuelve a comenzar a fallar y consigue resultados aún mejores. Por último, comienza otro desplome de su comportamiento, por suerte el algoritmo hace actualizaciones del modelo siempre que se considera que mejora y se va quedando guardada la \textbf{última mejor versión} registrada. \\
-
-Hice las mismas pruebas para las semillas 13 y 46, muestro las gráficas a continuación:
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain4} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5_suave.png}
-	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain4}). Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain5} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5_resumen.png}
-	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain6} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain7} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_suave.png}
-	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain7}). Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain8} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_resumen.png}
-	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain9} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Vemos que en la semilla 13 tiene una \textbf{estructura similar}, mientras que la semilla 46 solo tiene una subida significativa más o menos a mitad del entrenamiento. \\
-
-Cuando vi los resultados llegué a la siguiente conclusión: nos encontramos ante un problema sencillo, el cual no tiene muchas posibilidades a nivel de acciones para que el agente pueda realizar. Una vez es bueno en su entorno, con las siguientes actualizaciones es mucho más \textbf{probable que empeore} a que mejore. En este caso, solo hay una forma de hacer las cosas bien para llevar la carreta a su meta, una vez aprendida, la exploración solo va a dar resultados negativos. \\
-
-Por esa misma razón pienso que se suceden estos ciclos de subida y bajada en las recompensas. Es capaz de aprender de sus errores, pero una vez comienza a acertar no es capaz de aprender de sus éxitos de una forma tan buena. Hago hincapié en que no es preocupante, ya que siempre se guarda el modelo del mejor agente durante todo el entrenamiento, no el que queda cuando termina. \\
-
-También podemos llegar a pensar; si estos algoritmos son capaces de reforzar las buenas acciones para que las repita en situaciones similares, ¿por qué en este caso no es así? Otras de las conclusiones que he sacado a partir de estos experimentos, es que considero que el sistema de \textbf{recompensas} que utiliza OpenAI para este entorno \textbf{no es óptimo} para esta técnica. \\
-
-En el apartado \ref{sec:mountaincar} mencionamos que la recompensa de este entorno es siempre -1 a no ser que alcance la meta, en ese paso el valor de la recompensa es 1. Creo que este sistema no ayuda al agente de ninguna manera a determinar si sus acciones son buenas o no y solo se puede dejar llevar por el resultado final para aprender. Entonces, el agente no puede diferenciar entre buenas y malas acciones. En su lugar, refuerza todas las acciones que ha realizado cuando tiene éxito, aunque dentro tenga decisiones malas y quita relevancia a todas las decisiones tomadas durante un fracaso, aunque en ese intento haya tomado algunas buenas decisiones en realidad. \\
-
-Estaría bien que la recompensa fuera positiva cuando se detectase que la carreta está aprovechando el momentum para subir, y negativa en caso sontrario. No osbtante, no siempre vamos a saber la mejor manera de resolver los problemas para un entorno dado, y menos cuando son mucho más complejos que éste. \\
-
-Entonces, en el momento que comienza a tener éxito, sigue explorando un 2\% de su tiempo como veremos a continuación. Como el problema es muy sencillo y solo hay una manera de hacerlo bien, ese 2\% de exploración puede hacer que el agente erre en su intento y, como consecuencia, desfavorezca al resto de deciones buenas que ya había aprendido a tomar. \\
-
-
-Creo que es un ejemplo magnífico para entender la gran \textbf{importancia} en la \textbf{definición del problema} que se trata de resolver. dependiendo de esa definición, no solo la representación de la recompensa, sino el formato de input, output y ventajas, en caso de utilizarlas, puede hacer que una técnica consiga funcionar mejor o peor al procesar la experiencia que recoge. Es como elegir la mejor función de pérdida para una red neuronal, esa decisión puede cambiarlo todo.
-
-
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_time.png}
-	\caption{Porcentaje de tiempo empleado en explorar para algoritmo DQN en \textit{MountainCar-v0}.}
-	\label{fig:mountain10} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-En la figura \ref{fig:mountain10} vemos el porcentaje de tiempo empleado por el agente para explorar. Como ya hemos mencionado, no es mucho debido a la simplicidad del entorno y que explorar otras alternativas a las que el agente piensa no va a ser bueno. Sería interesante incluso implementar un sistema que redujera ese porcentaje a 0 cuando se superara una cierta recompensa. Estoy convencido de que esto mejoraría aún más los resultados o, al menos, estabilizaría más el aprendizaje. Por desgracia, no he tenido el suficiente tiempo para hacerlo. \\
-
-¿Hasta que punto influye la aleatoriedad en el progreso de su aprendizaje con esta técnica? Por esta cuestión es por a que he ejecutado la misma técnica con semillas diferentes. Podemos hacer una gráfica que resuma todos los datos que hemos visto anteriormente en una sola. Mezclando los tres modelos diferentes y plasmarlos como uno solo:
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DQN/general.png}
-	\caption{Resumen general de progreso de algoritmo DQN en \textit{MountainCar-v0}.}
-	\label{fig:mountain11} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-El tono más claro muestra la desviación estándar de los datos. El tono más oscuro el error en la estimación de la media. En otras palabras, la desviación estándar dividida por la raíz cuadrada del número de semillas que tenemos. También incluye un suavizado para que la gráfica sea más estable. \\
-
-La forma más simple de interpretarlo para que se entienda lo que acabo de explicar; cuanto más estrecha sea las áreas sombreadas alrededor de la línea, más coincide el progreso en ese punto para los tres modelos diferentes que hemos visto. \\
-
-Entonces, tenemos zonas más relevantes en la gráfica de la figura \ref{fig:mountain11}. Al principio coincide de forma perfecta que los tres modelos no son capaces de cumplir su objetivo, luego comienzan a tener algunos éxitos puntuales. La primera mejora sustancial de los datos es bastante común en el mismo punto del aprendizaje y después es un poco más variable de la aleatoriedad. Sin embargo, al final, hay una gran coincidencia de nuevo; todos empeoran hasta no ser capaces ni siquiera de cumplir el objetivo de alcanzar la meta y luego comienzan a remontar, pero aquí se acaba la gráfica. Esto me hace pensar que las conclusiones expresadas anteriormente son bastante firmes en cuanto a tiempo, sucediéndose en momentos similares en tres casos distintos.\\
-
-Como conclusión, diría que esta gráfica es muy útil para saber qué puntos del aprendizaje, como la primera mejora real de resultados o el empeoramiento final, no son dependientes del azar, sino que vienen muy determinados directamente por el algoritmo y el entorno. Por otro lado, también nos ayuda a entender qué partes del entrenamiento son más influenciables por el azar, como hemos podido observar.
-
-\subsection{PPO2}\label{sec:mountain:PPO2}
-
-Con esta técnica para este entorno no tenemos mucho que decir, por desgracia. Los resultados obtenidos fueron un completo \textbf{fracaso}. Por alguna razón, no consiguió siquiera resolver el problema que se le planteaba ni una sola vez. Se probó a quintuplicar la cantidad de \textit{timesteps} de entrenamiento (hasta el millón), no hubo ningún cambio.
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/PPO2/PPO2_fallo.png}
-	\caption{Recompensa obtenida con el algoritmo PPO2 en \textit{MountainCar-v0}, independientemente de la semilla iteraciones y otros parámetros.}
-	\label{fig:mountain12} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Tras realizar algunas pruebas y leer un poco las opiniones de los demás por Internet, conseguí darme cuenta de lo que estaba ocurriendo. El \textbf{problema} reside de nuevo en la forma de \textbf{representar la recompensas} por parte del entorno de Gym para el agente que estamos entrenando, el cual le viene especialmente mal a PPO2. \\
-
-\textit{MountainCar} solo consigues un valor positivo en la recompensa cuando alcanzas la meta, y -1 para el resto de casos. Recordemos que PPO2 es un algoritmo basado en actualizar los parámetros de la política utilizando el gradiente para ello. \\
-
-Conseguir el momentum necesario para que suba la carretilla por la montaña es algo que rara vez va a ocurrir con un agente totalmente aleatorio, sin partir de un agente con una mayor base aunque introduzca aleatoriedad en su proceso. \\
-
-Cuando consiga llegar a la meta, si es que ocurre en algún momento, no creo que con una sola actualización de sus parámetros para reforzar las acciones que ha realizado sea suficiente como para acertar mucho más en el futuro, por lo que el agente va a seguir atascado en ese proceso de nunca conseguir su objetivo \\
-
-En definitiva, no cuenta con esa \textbf{memoria} que tiene DDPG, por ejemplo. Además, no valora lo prometedores que son las acciones en la solución como si hace DQN o DDPG, centrándose únicamente en los resultados una vez se consiguen, cosa que nunca llega (ver apartado \ref{sec:RL} y \ref{sec:Algoritmos}). \\
-
-Gracias a estos resultados, fui capaz de aprender que PPO2 funcionará mejor cuando queramos mejorar un modelo que ya es capaz de alcanzar el objetivo (obtenido con otra técnica) o, al menos, que sea factible resolverlo a menudo con un agente totalmente aleatorio, no siendo este el caso.\cite{article:PPO2error}
-
-\subsection{DDPG}\label{sec:mountain:DDPG}
-
-Este algoritmo ha dado problemas desde el principio para poder ejecutarlo, aunque debo reconocer que ha merecido la pena dado que ha sido el que mejor resultados ha logrado. Como mencionamos en el apartado \ref{sec:actorcritic}, este algoritmo trata de explotar los puntos fuertes de \textit{Q-Learning} y de \textit{Política de gradientes} al mismo tiempo. En este caso, se ha notado. \\
-
-Vamos a comentar primero los problemas que he encontrado a la hora de poder utilizarlo. Resulta que los \textit{baselines} de OpenAI \textbf{fallan} a la hora de guardar el modelo entrenado. Si no podemos guardar el modelo, no nos sirve de nada. \\
-
-Estuve investigando mucho por Github, estudiando implementaciones forkeadas de otros usuarios que estaban tratando de solucionarlo. Incluso traté de modificar las implementaciones yo mismo, llegando a conseguir que guardase el modelo, aunque no guardaba parámetros importantes referentes al ruido, explicado en este trabajo. Haciendo que el modelo guardado no fuese el mismo que el entrenado, perdiendo parte de su esencia y, por tanto, calidad.\cite{article:ddpgError1}\\
-
-Se trata de un error que llevan arrastrando desde 2017. No debe ser trivial resolverlo con esas librerías, dado que hay unos cuantos usuarios discutiendo sobre ello y creen que la mejor opción es utilizar otras implementaciones de distintas fuentes. \\
-
-Finalmente, terminé cediendo y buscando otras alternativas. Encontré \textbf{Stable Baselines} y me pareció la mejor opción, dado que podía seguir usando parte de la configuración realizada de TensorFlow y tarjeta gráfica sin apenas hacer nada.
-
-
-
-\subsubsection{Resultados}
-
-Vamos a ver los resultados obtenidos con este algoritmo. Como he mencionado anteriormente, la información de \textit{progress.csv} no va a poder ser mostrada. Aunque este inconveniente no nos afecta a la hora de saber el desempeño referente a calidad de resultados por parte del agente, que es lo que más nos interesa. \\
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/3_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 3 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain13} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/3_2e5_suave.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain14} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/13_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 13 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain15} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/13_2e5_suave.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 13 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain16} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/46_2e5.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 46 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain17} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/46_2e5_suave.png}
-	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 46 y en \textit{MountainCar-v0}.}
-	\label{fig:mountain18} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Recordemos que este algoritmo se está ejecutado en la versión continua de MountainCar-v0 visto en el apartado \ref{sec:mountaincarcontinuo}. Por ello, el rango de recompensas no es el mismo al calcularse de diferente forma. \\
-
-A simple vista, vemos que las gráficas son mucho más estables que en DQN, sobretodo para la semilla 13 en la figura \ref{fig:mountain16}. Recordemos que tiene dos partes, una política que decide cual es la siguiente acción y un Q-Learning en otra red neuronal que evalúa como de buena es esa decisión y supervisa su desempeño. \\
-
-En cuestiones de resultados ha conseguido \textbf{mejores resultados} que DQN, resolviendo más veces y en menos pasos el momentum de la carreta para alcanzar la cima. Creo que DDPG resuelve mejor el problema que teníamos cuando el agente comenzaba a acertar gracias a su \textbf{ruido}. \\
-
-Si recordamos el apartado \ref{sec:DDPG}, el ruido es introducido directamente en los parámetros de la red neuronal y no en las acciones posibles. Esto quiere decir que ese ruido no tiene porqué modificar de forma directa las acciones que realiza, simplemente un poco su comportamiento. \\
-
-Creo que el nuevo \textbf{sistema de recompensas} también influye en la forma de aprender del agente una vez entiende como se resuelve el problema, ya que afecta de forma directa en la experiencia. Aunque vemos que puede experimentar alguna caída, se recupera rápidamente. \\
-
-Vamos a ver como afecta la aleatoriedad a este algoritmo: \\
-
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/DDPG/general.png}
-	\caption{Gráfica general obtenida durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3, 13 y 46  simultáneamente y en \textit{MountainCar-v0}.}
-	\label{fig:mountain19} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Vemos que el ruido que implementa este algoritmo afecta en prácticamente todo el proceso de aprendizaje excepto en dos zonas muy concretas. En general las caídas de eficacia no suelen tener un orden estricto, aunque en los tres modelos cuadra bastante bien el punto a partir del cual comienzan a estabilizarse en los resultados que ofrece.
-
-Por último, se me ocurrió la idea de plantear los resúmenes de los tres algoritmos en una misma gráfica. Sin embargo, para este entorno no tiene mucho sentido; DQN y DDPG tienen escalas de recompensas diferentes, mientras que PPO2 no ha dado buenos resultados. Igualmente voy a mostrarla, así podemos apreciar el progreso de cada uno indistintamente de la escala de recompensas.
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mountain/resumen.png}
-	\caption{Gráfica comparativa de los tres algoritmos: DQN, PPO2 y DDPG en  \textit{MountainCar-v0}.}
-	\label{fig:mountain20} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-
-
-\section{Otro entorno más complejo (Aún sin decidir)}
+\section{MountainCar-v0}
+
+Se han obtenido una serie de modelos con las técnicas DQN, DDPG y PPO2. Todas ellas han sido entrenadas en un total de 2,5 millones de \textit{time-steps}, el número de episodios depende de cada ejecución. \\
+
+Al tratarse de un problema con información estructurada en el input, se ha decidido utilizar una arquitectura de red multicapa, es decir, parte densa vista en la sección \ref{sec:deeplearning}. En baselines se define como tipo ``mlp'' y ya viene preconfigurada, por lo que no tenemos que preocuparnos por ello en principio. \\
+
+A continuación se muestra en una tabla los resultados más relevantes obtenidos en estas pruebas.
+
+\begin{table}[H]
+	\begin{tabular}{c|l|l|l|l|}
+		\cline{2-5}
+		\multicolumn{1}{l|}{}                                                              & \textbf{\begin{tabular}[c]{@{}l@{}}media recompensa\\ (cada 100 ep)\end{tabular}} & \textbf{semilla}           & \textbf{\begin{tabular}[c]{@{}l@{}}episodios\\ transcurridos\end{tabular}} & tiempo (segundos)           \\ \hline
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C7DCB4}}                                     & -149.40                                                                           & 3                          & 12600                                                                      & 6247                        \\ \cline{2-5} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C7DCB4}}                                     & -113.10                                                                           & 13                         & 12800                                                                      & 6109                        \\ \cline{2-5} 
+		\rowcolor[HTML]{C3D7FA} 
+		\multicolumn{1}{|c|}{\multirow{-3}{*}{\cellcolor[HTML]{C7DCB4}\textbf{DQN}}}       & \textbf{-100.40}                                                                  & \textbf{113}               & \textbf{20600}                                                             & 5926                        \\ \hline
+		\rowcolor[HTML]{C3D7FA} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C7DCB4}}                                     & \textbf{94.30}                                                                    & \textbf{3}                 & \textbf{23400}                                                             & \textbf{6569}               \\ \cline{2-5} 
+		\rowcolor[HTML]{FFFFFF} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C7DCB4}}                                     & 94.27                                                                             & 13                         & 25700                                                                      & 6577                        \\ \cline{2-5} 
+		\rowcolor[HTML]{FFFFFF} 
+		\multicolumn{1}{|c|}{\multirow{-3}{*}{\cellcolor[HTML]{C7DCB4}\textbf{DDPG}}}      & {\color[HTML]{000000} 94.03}                                                      & {\color[HTML]{000000} 113} & {\color[HTML]{000000} 25800}                                               & {\color[HTML]{000000} 5248} \\ \hline
+		\rowcolor[HTML]{C3D7FA} 
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C7DCB4}{\color[HTML]{000000} \textbf{PPO2}}} & \textbf{-200}                                                                     & \textbf{113}               & \textbf{12500}                                                             & 1315                        \\ \hline
+	\end{tabular}
+\end{table}
+
+Recordemos que el algoritmo DDPG funciona en \textit{MountainCarContinuous-v0} y que la función de recompensa y por tanto su rango de valores es diferente a DQN y PPO2. En cuanto a PPO2, solo se ha mostrado un resultado, porque en todos los experimentos ha ocurrido exactamente lo mismo; una recompensa de -200 (no alcanzar la meta nunca).\\
 
 \subsection{DQN}
 
-\subsection{PPO2}
+En DQN, la mayoría de semillas alcanzan una buena media de recompensas muy pronto y después comienzan a empeorar (semilla 3 y 13). No obstante, en la semilla 113, ocurre algo poco común; converge pronto pero se mantiene, incluso mejora poco a poco los resultados de recompensa hasta alcanzar la mejor recompensa obtenida en entrenamientos para esta técnica (-100). \\
+
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.27]{mountain/mountain-dqn.png}
+%	\caption{Media recompensas acumuladas cada 100 episodios.}
+%	\label{fig:mountainDQN} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure} 
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.27]{mountain/mountain-dqn2.png}
+	\caption{Media recompensas acumuladas cada 100 episodios, todas las semillas.}
+	\label{fig:mountainDQN2} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure} 
+
+Por como está definido el problema, el número de episodios y la recompensa acumulada están relacionados. Cuanta mejor sea la recompensa de media, menos \textit{time-steps} por episodio. Al tener una duración de entrenamiento fija, esto se traduce en un mayor número de episodios. \\
+
+La mayoría de modelos no alcanzan valores malos, siendo lo común encontrarnos recompensas comprendidas entre -140 y -110 (se han realizado entrenamientos con otras semillas diferentes de las mostradas), recordemos que una recompensa de -110 ya se considera un modelo totalmente eficaz. De forma extraordinaria, podemos dar con entrenamientos como en la semilla 113. No solo obteniendo una recompensa acumulada máxima más alta que el resto, sino capaz de mantenerse estable. \\
+
+¿Por qué ocurre esto? A pesar de la apariencia, MountainCar es un problema complejo. La función de recompensa solo ofrece un valor positivo cuando alcanza la meta, siendo valores negativos en el resto de casos, esto es conocido como \textbf{sparse reward} y es un problema bastante frecuente en los problemas de aprendizaje por refuerzo. \cite{article:sparse} \\
+
+Esto hace que sea muy complicado para el algoritmo lograr conectar series de acciones que sean beneficiosas para una recompensa acumulada futura. Si esa escasez de recompensas positivas es intratable, resultaría en un agente que nunca puede alcanzar el objetivo y aprender a representar una concatenación de acciones buena para el problema. Una solución posible a este inconveniente es entrenar con RL redes neuronales ya eficaces en cierta medida, en lugar de partir de cero. De hecho, es lo que hacen con AlphaStar, por ejemplo, entrenando a partir de modelos ya funcionales mediante aprendizaje supervisado de partidas de humanos, pero ya hablaremos de ello. \\
+
+Otra solución podría ser elaborar otra función de recompensa que no tuviera este problema, lo que se traduce en un \textbf{cambio de definición} de ese problema. Proponer una función diferente puede influir y mucho en ese proceso de aprendizaje y cómo el agente consigue optimizarse. \\
+
+Tener unas recompensas tan dispersas puede hacer que la exploración del agente se complique y no pueda llegar a converger. Por esa misma razón la aleatoriedad (semillas) influye tanto en los entrenamientos con esta técnica y la exploración, sobretodo al principio, es fundamental para tratar de encontrar esas recompensas que se necesitan. \\
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.27]{mountain/mountain-dqn-time.png}
+	\caption{Tiempo empleado en explorar por \textit{MountainCar} con semilla 113}
+	\label{fig:mountainDQNtime} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure} 
+
+La mayor parte de la exploración por parte del agente se produce en los primeros 1100 episodios del entrenamiento. Empezando con un 92\% del tiempo empleado en explorar y decrece linealmente a un ritmo alto. A los 1300 episodios ya solo emplea un 2\% del tiempo en explorar, hasta el final del entrenamiento se mantiene con esa dinámica. El resto de agentes entrenados siguen este patrón de exploración con DQN. \\
+
+Como conclusión final, los agentes suelen alcanzar su mejor media de recompensas antes de los 2000 episodios con unas recompensas de entre -110 y -140, por lo que se puede concluir que esta técnica es capaz de resolver el problema de \textit{MountainCar-v0} tal y como define el problema Gym. Aunque quizás con una reformulación de la función de recompensa los entrenamientos podrían ser más estables y predecibles. \\
+
+El entrenamiento de la semilla 113 ha sido un caso extraordinario, alcanzando su mejores validaciones y convergencia a partir de los 5000 episodios con una recompensa de -100 y siendo capaz de mantenerse a ese nivel. Sin embargo, no es lo habitual. Si mostramos un resumen de todos los entrenamientos en una misma gráfica podemos observar la influencia de la aleatoriedad:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.2]{mountain/mountain-dqn-media.png}
+	\caption{Resumen general de progreso de algoritmo DQN en \textit{MountainCar-v0}.}
+	\label{fig:mountainDQNmedia} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure} 
+
+Esta gráfica ha sido realizada a partir de los \textit{time-steps} dado que, como se mencionó anteriormente, si es el mismo valor en todos los modelos, cosa que no ocurre con los episodios. \\
+
+El tono más claro muestra la desviación estándar de los datos. El tono más oscuro el error en la estimación de la media. En otras palabras, la desviación estándar dividida por la raíz cuadrada del número de semillas que tenemos. También incluye un suavizado para que la gráfica sea mejor visible. \\
+
+La forma más simple de interpretarlo para que se entienda lo que se acaba de explicar; cuanto más estrecha sea las áreas sombreadas alrededor de la línea, más coincide el progreso en ese punto para los modelos diferentes en general. \\
+
+Vemos la enorme variabilidad que pueden tener DQN para \textit{MountainCar-v0}, sobretodo pasados los 2000 episodios más o menos.
 
 \subsection{DDPG}
+
+En DDPG, se han conseguido resultados mucho más \textbf{estables} que en DQN alcanzando siempre unos resultados muy semejantes independientemente de la semilla que se usa. Por lo que, a primera vista, parece ser que no es tan dependiente de la aleatoriedad durante el aprendizaje, al menos para este problema con \textit{sparse reward}. \\
+
+Los tiempos de ejecución para este problema son muy similares a los de DQN, quizás un poco más altos en general. Las recompensas obtenidas durante los entrenamientos han sido:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.2]{mountain/mountain-ddpg.png}
+	\caption{Agentes entrenados con DDPG en \textit{MountainCar-v0}.}
+	\label{fig:mountainDDPG} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure} 
+
+Como se puede apreciar en la figura \ref{fig:mountainDDPG}, los modelos convergen bastante pronto, sobre los 200000 \textit{time-steps} de entrenamiento aproximadamente. Se mantienen muy estables, no mejoran más, pero tampoco empeoran. En la semilla 3 se produjeron algunas caídas repentinas, volviendo a sus valores habituales de recompensa rápidamente, por lo que no parece preocupante.
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.2]{mountain/mountain-ddpg-resumen.png}
+	\caption{Agentes entrenados con DDPG en \textit{MountainCar-v0}.}
+	\label{fig:mountainDDPGresumen} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Siguen un patrón en el progreso de aprendizaje bastante claro independientemente de la semilla que se utilice. La representación de la función de recompensa para \textit{MountainCarContinuous-v0} es diferente que para \textit{MountainCar-v0}, como ya se comentó en la sección \ref{sec:mountaincarcontinuo}. Parece que esto resuelve en gran medida el problema de \textit{sparse reward} que veíamos reflejado en DQN, a parte de que DDPG parece lidiar mejor con ello.  
+
+\subsection{PPO2}
+
+Lamentablemente, PPO2 no ha conseguido ningún tipo de resultados positivos. Simple y llanamente, no ha logrado alcanzar la meta ni una sola vez durante su entrenamiento, realizando episodios de duración máxima, 200 pasos. \\
+
+¿Esto quiere decir que PPO2 es un mal algoritmo? En realidad no, es solo que no funciona para la definición de este problema. El \textit{sparse reward} hace que en este caso sea inviable para este método basado en política. \\
+
+\subsection{Comparativa de modelos}
+
+Si exponemos todos los resultados de modelos en una sola gráfica obtenemos lo siguiente:
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.25]{mountain/resumen-mountain.png}
+	\caption{Comparativa de técnicas en \textit{MountainCar}.}
+	\label{fig:mountainresumen} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+Hay que recordar que la escala de recompensas de \textit{MountainCarContinuous-v0} (DDPG) es diferente a la de \textit{MountainCar-v0} (DQN y PPO2). En el primer caso se entiende por un buen modelo aquel capaz de alcanzar medias de recompensas superiores a 90, en el segundo caso superiores a -110. \\
+
+PPO2 queda descartado para la definición del porblema actual dado que no consigue ningún resultado. Aunque DQN ha demostrado poder dar buenos resultados, es demasiado dependiente de la aleatoriedad en el aprendizaje, en gran parte por el \textit{sparse reward}. Entonces, DDPG parece ser la mejor opción para las definiciones de \textit{MountainCar} actuales, por su estabilidad y superar prácticamente siempre el umbral de recompensa a partir del cual se considera un buen modelo.
+
+\section{Super Mario Bros}
+
+%\section{MountainCar-v0}\label{sec:exp:mountaincar}
+%
+%Comenzamos con el problema más sencillo que hemos utilizado (apartado \ref{sec:mountaincar}). A pesar de su simpleza, podemos entender que dependiendo del problema, y de como lo interpretamos para el agente, esto puede hacer que algunas técnicas no sean efectivas o que den resultados mejores o peores. Lo veremos a continuación. \\
+%
+%\subsection{DQN}\label{sec:mountain:DQN}
+%
+%He realizado diferentes pruebas de entrenamiento. Voy a mostrar aquellos modelos que me han parecido más interesantes. También realicé el mismo entrenamiento haciendo uso de semillas diferentes(3, 13 y 46). De esta forma, podía reentrenar el modelo en caso de que hubiera algún error y podía valorar la importancia de la aleatoriedad en cada técnica. \\
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}}
+%	\label{fig:mountain1} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Esta es la primera gráfica que aprendí a generar a partir de los \textit{logs}. Con ella podemos observar las recompensas que fue obteniendo el agente en cada \textit{timestep} que realizaba de experimentación. En el caso de la figura \ref{fig:mountain1}, vemos que consiguió resolverlo tempranamente en un caso aislado, además en pocos pasos, ya que tardo unos 90 \textit{timesteps}(recompensa de -90). Lo cual quiere decir que aprovecho el momentum muy bien para conseguir subir. \\
+%
+%Sin embargo, por como es la gráfica, todo apunta a que fue un caso \textbf{casual}. Realmente comienza a tener más aciertos y de una forma más continua y estable posteriormente, como se puede apreciar en los picos más juntos en las otras zonas de la gráfica. Esto me hace pensar que denota un mejor entendimiento por parte del agente de como tiene que \textbf{comportarse} para conseguir su objetivo, resolverlo con \textbf{suerte} más que con conocimiento de lo que está haciendo no podemos considerarlo como éxito, aunque tampoco estoy diciendo que la primera vez lo resuelva de forma 100\% aleatoria ya que es prácticamente imposible.
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5_suave.png}
+%	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain1}). Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}}
+%	\label{fig:mountain2} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%El siguiente objetivo que busqué fue el tratar, de alguna manera, de suavizar aquellas subidas que no estaban tan motivadas por un buen conocimiento. Por ello, construimos una gráfica a partir de la anterior, solo que \textbf{suavizada}. Cada punto tiene un valor que depende de los valores que tiene alrededor, son influidos por sus vecinos. \\
+%
+%El resultado es la figura \ref{fig:mountain1}. Fijémonos en el primer éxito que tiene. Ahora la subida en la recompensa es muy pequeña en comparación de las que hay más adelante, justo lo que sospechábamos. \\
+%
+%Podemos ir más allá. En lugar de utilizar un suavizado de los datos de las recompensas, utilizar directamente las medias obtenidas por episodios, de los cuales hablamos en el apartado \ref{sec:logs}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/3_2e5_resumen.png}
+%	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 3 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain3} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%La figura \ref{fig:mountain3}, tiene el mismo objetivo que lo explicado anteriormente, dar más valor a aquellos éxitos que son resultado de un aprendizaje real y menos de la aleatoriedad, solo que aún más extremo. \\
+%
+%Vemos que ahora la primera subida apenas es apreciable directamente, sin embargo, las otras dos zonas que tenía muchos éxitos son aún mas escarpadas. Como resumen de estas pruebas para la semilla 3 en DQN y \textit{MountainCar-v0}, llegamos a la conclusión de que durante el entrenamiento pasa por \textbf{dos etapas}. Hay una primera subida general de los resultados, que luego se desploma, seguramente porque no consigue actualizarse correctamente a partir de esos éxitos y se actualiza a una versión peor de sí mismo. No obstante, luego es capaz de recuperarse cuando vuelve a comenzar a fallar y consigue resultados aún mejores. Por último, comienza otro desplome de su comportamiento, por suerte el algoritmo hace actualizaciones del modelo siempre que se considera que mejora y se va quedando guardada la \textbf{última mejor versión} registrada. \\
+%
+%Hice las mismas pruebas para las semillas 13 y 46, muestro las gráficas a continuación:
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain4} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5_suave.png}
+%	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain4}). Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain5} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/13_2e5_resumen.png}
+%	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 13 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain6} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain7} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_suave.png}
+%	\caption{Recompensas obtenidas durante entrenamiento(versión suavizada de la figura \ref{fig:mountain7}). Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain8} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_resumen.png}
+%	\caption{Media de recompensas obtenidas cada 100 episodios. Algoritmo DQN, semilla 46 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain9} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Vemos que en la semilla 13 tiene una \textbf{estructura similar}, mientras que la semilla 46 solo tiene una subida significativa más o menos a mitad del entrenamiento. \\
+%
+%Cuando vi los resultados llegué a la siguiente conclusión: nos encontramos ante un problema sencillo, el cual no tiene muchas posibilidades a nivel de acciones para que el agente pueda realizar. Una vez es bueno en su entorno, con las siguientes actualizaciones es mucho más \textbf{probable que empeore} a que mejore. En este caso, solo hay una forma de hacer las cosas bien para llevar la carreta a su meta, una vez aprendida, la exploración solo va a dar resultados negativos. \\
+%
+%Por esa misma razón pienso que se suceden estos ciclos de subida y bajada en las recompensas. Es capaz de aprender de sus errores, pero una vez comienza a acertar no es capaz de aprender de sus éxitos de una forma tan buena. Hago hincapié en que no es preocupante, ya que siempre se guarda el modelo del mejor agente durante todo el entrenamiento, no el que queda cuando termina. \\
+%
+%También podemos llegar a pensar; si estos algoritmos son capaces de reforzar las buenas acciones para que las repita en situaciones similares, ¿por qué en este caso no es así? Otras de las conclusiones que he sacado a partir de estos experimentos, es que considero que el sistema de \textbf{recompensas} que utiliza OpenAI para este entorno \textbf{no es óptimo} para esta técnica. \\
+%
+%En el apartado \ref{sec:mountaincar} mencionamos que la recompensa de este entorno es siempre -1 a no ser que alcance la meta, en ese paso el valor de la recompensa es 1. Creo que este sistema no ayuda al agente de ninguna manera a determinar si sus acciones son buenas o no y solo se puede dejar llevar por el resultado final para aprender. Entonces, el agente no puede diferenciar entre buenas y malas acciones. En su lugar, refuerza todas las acciones que ha realizado cuando tiene éxito, aunque dentro tenga decisiones malas y quita relevancia a todas las decisiones tomadas durante un fracaso, aunque en ese intento haya tomado algunas buenas decisiones en realidad. \\
+%
+%Estaría bien que la recompensa fuera positiva cuando se detectase que la carreta está aprovechando el momentum para subir, y negativa en caso sontrario. No osbtante, no siempre vamos a saber la mejor manera de resolver los problemas para un entorno dado, y menos cuando son mucho más complejos que éste. \\
+%
+%Entonces, en el momento que comienza a tener éxito, sigue explorando un 2\% de su tiempo como veremos a continuación. Como el problema es muy sencillo y solo hay una manera de hacerlo bien, ese 2\% de exploración puede hacer que el agente erre en su intento y, como consecuencia, desfavorezca al resto de deciones buenas que ya había aprendido a tomar. \\
+%
+%
+%Creo que es un ejemplo magnífico para entender la gran \textbf{importancia} en la \textbf{definición del problema} que se trata de resolver. dependiendo de esa definición, no solo la representación de la recompensa, sino el formato de input, output y ventajas, en caso de utilizarlas, puede hacer que una técnica consiga funcionar mejor o peor al procesar la experiencia que recoge. Es como elegir la mejor función de pérdida para una red neuronal, esa decisión puede cambiarlo todo.
+%
+%
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/46_2e5_time.png}
+%	\caption{Porcentaje de tiempo empleado en explorar para algoritmo DQN en \textit{MountainCar-v0}.}
+%	\label{fig:mountain10} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%En la figura \ref{fig:mountain10} vemos el porcentaje de tiempo empleado por el agente para explorar. Como ya hemos mencionado, no es mucho debido a la simplicidad del entorno y que explorar otras alternativas a las que el agente piensa no va a ser bueno. Sería interesante incluso implementar un sistema que redujera ese porcentaje a 0 cuando se superara una cierta recompensa. Estoy convencido de que esto mejoraría aún más los resultados o, al menos, estabilizaría más el aprendizaje. Por desgracia, no he tenido el suficiente tiempo para hacerlo. \\
+%
+%¿Hasta que punto influye la aleatoriedad en el progreso de su aprendizaje con esta técnica? Por esta cuestión es por a que he ejecutado la misma técnica con semillas diferentes. Podemos hacer una gráfica que resuma todos los datos que hemos visto anteriormente en una sola. Mezclando los tres modelos diferentes y plasmarlos como uno solo:
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DQN/general.png}
+%	\caption{Resumen general de progreso de algoritmo DQN en \textit{MountainCar-v0}.}
+%	\label{fig:mountain11} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%El tono más claro muestra la desviación estándar de los datos. El tono más oscuro el error en la estimación de la media. En otras palabras, la desviación estándar dividida por la raíz cuadrada del número de semillas que tenemos. También incluye un suavizado para que la gráfica sea más estable. \\
+%
+%La forma más simple de interpretarlo para que se entienda lo que acabo de explicar; cuanto más estrecha sea las áreas sombreadas alrededor de la línea, más coincide el progreso en ese punto para los tres modelos diferentes que hemos visto. \\
+%
+%Entonces, tenemos zonas más relevantes en la gráfica de la figura \ref{fig:mountain11}. Al principio coincide de forma perfecta que los tres modelos no son capaces de cumplir su objetivo, luego comienzan a tener algunos éxitos puntuales. La primera mejora sustancial de los datos es bastante común en el mismo punto del aprendizaje y después es un poco más variable de la aleatoriedad. Sin embargo, al final, hay una gran coincidencia de nuevo; todos empeoran hasta no ser capaces ni siquiera de cumplir el objetivo de alcanzar la meta y luego comienzan a remontar, pero aquí se acaba la gráfica. Esto me hace pensar que las conclusiones expresadas anteriormente son bastante firmes en cuanto a tiempo, sucediéndose en momentos similares en tres casos distintos.\\
+%
+%Como conclusión, diría que esta gráfica es muy útil para saber qué puntos del aprendizaje, como la primera mejora real de resultados o el empeoramiento final, no son dependientes del azar, sino que vienen muy determinados directamente por el algoritmo y el entorno. Por otro lado, también nos ayuda a entender qué partes del entrenamiento son más influenciables por el azar, como hemos podido observar.
+%
+%\subsection{PPO2}\label{sec:mountain:PPO2}
+%
+%Con esta técnica para este entorno no tenemos mucho que decir, por desgracia. Los resultados obtenidos fueron un completo \textbf{fracaso}. Por alguna razón, no consiguió siquiera resolver el problema que se le planteaba ni una sola vez. Se probó a quintuplicar la cantidad de \textit{timesteps} de entrenamiento (hasta el millón), no hubo ningún cambio.
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/PPO2/PPO2_fallo.png}
+%	\caption{Recompensa obtenida con el algoritmo PPO2 en \textit{MountainCar-v0}, independientemente de la semilla iteraciones y otros parámetros.}
+%	\label{fig:mountain12} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Tras realizar algunas pruebas y leer un poco las opiniones de los demás por Internet, conseguí darme cuenta de lo que estaba ocurriendo. El \textbf{problema} reside de nuevo en la forma de \textbf{representar la recompensas} por parte del entorno de Gym para el agente que estamos entrenando, el cual le viene especialmente mal a PPO2. \\
+%
+%\textit{MountainCar} solo consigues un valor positivo en la recompensa cuando alcanzas la meta, y -1 para el resto de casos. Recordemos que PPO2 es un algoritmo basado en actualizar los parámetros de la política utilizando el gradiente para ello. \\
+%
+%Conseguir el momentum necesario para que suba la carretilla por la montaña es algo que rara vez va a ocurrir con un agente totalmente aleatorio, sin partir de un agente con una mayor base aunque introduzca aleatoriedad en su proceso. \\
+%
+%Cuando consiga llegar a la meta, si es que ocurre en algún momento, no creo que con una sola actualización de sus parámetros para reforzar las acciones que ha realizado sea suficiente como para acertar mucho más en el futuro, por lo que el agente va a seguir atascado en ese proceso de nunca conseguir su objetivo \\
+%
+%En definitiva, no cuenta con esa \textbf{memoria} que tiene DDPG, por ejemplo. Además, no valora lo prometedores que son las acciones en la solución como si hace DQN o DDPG, centrándose únicamente en los resultados una vez se consiguen, cosa que nunca llega (ver apartado \ref{sec:RL} y \ref{sec:Algoritmos}). \\
+%
+%Gracias a estos resultados, fui capaz de aprender que PPO2 funcionará mejor cuando queramos mejorar un modelo que ya es capaz de alcanzar el objetivo (obtenido con otra técnica) o, al menos, que sea factible resolverlo a menudo con un agente totalmente aleatorio, no siendo este el caso.\cite{article:PPO2error}
+%
+%\subsection{DDPG}\label{sec:mountain:DDPG}
+%
+%Este algoritmo ha dado problemas desde el principio para poder ejecutarlo, aunque debo reconocer que ha merecido la pena dado que ha sido el que mejor resultados ha logrado. Como mencionamos en el apartado \ref{sec:actorcritic}, este algoritmo trata de explotar los puntos fuertes de \textit{Q-Learning} y de \textit{Política de gradientes} al mismo tiempo. En este caso, se ha notado. \\
+%
+%Vamos a comentar primero los problemas que he encontrado a la hora de poder utilizarlo. Resulta que los \textit{baselines} de OpenAI \textbf{fallan} a la hora de guardar el modelo entrenado. Si no podemos guardar el modelo, no nos sirve de nada. \\
+%
+%Estuve investigando mucho por Github, estudiando implementaciones forkeadas de otros usuarios que estaban tratando de solucionarlo. Incluso traté de modificar las implementaciones yo mismo, llegando a conseguir que guardase el modelo, aunque no guardaba parámetros importantes referentes al ruido, explicado en este trabajo. Haciendo que el modelo guardado no fuese el mismo que el entrenado, perdiendo parte de su esencia y, por tanto, calidad.\cite{article:ddpgError1}\\
+%
+%Se trata de un error que llevan arrastrando desde 2017. No debe ser trivial resolverlo con esas librerías, dado que hay unos cuantos usuarios discutiendo sobre ello y creen que la mejor opción es utilizar otras implementaciones de distintas fuentes. \\
+%
+%Finalmente, terminé cediendo y buscando otras alternativas. Encontré \textbf{Stable Baselines} y me pareció la mejor opción, dado que podía seguir usando parte de la configuración realizada de TensorFlow y tarjeta gráfica sin apenas hacer nada.
+%
+%
+%
+%\subsubsection{Resultados}
+%
+%Vamos a ver los resultados obtenidos con este algoritmo. Como he mencionado anteriormente, la información de \textit{progress.csv} no va a poder ser mostrada. Aunque este inconveniente no nos afecta a la hora de saber el desempeño referente a calidad de resultados por parte del agente, que es lo que más nos interesa. \\
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/3_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 3 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain13} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/3_2e5_suave.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain14} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/13_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 13 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain15} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/13_2e5_suave.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 13 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain16} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/46_2e5.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento. Algoritmo DDPG, semilla 46 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain17} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/46_2e5_suave.png}
+%	\caption{Gráfica de recompensas obtenidas durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 46 y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain18} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Recordemos que este algoritmo se está ejecutado en la versión continua de MountainCar-v0 visto en el apartado \ref{sec:mountaincarcontinuo}. Por ello, el rango de recompensas no es el mismo al calcularse de diferente forma. \\
+%
+%A simple vista, vemos que las gráficas son mucho más estables que en DQN, sobretodo para la semilla 13 en la figura \ref{fig:mountain16}. Recordemos que tiene dos partes, una política que decide cual es la siguiente acción y un Q-Learning en otra red neuronal que evalúa como de buena es esa decisión y supervisa su desempeño. \\
+%
+%En cuestiones de resultados ha conseguido \textbf{mejores resultados} que DQN, resolviendo más veces y en menos pasos el momentum de la carreta para alcanzar la cima. Creo que DDPG resuelve mejor el problema que teníamos cuando el agente comenzaba a acertar gracias a su \textbf{ruido}. \\
+%
+%Si recordamos el apartado \ref{sec:DDPG}, el ruido es introducido directamente en los parámetros de la red neuronal y no en las acciones posibles. Esto quiere decir que ese ruido no tiene porqué modificar de forma directa las acciones que realiza, simplemente un poco su comportamiento. \\
+%
+%Creo que el nuevo \textbf{sistema de recompensas} también influye en la forma de aprender del agente una vez entiende como se resuelve el problema, ya que afecta de forma directa en la experiencia. Aunque vemos que puede experimentar alguna caída, se recupera rápidamente. \\
+%
+%Vamos a ver como afecta la aleatoriedad a este algoritmo: \\
+%
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/DDPG/general.png}
+%	\caption{Gráfica general obtenida durante entrenamiento(suavizadas). Algoritmo DDPG, semilla 3, 13 y 46  simultáneamente y en \textit{MountainCar-v0}.}
+%	\label{fig:mountain19} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%Vemos que el ruido que implementa este algoritmo afecta en prácticamente todo el proceso de aprendizaje excepto en dos zonas muy concretas. En general las caídas de eficacia no suelen tener un orden estricto, aunque en los tres modelos cuadra bastante bien el punto a partir del cual comienzan a estabilizarse en los resultados que ofrece.
+%
+%Por último, se me ocurrió la idea de plantear los resúmenes de los tres algoritmos en una misma gráfica. Sin embargo, para este entorno no tiene mucho sentido; DQN y DDPG tienen escalas de recompensas diferentes, mientras que PPO2 no ha dado buenos resultados. Igualmente voy a mostrarla, así podemos apreciar el progreso de cada uno indistintamente de la escala de recompensas.
+%
+%\begin{figure}[H]
+%	\centering\includegraphics[scale=0.25]{mountain/resumen.png}
+%	\caption{Gráfica comparativa de los tres algoritmos: DQN, PPO2 y DDPG en  \textit{MountainCar-v0}.}
+%	\label{fig:mountain20} % Unique label used for referencing the figure in-text
+%	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+%\end{figure}
+%
+%\section{Super Mario Bros}
+%
+%\subsection{DQN}
+%
+%\subsection{PPO2}
+%
+%\subsection{DDPG}
 
 %----------------------------------------------------------------------------------------
 %	PART 4
@@ -1738,12 +2149,27 @@ Por último, se me ocurrió la idea de plantear los resúmenes de los tres algor
 
 Hasta ahora hemos podido entender, desarrollar y probar algunas técnicas de aprendizaje por refuerzo profundo. Es posible que a estas alturas hayas podido llegar a pensar, ¿qué utilidad tiene esto? ¿De que sirve crear un agente capaz de jugar muy bien a un juego? \\
 
-Quizás es cierto que resolver videojuegos o juegos competitivos en general no aporta nada útil a la humanidad como tal. Pero hay que entender que, la curiosidad es lo que nos ha hecho tan grandes. Las investigaciones y avances tecnológicos que nacen de querer resolver estos problemas pueden conducirnos a cosas más interesantes y ambiciosas en el futuro. Escalando a partir de los avances que se van produciendo gracias a este trabajo. \\
+Quizás es cierto que resolver videojuegos o juegos competitivos en general no aporta nada útil a la humanidad como tal. Sin embargo, hay que entender que, la curiosidad es lo que nos ha hecho tan grandes. Las investigaciones y avances tecnológicos que nacen de querer resolver estos problemas pueden conducirnos a cosas más interesantes y ambiciosas en el futuro. Escalando a partir de los avances que se van produciendo gracias a este trabajo. \\
 
-%Hablar de los entornos gym y de como los videojuegos en general son formas de simplificar problemas del mundo real mucho mas complejos y por tanto, mucho mas facil de investigar y desarrollar tecnologías alrededor de ellos que pasar directamente a problemas del mundo real en general mucho más dificiles, menos controlados, más inexactos, ect.
+Los entornos gym que hemos visto anteriormente pueden entenderse como simplificaciones de problemas, en el mundo real tiene mayor complejidad que el que ofrece un nivel de Super Mario Bros, como la conducción automática de vehículos, por ejemplo. \\
+
+No es viable tratar de resolver estos problemas directamente sin antes haber estudiado y mejorado técnicas que sean capaces de realizar acciones más simples. Esa es la importancia que tiene este tipo de investigaciones y es importante darles el valor que tienen. Es más fácil investigar y desarrollar alrededor de estos entornos acotados, antes de enfrentarnos a la incertidumbre de los problemas más realistas. \\
+
+En esta parte, explicaremos la arquitectura general de dos agentes muy famosos en el mundo de RL, estos son \textbf{AlphaGo} y \textbf{AlphaStar}.
 
 \chapterimage{alphago.jpg}
 \chapter{AlphaGO}
+
+GO es un juego \textbf{competitivo} entre dos rivales, el ganador es aquel que consigue establecer una mejor estrategia y controlar una cantidad de tablero mayor que su oponente, rodeándola con fichas de su color. Se producen turnos alternándose entre ambos jugadores para colocar una piedra, por lo que se trata de un entorno con tiempo discretizado. Se originó en China hace más de 4000 años. \cite{book:alphago} \cite{article:vinyals} \cite{article:vinyals2}
+
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{captures/go.jpg}
+	\caption{Juego de mesa GO.}
+	\label{fig:gotablero} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+AlphaGO es un agente capaz de jugar muy bien a GO, lo cual puede entenderse o es equivalente a \textbf{resolver} el juego GO. Fue desarrollado por \textbf{Google DeepMind}. En 2016, fue capaz de ganar 4 partidas a 1 contra uno de los considerados mejores jugadores de este juego; Lee Sedol.
 
 \chapterimage{alphastar.png}
 \chapter{AlphaStar}
@@ -1885,8 +2311,6 @@ No obstante, no es necesario para este caso, ya que se va a contar con una únic
 Simplemente se ha desarrollado un script con todos los comandos necesarios, el cual posteriormente se envía al servidor y ejecuta desde allí. Ese script fue perfeccionándose a medida que se encontraban problemas en la configuración del mismo: \\
 
 \begin{lstlisting}[language=bash]
-#! /bin/bash
-
 #Primeras instalaciones
 sudo apt update && sudo apt install -y cmake libopenmpi-dev python3-dev zlib1g-dev
 
@@ -1907,11 +2331,11 @@ conda create --name TFM python=3.6
 conda activate TFM
 
 #Tenemos que hacer que ubuntu reconozca la tarjeta grafica Tesla de la VM instalando sus drivers para ubuntu 18.04
-wget http://us.download.nvidia.com/tesla/410.129/nvidia-diag-driver-local-repo-ubuntu1804-410.129_1.0-1_amd64.deb
-sudo dpkg -i nvidia-diag-driver-local-repo-ubuntu1804-410.129_1.0-1_amd64.deb
-sudo apt-key add /var/nvidia-diag-driver-local-repo-410.129/7fa2af80.pub
+curl -O http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 sudo apt update
-sudo apt install -y cuda-drivers
+sudo apt-get install -y cuda
 
 #Pra comprobar que los drivers estan bien
 sudo apt install -y ubuntu-drivers-common
@@ -1941,6 +2365,13 @@ sudo apt install -y ffmpeg
 
 pip install pytest
 
+#Para correr la rom de Super Mario Bros con GYM
+pip install gym-retro joblib atari-py opencv-python anyrl
+
+cd ~/mario
+
+python -m retro.import .
+
 #Reiniciamos la VM, lo cual significa que nos va a tirar la conexion y vamos a tener que volver a entrar por SSH
 sudo reboot
 \end{lstlisting} 
@@ -1953,9 +2384,11 @@ Los siguientes comandos son simplemente para actualizar conda y crear el entorno
 
 Recordemos que configuramos una tarjeta gráfica bastante potente para la máquina (apartado \ref{sec:infraestructura}). Por defecto, las librerías de \textit{baselines} no van a ser capaces de reconocer esa GPU, aunque sean específicas para uso de la misma. Es necesario instalar los \textbf{controladores} para esa tarjeta concreta, así \textit{Tensorflow} puede utilizarla, es la librería que utiliza los baselines para las redes neuronales profundas.\cite{article:tensorflow}.\\
 
+Si se encuentran problemas para reconocer la tarjeta gráfica(a través del comando \textit{nvidia-smi}), Google Cloud ofrece una guía específica para Ubuntu 18.04 LTS. \cite{article:GPUgoogle} \\
+
 Antes de instalar los \textit{baselines} es importante instalar \textit{TensorFlow}, como mencionamos hace un momento. Es necesario instalar la versión para GPU, de lo contrario no la utilizará aunque hayamos instalado los controladores. La versión 1.14 es bastante estable (la versión que aparece en la guía de OpenAI\cite{article:baselines}). Hay algunas guías con otras versiones, aunque no han funcionado en este caso, los motivos exactos son desconocidos. \\
 
-Clonamos el repositorio Github de donde extraemos los \textit{baselines} de \textit{OpenAI} \cite{article:baselines}. Entramos en la carpeta y con el comando pip comenzamos a instalar las librerías de Python necesarias que incluye. Importante poner la opción \textit{-e .[all]} aunque no venga en su guía, ya que de lo contrario los test con pytest futuros no funcionarán correctamente, quizás se trate de un error que hay que solucionar. \\
+Clonamos el repositorio Github de donde extraemos los \textit{baselines} de \textit{OpenAI}. Entramos en la carpeta y con el comando pip comenzamos a instalar las librerías de Python necesarias que incluye. Importante poner la opción \textit{-e .[all]} aunque no venga en su guía, ya que de lo contrario los test con pytest futuros no funcionarán correctamente, quizás se trate de un error que hay que solucionar. \\
 
 Hacemos la instalación de \textit{stable-baselines}\cite{article:stablebaselinesinstalation} para poder usarlo concretamente en el algoritmo DDPG. \\
 
