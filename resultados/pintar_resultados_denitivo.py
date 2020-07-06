@@ -10,11 +10,13 @@ args = parser.parse_args()
 
 if(args.log_path):
 	results = pu.load_results(args.log_path)
-	#Poner el código que se desee aquí para ruta específica
-	#plt.title("")
-	#plt.xlabel("")
-	#plt.ylabel("")
-	#plt.show()
+	plt.plot(results[0].progress['misc/total_timesteps'], pu.smooth(results[0].progress['loss/policy_entropy'],radius=20),label="semilla 113")
+	plt.plot(results[1].progress['misc/total_timesteps'], pu.smooth(results[1].progress['loss/policy_entropy'],radius=20),label="semilla 32")
+	plt.title("Entropía PPO2 Super Mario Bros (100 millones de interacciones)")
+	plt.xlabel("Recompensas")
+	plt.ylabel("Pasos transcurridos episodios")
+	plt.legend()
+	plt.show()
 else:
 	#MOUNTAIN CAR V0
 
@@ -77,14 +79,86 @@ else:
 	plt.show()
 
 	#Comparativa todos modelos
-	#results = pu.load_results('./mountain/logs/')
-	#pu.plot_results(results, average_group=True, split_fn=lambda _: '')
-	#plt.title("Comparativa modelos MountainCar-v0")
-	#plt.ylabel('recompensas')
-	#plt.xlabel('pasos (t)')
-	#plt.show()
+	results = pu.load_results('./mountain/logs/')
+	pu.plot_results(results, average_group=True, split_fn=lambda _: '')
+	plt.title("Comparativa modelos MountainCar-v0")
+	plt.ylabel('recompensas')
+	plt.xlabel('pasos (t)')
+	plt.show()
 
 	#Super Mario Bros 
+
+	#DQN
+	results = pu.load_results('./mario/logs/DQN/mariolevel11-52/')
+	plt.plot(results[0].progress['episodes'], results[0].progress['mean 100 episode reward'])
+	plt.title("Recompensas DQN Super Mario Bros")
+	plt.ylabel('Media recompensas')
+	plt.xlabel('Episodios')
+	plt.show()
+
+	plt.plot(results[0].progress['episodes'], results[0].progress['% time spent exploring'])
+	plt.title("Tiempo empleado explorando DQN Super Mario Bros")
+	plt.ylabel('Tiempo explorando(%)')
+	plt.xlabel('Episodios')
+	plt.show()
+
+	#A2C y PPO2
+	results_a2c = pu.load_results('./mario/logs/A2C/mariolevel11-84/')
+	results_ppo2 = pu.load_results('./mario/logs/PPO2/mariolevel11-77/')
+	plt.plot(results_a2c[0].progress['total_timesteps'], results_a2c[0].progress['eprewmean'],label="A2C")	
+	plt.plot(results_ppo2[0].progress['misc/total_timesteps'], results_ppo2[0].progress['eprewmean'],label="PPO2")
+	plt.title("Media recompensas Super Mario Bros PPO2 y A2C")
+	plt.ylabel('Media de recompensas por episodio')
+	plt.xlabel('Pasos (t)')
+	plt.legend()
+	plt.show()
+
+	
+	plt.plot(results_a2c[0].progress['total_timesteps'], results_a2c[0].progress['eplenmean'],label="A2C")
+	plt.plot(results_ppo2[0].progress['misc/total_timesteps'], results_ppo2[0].progress['eplenmean'],label="PPO2")
+	plt.title("Media de pasos por episodios A2C y PPO2 Super Mario Bros")
+	plt.ylabel('Media de pasos por episodio')
+	plt.xlabel('Pasos (t)')
+	plt.legend()
+	plt.show()
+
+
+	plt.plot(results_a2c[0].progress['eprewmean'],results_a2c[0].progress['eplenmean'],'o',markersize=2,label="A2C")
+	plt.plot(results_ppo2[0].progress['eprewmean'],results_ppo2[0].progress['eplenmean'],'o',markersize=2,label="PPO2")
+	plt.title("Nube de puntos media recompensas/ media pasos por episodios entre A2C y PPO2 Super Mario Bros")
+	plt.ylabel('Media de pasos por episodio')
+	plt.xlabel('Media de recompensas')
+	plt.legend()
+	plt.show()
+
+
+	plt.plot(results_a2c[0].progress['total_timesteps'], pu.smooth(results_a2c[0].progress['policy_entropy'],radius=20),label="A2C")
+	plt.plot(results_ppo2[0].progress['misc/total_timesteps'], pu.smooth(results_ppo2[0].progress['loss/policy_entropy'],radius=20),label="PPO2")
+	plt.title("Entropía PPO2 y A2C Super Mario Bros")
+	plt.ylabel('Entropía')
+	plt.xlabel('Pasos (t)')
+	plt.legend()
+	plt.show()
+
+
+	#Desarrollo PPO2
+	results_113 = pu.load_results('./mario/logs/PPO2/mariolevel11-113/')
+	results_32 = pu.load_results('./mario/logs/PPO2/mariolevel11-32/')
+	plt.plot(results_113[0].progress['misc/total_timesteps'], results_113[0].progress['eprewmean'],label="Semilla 113")
+	plt.plot(results_32[0].progress['misc/total_timesteps'], results_32[0].progress['eprewmean'],label="Semilla 32")
+	plt.title("Media recompensas Super Mario Bros PPO2 (100 millones de interacciones)")
+	plt.ylabel('Media de recompensas por episodio')
+	plt.xlabel('Pasos (t)')
+	plt.legend()
+	plt.show()
+
+	plt.plot(results_113[0].progress['misc/total_timesteps'], pu.smooth(results_113[0].progress['loss/policy_entropy'],radius=20),label="Semilla 113")
+	plt.plot(results_32[0].progress['misc/total_timesteps'], pu.smooth(results_32[0].progress['loss/policy_entropy'],radius=20),label="Semilla 32")
+	plt.title("Entropía PPO2 Super Mario Bros (100 millones de interacciones)")
+	plt.ylabel('Entropía')
+	plt.xlabel('Pasos (t)')
+	plt.legend()
+	plt.show()
 
 
 #results = pu.load_results('./prueba/A2C/')
