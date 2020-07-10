@@ -65,8 +65,8 @@
 \thispagestyle{empty} % Suppress headers and footers on the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
-\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Aprendizaje profundo por refuerzo para la resolución de problemas.\\[15pt] % Book title
-{\Large Técnicas actuales}\\[20pt] % Subtitle
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Aprendizaje por refuerzo profundo para la resolución de juegos.\\[15pt] % Book title
+%{\Large Técnicas actuales}\\[20pt] % Subtitle
 {\huge Alejandro Campoy Nieves} \\ % Author name
 {\Large Tutor: Juan Gómez Romero}\\[20pt] % Subtitle
 }};
@@ -84,6 +84,8 @@
 
 \noindent Copyright \copyright\ 2020 Alejandro Campoy\\ % Copyright notice
 
+\newpage
+
 %\noindent \textsc{Published by Publisher}\\ % Publisher
 
 %\noindent \textsc{book-website.com}\\ % URL
@@ -95,7 +97,83 @@
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
+\section*{}
+\thispagestyle{empty}
 
+\noindent\rule[-1ex]{\textwidth}{2pt}\\[4.5ex]
+
+Yo, \textbf{Alejandro Campoy Nieves}, alumno de la titulación Máster en Ingeniería Informática de la \textbf{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación de la Universidad de Granada}, con DNI \textbf{53597213Z}, autorizo la ubicación de la siguiente copia de mi Trabajo Fin de Máster en la biblioteca del centro para que pueda ser consultada por las personas que lo deseen.
+
+\vspace{3cm}
+
+\begin{figure}[H]
+	\includegraphics[scale=1]{captures/firmaAlejandro.png}
+	%\caption{Categorización de tipos de aprendizajes en Machine Learning.}
+	%\label{fig:IA2} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+\noindent Fdo: Alejandro Campoy Nieves
+
+\vspace{2cm}
+
+\begin{flushright}
+	Granada a \today .
+\end{flushright}
+
+\newpage
+
+\section*{}
+\thispagestyle{empty}
+
+\noindent\rule[-1ex]{\textwidth}{2pt}\\[4.5ex]
+
+Yo, \textbf{Alejandro Campoy Nieves}, alumno de la titulación Máster en Ingeniería Informática de la \textbf{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación de la Universidad de Granada}, con DNI \textbf{53597213Z}, \underline{declaro explícitamente} que el trabajo presentado
+es original, entendido en el sentido que no he utilizado ninguna fuente sin
+citarla debidamente.
+
+\vspace{3cm}
+
+\begin{figure}[H]
+	\includegraphics[scale=1]{captures/firmaAlejandro.png}
+	%\caption{Categorización de tipos de aprendizajes en Machine Learning.}
+	%\label{fig:IA2} % Unique label used for referencing the figure in-text
+	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
+\end{figure}
+
+\noindent Fdo: Alejandro Campoy Nieves
+
+\vspace{2cm}
+
+\begin{flushright}
+	Granada a \today .
+\end{flushright}
+
+\newpage
+
+\section*{Resumen}\label{sec:resumen}
+
+El Aprendizaje por Refuerzo o, en inglés, Reinforcement Learning (RL) es un área dentro de la Inteligencia Artificial y más concretamente del Aprendizaje Automático que estudia la forma en la que un agente puede resolver una tarea mediante una experimentación repetitiva y asignación de recompensas a esas tareas que realiza. Es el concepto de ``ensayo y error'' que los humanos utilizamos para aprender en muchos de los problemas que nos plantea la vida en nuestro día a día. \\
+
+Los avances en Aprendizaje Profundo o Deep Learning (DL) han dado lugar a redes neuronales capaces de estimar esas recompensas en función de las decisiones tomadas y optimizar las acciones del agente. La combinación de DL Y RL es llamada Aprendizaje Profundo por Refuerzo o Deep Reinforcement Learning (DRL). \\
+
+Estas técnicas, relativamente nuevas, han demostrado ser extraordinariamente efectivas, superando incluso a la inteligencia humana en muchos ámbitos; por ejemplo, en la resolución de juegos como Go, con el agente AlphaGo, o en el StarCraft II, con el agente AlphaStar entre muchos otros. \\
+
+En este trabajo se describirán los fundamentos del DRL, se estudiarán los aspectos prácticos de implementación para la resolución de problemas de videojuegos, se construirán e ilustrarán algunos agentes y, finalmente, se mostrarán los resultados obtenidos, proporcionando una visión general de lo que estos algoritmos son capaces de hacer.\\
+
+\newpage
+
+\section*{Abstract}\label{sec:abstract}
+
+Reinforcement Learning (RL) is an area within Artificial Intelligence, specifically Machine Learning, that studies how an agent can solve a task through repetitive experimentation and assigns rewards to those tasks. It satisfies the concept of ``trial and error'', used by humans to learn behaviours in many of our daily problems. \\
+
+Deep Learning (DL) advances have given place to neural networks, which estimates those rewards based on the decisions made and optimizes the agent's actions. The combination of DL and RL is called Deep Reinforcement Learning (DRL). \\
+
+These new techniques have been proven to be effective, even surpassing human intelligence in many aspects. There are examples like AlphaGo or AlphaStar agents, which resolves Go and StarCraft games respectively. \\
+
+This research describes the foundations of DRL. The different aspects of practical implementations for the resolution of video-games problems will be studied, some agents will be illustrated and, finally, the results obtained will be shown, providing an overview of what these algorithms are capable of.
+
+\newpage
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
 \chapterimage{indice.jpg} % Table of contents heading image
@@ -116,15 +194,6 @@
 %	PART 1
 %----------------------------------------------------------------------------------------
 
-\section{Resumen}\label{sec:resumen}
-
-El Aprendizaje por Refuerzo o, en inglés, Reinforcement Learning (RL) es un área dentro de la Inteligencia Artificial y más concretamente del Aprendizaje Automático que estudia la forma en la que un agente puede resolver una tarea mediante una experimentación repetitiva y asignación de recompensas a esas tareas que realiza. Es el concepto de ``ensayo y error'' que los humanos utilizamos para aprender en muchos de los problemas que nos plantea la vida en nuestro día a día. \\
-
-Recientes estudios han mostrado que los avances en Aprendizaje Profundo o Deep Learning (DL) han dado lugar a redes neuronales capaces de estimar esas recompensas en función de las decisiones tomadas y optimizar las acciones del agente. A esto se le llama Aprendizaje Profundo por Refuerzo o Deep Reinforcement Learning (DRL). \\
-
-Estas técnicas, relativamente nuevas, han demostrado ser extraordinariamente efectivas, superando incluso a la inteligencia humana en muchos ámbitos; por ejemplo, en la resolución de juegos como Go, con el agente AlphaGo, o en el StarCraft II, con el agente AlphaStar entre muchos otros. \\
-
-En este trabajo se describirán los fundamentos del DRL, se estudiarán los aspectos prácticos de implementación para la resolución de problemas de videojuegos, se construirán e ilustrarán algunos agentes y, finalmente, se mostrarán los resultados obtenidos, tratando de dar una visión general de lo que estos algoritmos son capaces de hacer.
 
 \part{Introducción}
 
@@ -136,9 +205,9 @@ En este trabajo se describirán los fundamentos del DRL, se estudiarán los aspe
 
 \chapter{Contexto}\label{sec:introduccion}
 
-La \textbf{Inteligencia Artificial} (IA) es una de las ramas o disciplinas de la informática relativamente más jóvenes que existen a día de hoy, nació en la década de 1960. Es el concepto más abstracto, genérico y amplio que podemos encontrar; se trata de una combinación de técnicas que nos permiten emular el comportamiento y capacidades de los seres humanos para resolver problemas de cualquier tipo. Incluyendo en este concepto cosas como planificación, reconocimiento de objetos, sonidos, hablar, traducir, etc.\cite{article:IA} \\
+La \textbf{Inteligencia Artificial} (IA) es una de las ramas o disciplinas de la informática relativamente más jóvenes que existen a día de hoy, nació en la década de 1960. Consiste una combinación de técnicas que nos permiten emular el comportamiento y capacidades de los seres humanos para resolver problemas de cualquier tipo. Incluyendo en este concepto cosas como planificación, reconocimiento de objetos, sonidos, hablar, traducir, etc.\cite{article:IA} \\
 
-Por tanto, la Inteligencia Artificial aborda todo lo que se encuentra dentro de \textbf{``imitar''} el razonamiento y capacidades cognitivas de un ser humano. Cuando hacemos uso de algoritmos y técnicas matemáticas para poder llevar a cabo ésto, de tal manera que el programa es capaz de auto-perfeccionarse a medida que obtiene más información, estamos hablando de técnicas de \textbf{Machine Learning} dentro de la propia IA. Son, pues, técnicas matemáticas para construir algoritmos de decisión ante problemas determinados y que son capaces de mejorarse a sí mismos de forma autónoma. Estas técnicas se implementan en computadores, normalmente de potencia considerable, para que sean capaces de decidir acciones dentro de un entorno determinado con la finalidad de cumplir un objetivo preestablecido. \\
+Por tanto, una de las visiones que se tienen de la Inteligencia Artificial es que consiste en abordar todo lo que se encuentra dentro de \textbf{``imitar''} el razonamiento y capacidades cognitivas de un ser humano. Cuando hacemos uso de algoritmos y técnicas matemáticas para poder llevar a cabo ésto, de tal manera que el programa es capaz de auto-perfeccionarse a medida que obtiene más información, estamos hablando de técnicas de \textbf{Machine Learning} dentro de la propia IA. Son, pues, técnicas matemáticas para construir algoritmos de decisión ante problemas determinados y que son capaces de mejorarse a sí mismos de forma autónoma. Estas técnicas se implementan en computadores, normalmente de potencia considerable, para que sean capaces de decidir acciones dentro de un entorno determinado con la finalidad de cumplir un objetivo preestablecido. \\
 
 En el caso de un videojuego, este objetivo podría ser pasarse un nivel, por ejemplo. En el caso de un juego competitivo, sería ganar al rival o rivales. En el caso de que el problema sea de clasificación, clasificar todos los casos que aparezcan correctamente, etc. \\
 
@@ -149,7 +218,7 @@ Dentro del Machine Learning se pueden encontrar una gran cantidad de técnicas m
 	 
 	\item \textbf{Aprendizaje no supervisado}: La idea es que estos algoritmos de aprendizaje sean capaces de mejorar solo a partir de la entrada, realizando una búsqueda de patrones o estructuras dentro de los datos con los que debe tomar decisiones, sin necesidad de etiquetas que definan como de buenas son las salidas que brinda. \\
 	
-	\item \textbf{Aprendizaje por refuerzo}: Es similar al aprendizaje no supervisado, en el sentido de que no necesita de la supervisión de un ser humano en las decisiones que va tomando. Sin embargo, en lugar de analizar los datos de entrada en búsqueda de un orden, se centra en mejorar las recompensas que el entorno le devuelve con las decisiones que toma. Sería, por ejemplo, la forma en la que un humano aprende a montar en bici. En caso de que se caiga, sabría detectar qué acciones han hecho que falle en su objetivo de ir de un punto a otro y acabe cayendo. En caso de que llegue al lugar esperado, se reforzaría las acciones que haya considerado buenas para poder cumplir ese objetivo de la forma que lo ha conseguido. Por tanto, esto requiere una experimentación del agente sobre qué cosas están bien hacerlas y qué cosas no en momentos determinados. \\
+	\item \textbf{Aprendizaje por refuerzo}: Es similar al aprendizaje no supervisado, en el sentido de que no necesita de la supervisión de un ser humano en las decisiones que va tomando. Sin embargo, en lugar de analizar los datos de entrada en búsqueda de un patrón, se centra en mejorar las recompensas que el entorno le devuelve con las decisiones que toma. Sería, por ejemplo, la forma en la que un humano aprende a montar en bici. En caso de que se caiga, sabría detectar qué acciones han hecho que falle en su objetivo de ir de un punto a otro y acabe cayendo. En caso de que llegue al lugar esperado, se reforzaría las acciones que haya considerado buenas para poder cumplir ese objetivo de la forma que lo ha conseguido. Por tanto, esto requiere una experimentación del agente sobre qué cosas están bien hacerlas y qué cosas no en momentos determinados. \\
 	
 \end{itemize}
 
@@ -160,11 +229,11 @@ Dentro del Machine Learning se pueden encontrar una gran cantidad de técnicas m
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Dentro del Machine Learning y todo lo que esto abarca, existe un conjunto de técnicas concretas que hacen uso de \textbf{redes neuronales artificiales} que se compone de un número de niveles jerárquicos, es lo que se denomina \textbf{Deep Learning}. Hay que decir que, aunque se haga uso de ese nombre, aun desconocemos la forma de trabajar exacta del cerebro humano. \\
+Dentro del Machine Learning y todo lo que esto abarca, existe un conjunto de técnicas concretas que hacen uso de \textbf{redes neuronales artificiales}, es lo que se denomina \textbf{Deep Learning}. Hay que decir que, aunque se haga uso de ese nombre, aun desconocemos la forma de trabajar exacta del cerebro humano. \\
 
 Estas técnicas son aproximaciones o ideas generales de como se cree que funciona nuestro desarrollo del razonamiento. Para que se entienda con un ejemplo, aprendimos y nos inspiramos a volar observando los pájaros, aunque los aviones no utilicen exactamente las mismas técnicas que ellos. \\
 
-Estas redes neuronales son adecuadas en determinados problemas en los que no necesitamos saber \textbf{cómo piensa el agente}, simplemente queremos conseguir la \textbf{mejor respuesta} posible, sin más. Son usados cuando se dispone de mucha fuerza de computación y datos no estructurados (reconocimiento de imágenes, por ejemplo). Las redes neuronales pueden funcionar tanto en \textit{aprendizaje supervisado} como en \textit{aprendizaje por refuerzo}. Podemos indicarle los ejemplos con los que se quiere que aprenda y las salidas que debería de dar, o bien permitirle que explore el mismo y evalúe sus propias decisiones una vez obtiene recompensas negativas o positivas como fruto de las mismas, esto dependerá de la naturaleza del problema a resolver y de los datos que deba manejar.\cite{article:deeplearning}\\
+Estas redes neuronales son adecuadas en determinados problemas en los que no necesitamos saber \textbf{cómo piensa el agente}, simplemente queremos conseguir la \textbf{mejor respuesta} posible, sin más. Son usados principalmente cuando se dispone de mucha fuerza de computación y datos no estructurados (reconocimiento de imágenes, por ejemplo). Las redes neuronales pueden funcionar tanto en \textit{aprendizaje supervisado} como en \textit{aprendizaje por refuerzo}. Podemos indicarle los ejemplos con los que se quiere que aprenda y las salidas que debería de dar, o bien permitirle que explore el mismo y evalúe sus propias decisiones una vez obtiene recompensas negativas o positivas como fruto de las mismas, esto dependerá de la naturaleza del problema a resolver y de los datos que deba manejar.\cite{article:deeplearning}\\
 
 Cuando se usa Deep Learning dentro del paradigma de aprendizaje por refuerzo, es llamado \textbf{Aprendizaje por refuerzo profundo} y es una combinación que ha sido demostrada \textbf{muy eficaz} y potente para la resolución de algunos problemas tales como juegos de mesa, videojuegos, etc. \\
 
@@ -175,7 +244,7 @@ Cuando se usa Deep Learning dentro del paradigma de aprendizaje por refuerzo, es
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:IA}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Tanto mi tutor, Juan Gómez Romero, como yo, hemos decido investigar de una forma más exhaustiva sobre todo lo que significa el \textbf{Aprendizaje por refuerzo profundo}. Tanto en el Grado de Ingeniería Informática como en el Máster, la información que se aportaba sobre este tema era simplemente un par de frases dando su definición. Nunca hemos abordado o resuelto, tanto de forma teórica como práctica, problemas en los que la mejor metodología que se puede usar dentro del Machine Learning sea esa. Como sí ha ocurrido con AlphaGo o AlphaStar, punteros a día de hoy en este campo. Personalmente, me resulta muy interesante a nivel académico debido al total desconocimiento desde el que parto como estudiante y sobre el cual me gustaría avanzar y ver las posibilidades que ofrece.
+En este Trabajo fin de Máster se investiga de forma exhaustiva sobre todo lo que significa el \textbf{Aprendizaje por refuerzo profundo}. Tanto en el Grado de Ingeniería Informática como en el Máster, la información que se aportaba sobre este tema era simplemente un par de frases dando su definición. Nunca hemos abordado o resuelto, tanto de forma teórica como práctica, problemas en los que la mejor metodología que se puede usar dentro del Machine Learning sea esa. Como sí ha ocurrido con AlphaGo o AlphaStar, punteros a día de hoy en este campo. Personalmente, me resulta muy interesante a nivel académico debido al total desconocimiento desde el que parto como estudiante y sobre el cual me gustaría avanzar y ver las posibilidades que ofrece.
 
 \section{Motivación}\label{sec:DRL2}
 
@@ -185,7 +254,7 @@ En el caso de AlphaGo, fue capaz de ganar a uno de los mejores, sino el mejor, j
 
 En el caso de AlphaStar, supuso un paso más allá en el avance de este campo, creando un agente capaz de colarse entre el 0,2\% de los mejores jugadores del mundo. Se pasó de un problema con tiempo discretizado (por turnos) en el que se conocía en todo momento el entorno completo (conjunto de fichas en juego), a un videojuego en tiempo real (inexistencia de turnos) en el que el jugador solo tienen como entrada de información una porción del entorno (es como ver solo una parte del tablero). Eso sin contar con la complejidad de la información de entrada como conjunto de posibles acciones que se pueden realizar en cada momento.\cite{article:vinyals} \cite{article:vinyals2} \\
 
-En este Trabajo fin de Máster se va a tratar de arrojar algo de luz a este paradigma, prácticamente desconocido a nivel académico. Como se trata de un conjunto de técnicas punteras que aún se están investigando, desarrollando y perfeccionando, este trabajo se va a centrar en explicar de una forma básica las técnicas más comunes que usan empresas como DeepMind, aplicándolas a entornos o problemas más simples para poder experimentar con las mismas.\footnote{Hay que tener en cuenta que estas empresas invierten muchos recursos y tiempo a estas investigaciones, por lo que no se puede abarcar de una forma tan ambiciosa de manera académica, por desgracia.} \\
+En este Trabajo fin de Máster se va a tratar de arrojar algo de luz a este paradigma. Como se trata de un conjunto de técnicas punteras que aún se están investigando, desarrollando y perfeccionando, este trabajo se va a centrar en explicar las técnicas más comunes, aplicándolas a entornos o problemas más simples para poder experimentar con las mismas.\footnote{Hay que tener en cuenta que las empresas dedicadas a esto invierten muchos recursos y tiempo a estas investigaciones, por lo que no se puede abarcar de una forma tan ambiciosa de manera académica, por desgracia.} \\
 
 \section{Objetivos del proyecto}\label{sec:objetivos}
 
@@ -194,7 +263,7 @@ Los objetivos principales que se van a tratar de abordar en este trabajo son: \\
 \begin{enumerate}
 	\item Entender los \textbf{conceptos fundamentales} del Aprendizaje Automático en los que se sostiene el DRL. \\
 	
-	\item Entender, de una forma genérica, el \textbf{funcionamiento y metodología} que siguen las \textbf{técnicas} más importantes hasta la fecha. \\
+	\item Entender el \textbf{funcionamiento y metodología} que siguen las \textbf{técnicas} más importantes hasta la fecha. \\
 	
 	\item Resolver el problema de \textbf{control} en un entorno de juegos con DRL. Utilizando la herramienta \textit{Gym} con esta finalidad. \cite{article:gym} \\
 	
@@ -207,7 +276,9 @@ Los objetivos principales que se van a tratar de abordar en este trabajo son: \\
 	\item Reflexionar sobre las conclusiones que se pueden extraer del cumplimiento de los objetivos anteriores y considerar posibles mejoras futuras del trabajo realizado durante este proyecto.
 \end{enumerate}
 
-\section{Estructura del proyecto}\label{sec:planificacion}
+\section{Planificación del proyecto}\label{sec:planificacion}
+
+\subsection{Estructura del proyecto}
 
 Este proyecto está formado por 9 capítulos repartidos en 4 partes, junto con un apéndice formado por otros 3 capítulos más.
 
@@ -225,23 +296,90 @@ Estas partes son: \\
 	
 	\item \textbf{Descripción de Tecnologías}: Tecnologías que se combinan y usan para resolver problemas de IA, tales como deep learning (DL), aprendizaje por refuerzo (RL) y la combinación de ambas; aprendizaje por refuerzo profundo (DRL).\\
 	
-	\item \textbf{Desarrollo y experimentación}: Se trata las herramientas y recuros actuales que existen para aplicar estas técnicas y se analizan los resultados obtenidos en varios entornos seleccionados.\\
+	\item \textbf{Desarrollo y experimentación}: Se trata las herramientas y recursos actuales que existen para aplicar estas técnicas y se analizan los resultados obtenidos en varios entornos seleccionados. Los entornos que veremos para este trabajo son \textit{MountainCar-v0} y \textit{Super Mario Bros}.\\
 	
 	%\item \textbf{Problemas avanzados}: Se razonará sobre hasta donde han sido capaz de llegar estas técnicas y qué podemos esperar de ellas en el futuro. Analizando agentes muy novedoso como \textit{AlphaGo} y \textit{AlphaStar}. \\
 	
-	\item \textbf{Posibles Mejoras y conclusiones}: Se realiza un análisis crítico del trabajo y se exponen las sensaciones y conceptos adquiridos. \\
+	\item \textbf{Trabajo futuro y conclusiones}: Se realiza un análisis crítico del trabajo y se exponen las sensaciones y conceptos adquiridos. \\
 	
-	\item Además, se ha añadido un apéndice con información relevante sobre \textbf{configuración en la nube}, \textbf{uso de la máquina virtual} y \textbf{Stable Baselines} como herramienta alternativa.
+	\item Además, se ha añadido un apéndice con información relevante sobre \textbf{configuración en la nube}, \textbf{uso de la máquina virtual} y \textbf{Stable Baselines} como herramienta alternativa. \\
 \end{itemize}
 
-El planteamiento final del proyecto puede observarse de una forma más detallada en el diagrama de Gantt de la figura \ref{fig:gantt}:
+La estructura del proyecto refleja las tareas llevadas a cabo, que se recogen en la Figura \ref{fig:gantt}:
 
 \begin{figure}[H]
-	\centering\includegraphics[scale=0.75]{captures/gantt.pdf}
+	\centering\includegraphics[scale=0.58]{captures/gantt.pdf}
 	\caption{Diagrama de Gantt.}
 	\label{fig:gantt} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:IA}} % Uncomment to add the figure to the table of contents
 \end{figure}
+
+\subsection{Presupuesto}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|l|c|} \hline
+			\cellcolor{red} Gastos elegibles & Importe solicitado \\
+			\hline \hline
+			\cellcolor[gray]{0.5}GASTOS DE PERSONAL &  \\ \hline
+			Total gastos de contratación de personal experto & \textbf{0}\euro \\ \hline
+			\cellcolor[gray]{0.8} \textbf{Total gastos de contratación de personal investigador} & \textbf{18251,1}\euro \\ \hline
+			sueldo & 12600\euro \\ \hline
+			IRPF & 1083,6\euro \\ \hline
+			Seguridad Social & 3565,8\euro \\ \hline
+			Fondo garantía salarial & 25,2\euro \\ \hline
+			Formación profesional & 88,2\euro \\ \hline
+			Seguro de desempleo &  888,3\euro \\ \hline
+			\cellcolor[gray]{0.5}GASTOS DE EJECUCIÓN &  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Costes de adquisición de material inventariable} &  \\ \hline
+			Equipo para personal fijo & 104,4\euro  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Costes de adquisición de material fungible} &  \\ \hline
+			Material de oficina & 100\euro \\ \hline
+			Consumibles & 100\euro \\ \hline
+			Mesa de oficina para personal &  100\euro \\ \hline
+			Silla de oficina para personal &  75\euro \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Costes de investigación contractual, conocimientos} \\
+			\cellcolor[gray]{0.8}\textbf{técnicos y patentes} & \\ \hline
+			Estudio realizado para elegir la mejores opciones \\
+			tecnologías & 200\euro   \\ \hline
+			Coste librería & 0\euro \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Costes de consultoría, prestación de servicios, suministros,etc.} &  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Costes de subcontratación} &  \\ \hline
+			\cellcolor[gray]{0.5}GASTOS COMPLEMENTARIOS &  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Gastos de desplazamiento, viajes, estancias}    \\ 
+			\cellcolor[gray]{0.8}\textbf{y dietas (derivados del proyecto)} &  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Gastos de material de difusión, publicaciones, promoción,}   \\ 
+			\cellcolor[gray]{0.8}\textbf{catálogos, folletos, cartelería, etc.} &  \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Gastos de inscripción en congresos y} \\
+			\cellcolor[gray]{0.8}\textbf{Recursos en la nube.} &  \\ \hline
+			Máquina virtual en Google Cloud &  200\euro \\ \hline
+			\cellcolor[gray]{0.8}\textbf{Otros gastos de funcionamiento derivados de la actividad de} \\
+			i\cellcolor[gray]{0.8}\textbf{investigación.} &  \\ \hline
+			Gastos varios & 300\euro \\ \hline
+			\cellcolor{red}TOTAL INCENTIVO SOLICITADO & \textbf{19430,5}\euro \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Presupuesto para proyecto}
+	\label{tab:tabla1}
+\end{table}
+
+El equipo está compuesto por un único ingeniero informático, especializado en inteligencia artificial. Este contrato tiene una duración de \textbf{7 meses}, por lo que el coste de los recursos humanos, junto con el resto de factores que se detallan en la tabla \ref{tab:tabla1}, es el siguiente: \\
+
+\newpage
+
+1 Ingeniero * 7 meses * (1800\euro/mes * (1.086 + 0.283 + 0.0705 + 0.002 + 0.007)) = \textbf{18251.1\euro} \\
+
+Se ha calculado a partir de un IRPF del 8.6\% al no superar los 20000 euros pero sobrepasar los 15000 euros \cite{article:irpf}, Seguridad social de 28.3\% \cite{article:seguridadsocial}, fondo de garantía salarial de 0.2\%, formación profesional de 0.7\% y desempleo de 7.05\%. \\
+
+En cuanto al material inventariable, el trabajador usa su portátil personal para la investigación. Este fue adquirido hace siete meses, por tanto, su periodo máximo de amortización es de 10 años con una amortización del 20\% al año ya que se enmarcan en la categoría de ``equipos electrónicos''. \cite{article:amortizacion}\\
+
+El coste del portátil fue de 900 euros. Por tanto, si han pasado 7 meses, esto equivale a una amortización de 11.6\% que deja su coste actual en 795.6\euro. Finalmente, si el proyecto tiene una duración de siete meses, el coste del equipo informático es de 104.4\euro. \\
+
+En cuanto al material fungible, se han presentado materiales imprescindibles para el trabajo en este proyecto, siendo su coste estándar y medio respecto a lo que podemos encontrar en el mercado. \\
+
+Para los recursos en la nube, se estima que se harán uso de unos 200 euros para el entrenamiento de los agentes. Si se desea conocer detalles de las características de dicha máquina, consultar el apéndice \ref{sec:infraestructura} \\
+
+Se ha realizado una estimación de gastos que no se han previsto, dejando un margen de error de 300 euros por si ocurre algún tipo de emergencia.
 
 %----------------------------------------------------------------------------------------
 %	PART 2
@@ -275,7 +413,7 @@ De esta forma iremos adquiriendo los conocimientos y conceptos básicos que nece
 \chapterimage{red-neuronal.jpg}
 \chapter{Redes Neuronales}\label{sec:deeplearning}
 
-Como hemos mencionado anteriormente, estas técnicas se apoyan firmemente en el uso de las redes neuronales. Son técnicas que ya conocemos del Grado y el Máster respectivamente, aunque considero que no está mal repasarlo de forma resumida. \cite{article:redesNeuronalesMicrosoft} \cite{book:TFGredes} \cite{book:berzal} \cite{article:redesNeuronales} \cite{article:RLromero} \\
+Como hemos mencionado anteriormente, el DRL se apoya firmemente en el uso de las redes neuronales. Son técnicas que ya conocemos del Grado y el Máster respectivamente, se repasará de forma resumida. \cite{article:redesNeuronalesMicrosoft} \cite{book:TFGredes} \cite{article:redesNeuronales} \cite{article:RLromero} \\
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=1]{captures/redNeuronal.jpg}
@@ -290,7 +428,7 @@ Estos nodos se encuentran organizados por \textbf{capas}. La \textbf{primera cap
 
 La entrada es un \textbf{vector de características} del problema que queremos resolver. Por ejemplo, si estamos intentando decidir el siguiente movimiento a realizar en un tablero de ajedrez, el vector de características estaría formado por elementos que indicasen la pieza que hay en cada casilla respectivamente (o indicar que no hay ninguna). Es un ejemplo, ya que no sería la única manera de describir el tablero para una red neuronal. Por tanto, la capa de entrada tendrá tantas neuronas como elementos el vector de características; cada neurona recibe una de las características consideradas. \\
 
-Las capas ocultas, pudiendo ser una o más capas, no tienen una conexión directa con el entorno como hemos visto anteriormente. En su lugar, la entrada que recibe es la salida de la capa anterior (capa de entrada en este caso). La salida que devuelvan los nodos de esta capa serán utilizados como entrada en la capa siguiente. ¿Para que sirve esto? La repuesta resumida es que si solo tuviéramos la capa de entrada y salida, las entradas serían demasiado independientes entre sí a la hora de influir en la salida seleccionada entre todas las posibles. En general, los problemas del mundo real son mucho más complejos que eso y es necesario que la red sea capaz de detectar patrones e interdependencias entre los distintos valores de las entradas. Estas capas ocultas ayudan a dar esa \textbf{riqueza} al proceso.\cite{article:redNeuronal2}\\
+Las capas ocultas, pudiendo ser una o más capas, no tienen una conexión directa con el entorno como hemos visto anteriormente. En su lugar, la entrada que recibe es la salida de la capa anterior (capa de entrada en este caso). La salida que devuelvan los nodos de esta capa serán utilizados como entrada en la capa siguiente. ¿Para que sirve esto? La repuesta resumida es que si solo tuviéramos la capa de entrada y salida, las entradas serían demasiado independientes entre sí a la hora de influir en la salida seleccionada entre todas las posibles. En general, los problemas del mundo real son mucho más complejos que eso y es necesario que la red sea capaz de detectar patrones e interdependencias entre los distintos valores de las entradas. Estas capas ocultas ayudan a representar esa complejidad del problema.\cite{article:redNeuronal2}\\
 
 La capa de salida recoge los datos de la última capa oculta y los procesa para dar una respuesta definitiva en la red. La forma en la que da esta salida depende de diversos factores de la propia capa que veremos un poco más adelante. \\
 
@@ -298,9 +436,9 @@ Las conexiones de los nodos de una capa a otra son definidos por los \textbf{pes
 
 \section{Funciones de activación (h)}\label{sec:activacion}
 
-Cada neurona no transmite la entrada que recibe a las siguientes de forma directa. Antes de hacer esto, procesa dicha entrada. Esto se realiza mediante la \textbf{función de activación}. Estas pueden ser de muchos tipos y determina cuando la neurona se \textbf{excita o no} en función de las entradas que recibe junto con su ponderación (ya que su entrada se compone de las salidas de las neuronas de la capa anterior)\cite{article:redNeuronal2}. \\
+Cada neurona no transmite la entrada que recibe a las siguientes de forma directa. Antes de hacer esto, procesa dicha entrada. Esto se realiza mediante la \textbf{función de activación}. Estas pueden ser de muchos tipos y determina cuando la neurona se \textbf{excita o no} en función de las entradas que recibe junto con su ponderación. \cite{article:redNeuronal2} \\
 
-Se han propuesto muchos tipos de funciones de activación en este campo, vamos a mencionar las más habituales o las que más hemos utilizado durante la carrera y el Máster: \\
+Se han propuesto muchos tipos de funciones de activación en este campo, vamos a mencionar las más habituales: \\
 
 \begin{itemize}
 	\item \textbf{Sigmoide}: Las neuronas sigmoide se comportan sumando todas las entradas ponderadas, es decir, aplicándoles sus respectivos pesos, para luego utilizar ese único valor (z) de la siguiente forma: 
@@ -308,7 +446,7 @@ Se han propuesto muchos tipos de funciones de activación en este campo, vamos a
 	\sigma(z) = \frac{1}{1+e^{-z}}
 	\end{equation}
 	
-	Se hace de esta manera para que dicha función tenga la siguiente forma, si la dibujamos en un plano bidimensional:
+	Se hace de esta manera para que dicha función tenga la siguiente forma:
 	
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.5]{captures/sigmoide.png}
@@ -321,7 +459,7 @@ Se han propuesto muchos tipos de funciones de activación en este campo, vamos a
 	
 	Esto hace que no haya tanta diferencia entre un conjunto de entradas muy altas a otras que no lo son tanto, por ejemplo, ya que en cualquier caso al ser valores positivos la neurona se va a excitar y devolver un 1. Lo mismo ocurre para las entradas negativas y la salida 0. \\
 	
-	\item \textbf{Rectified linear unit} (ReLU): Esta función es actualmente más usada que la sigmoide. Principalmente se debe a a la existencia de más capas en las redes neuronales. Los pesos de las neuronas sigmoide son mucho más difíciles de actualizar debido al \textbf{problema de desaparición del gradiente}, aunque no vamos a entrar en detalles con eso. La función es:
+	\item \textbf{Rectified linear unit} (ReLU): Esta función es actualmente más usada que la sigmoide. Es más sencilla de calcular y tiene una derivada más simple, por lo que es mejor cuando hay muchas capas en la red. Los pesos de las neuronas sigmoide son mucho más difíciles de actualizar debido al \textbf{problema de desaparición del gradiente}, aunque no vamos a entrar en detalles con eso. La función es:
 	
 	\begin{equation}
 	R(z) = max(0,z)
@@ -337,11 +475,11 @@ Se han propuesto muchos tipos de funciones de activación en este campo, vamos a
 	\end{figure}
 \end{itemize}
 
-En general, se utilizan estos tipos de funciones no lineales debido a que permiten que las redes detecten esas relaciones no lineales entre entradas y salidas. Cosa que es muy frecuente a la hora de resolver todo tipo de problemas en nuestro día a día (clasificación de dígitos manuscritos, por ejemplo). La mayoría de problemas que podemos resolver con estas técnicas no se van a ajustar bien a funciones lineales, hay que tenerlo siempre en cuenta.
+En general, se utilizan estos tipos de funciones debido a que permiten que las redes detecten esas relaciones no lineales entre entradas y salidas. 
 
 \section{Funciones de salida (h')}\label{sec:funcionsalida}
 
-Las funciones de salida son utilizadas en la \textbf{última capa de la red neuronal}. Tratan de utilizar los valores que han llegado a este punto de la red y transformarlos en una \textbf{respuesta final} al problema que está tratando de resolver. La más frecuente y una de las más utilizadas es la \textbf{función exponencial normalizada o softmax}. Suele ser utilizada en problemas de clasificación con salidas discretas, ya que podemos obtener una \textbf{distribución de probabilidades} entre las posibles salidas:
+Las funciones de salida son utilizadas en la \textbf{última capa de la red neuronal}. Tratan de utilizar los valores que han llegado a este punto de la red y transformarlos en una \textbf{respuesta final} al problema que está tratando de resolver. La más frecuente y una de las más utilizadas es la \textbf{función exponencial normalizada o softmax}. Suele ser utilizada en problemas de clasificación con salidas discretas, ya que podemos obtener una \textbf{pseudo-distribución de probabilidades} entre las posibles salidas:
 
 \begin{equation}
 \sigma(z)_j = \frac{e^{z_j}}{\sum^K_{k=1}e^{z_k}}
@@ -353,7 +491,7 @@ La potencia de esto es que la red neuronal no solo aporta una salida (aquella ne
 
 \section{Funciones de coste}\label{sec:funcioncoste} 
 
-Es muy posible, y sobretodo durante el proceso de aprendizaje, de que la red neuronal se \textbf{equivoque} al dar una salida para una entrada determinada. Hay que buscar un modo de comparar la salida dada por la red de la salida real o salida que debería haber dado. \\
+Es muy posible, y sobre todo durante el proceso de aprendizaje, que la red neuronal se \textbf{equivoque} al dar una salida para una entrada determinada. Hay que buscar un modo de comparar la salida dada por la red de la salida real o salida que debería haber dado. \\
 
 Las \textbf{funciones de coste o de pérdida} son utilizadas una vez la red neuronal da una salida definitiva. Trata de evaluar o, mejor dicho, cuantificar el error que ha tenido. Hay muchas formas de analizar o evaluar este error, cada una con sus pros y contras, vamos a ver un par de ellas:\\
 
@@ -378,8 +516,6 @@ El objetivo de cualquier red neuronal debe ser el de \textbf{minimizar} esta fun
 
 \textbf{Decidir} una función de pérdida es \textbf{muy importante} a la hora de entrenar la red en un futuro, ya que dependiendo de su diseño puede hacer más difícil su optimización o menos (por tanto, que lleguemos a un conjunto de pesos determinado para la red u otros diferentes). Dependiendo de la naturaleza del problema que queramos resolver y de cómo se interpreta la entrada para la red. \\
 
-Esta es una de las tareas del programador, no solo saber un lenguaje de programación, sino decidir y probar aquellas cosas en las que tienen un motivo para creer que pueden funcionar mejor que otras.
-
 \section{Algoritmos de optimización}\label{sec:optimizacion}
 
 Hasta ahora, todo lo que se ha explicado de las redes neuronales es diseñado y establecido de antemano (las capas, número de neuronas por capa, las funciones de activación y salida que van a tener, función de coste, etc). Solo hay una cosa que va a variar en dichas redes neuronales a lo largo de su aprendizaje: \textbf{la actualización de sus pesos} en las conexiones entre sus respectivas capas. \\
@@ -391,7 +527,7 @@ Los \textbf{algoritmos de optimización} buscan concretamente esto. Usando los v
 	
 	El principal problema aquí es que estamos hablando de redes neuronales que pueden tener cientos de miles de parámetros, por lo que no es viable hacer este tipo de cálculos a lo largo del tiempo. \\
 	
-	Por ello, esta técnica se diferencia del gradiente descendente tradicional en que utiliza solo una muestra aleatoria de todo el conjunto de entradas en cada iteración para actualizar los pesos en la función de perdida. Esto mete algo de aleatoriedad en el aprendizaje y evita sobreajuste y estancamiento en el proceso. Además, también se puede incluir una organización de estas muestras en \textbf{mini lotes} (mini batches), haciendo el entrenamiento aún más rápido al tener la posibilidad de paralelizar estas operaciones.
+	Por ello, esta técnica se diferencia del gradiente descendente tradicional en que utiliza solo una muestra aleatoria de todo el conjunto de entradas en cada iteración para actualizar los pesos propagando el error de la función de perdida. Esto mete algo de aleatoriedad en el aprendizaje y evita sobreajuste y estancamiento en el proceso. Además, también se puede incluir una organización de estas muestras en \textbf{mini lotes} (mini batches), haciendo el entrenamiento aún más rápido al tener la posibilidad de paralelizar estas operaciones.
 	
 	\begin{figure}[H]
 		\centering\includegraphics[scale=0.5]{captures/gds.png}
@@ -402,28 +538,28 @@ Los \textbf{algoritmos de optimización} buscan concretamente esto. Usando los v
 
 	Si observamos la figura \ref{fig:GDS}, vemos que es un ejemplo muy sencillo. Debemos tener en cuenta que sólo tiene un parámetro (x). El caso es que en redes neuronales tenemos una función que puede tener cientos de miles de parámetros, dependiendo de la red, y que esto ni siquiera es mostrable en una gráfica ya que espacialmente no entendemos más allá de tres dimensiones (2 parámetros más el valor de salida). Por eso es importante el muestreo de entradas, para hacerlo viable computacionalmente. \\
 
-	\item \textbf{Adam}: El algoritmo Adam (Momentum Adaptable) es uno de algoritmos de optimización más usados. No vamos a entrar en detalle, simplemente decir que esta basado en gradientes de primer orden, es computacionalmente eficiente, pocos requisitos de memoria y es muy adecuado para problemas de redes con un gran número de parámetros y datos.  \\
+	\item \textbf{Adam}: El algoritmo Adam (Momentum Adaptable) es uno de algoritmos de optimización más usados. No vamos a entrar en detalle, simplemente decir que esta basado en gradientes de primer orden, es computacionalmente eficiente, pocos requisitos de memoria y es muy adecuado para problemas de redes con un gran número de parámetros y datos. \cite{article:adam} \\
 \end{itemize}
 
 En definitiva, las redes neuronales son tan amplias como artículos tiene publicados al respecto y experimentos se han realizado desde su aparición. Solo se pretende dar una vista general de su arquitectura y como funcionan. 
 
 \section{Redes Neuronales Convolucionales (CNN)}\label{sec:convolucional}
 
-Las redes neuronales convolucionales (CNN) son muy similares a las redes ordinarias. De hecho, se pueden entender como una extensión de éstas. Definimos a las redes neuronales vistas hasta este punto como la parte \textbf{densa}. De ellas no se puede saber la metodología de razonamiento, sólo la calidad de los resultados que ofrecen, por lo que es complicado predecir un comportamiento de estas redes. \\
+Las redes neuronales convolucionales (CNN) son muy similares a las redes ordinarias. De hecho, se pueden entender como una extensión de éstas. Definimos a las redes neuronales vistas hasta este punto como la parte \textbf{densa}. \\
 
-En las redes convolucionales, se supone que las entradas que recibe son directamente imágenes, por ejemplo, en el reconocimiento de dígitos manuscritos. Este tipo de redes mejoran el tratamiento de estos datos, tanto en rendimiento como en calidad de las respuestas. \\
+Son diseñadas para trabajar con imágenes, tomando estas directamente como entrada de la red. Las principales tareas que se asocian a este tipo de redes es la categorización de objetos, clasificación de escenas y clasificación de imágenes en general. \\
 
-Una imagen tiene una dimensión predeterminada, supongamos por ejemplo 800x800. Esto supone un total de 640000 elementos en el vector de características para cada muestra, eso asumiendo que la imagen es en escala de grises. Si es a color, cada pixel tiene una tripleta de valores RGB, lo que supone $640000*3=1920000$ valores por muestra de entrada. Contar con tantos parámetros desde la capa de entrada ya supone un gran límite para la red, existiendo mayor facilidad y tendencia al sobreajuste. \\
+La red toma como entrada los pixeles de la imagen, esto puede ser un valor por pixel si está en escala de grises o una tripleta de valores si está a color (RGB). Por ejemplo, si la red trabaja con imágenes de caracteres manuscritos de 30x30 pixeles, habrá un total de 900 datos por imagen y 900x3=2700 datos si es a color. \\
 
-La parte \textbf{convolucional} de la red puede ser entendida como una etapa de \textbf{preprocesamiento} de las imágenes para extraer las características más importantes de las mismas, y estas son las que llegarían a la parte \textbf{densa} de la red, como se estaba mencionando anteriormente. \\
+Estos datos habrán sido previamente \textbf{normalizados} a valores entre 0 y 1, generalmente las imágenes suelen tener valores entre 0 y 255 (correspondientes a un bytes) que define la escala de gris o del color que se trate (rojo, verde o azul). \\
 
-Vamos a ver de forma resumida las distintas capas que constituyen esta parte convolucional de la red.
+Esta parte \textbf{convolucional} de la red puede ser entendida como una etapa de \textbf{preprocesamiento} de las imágenes para extraer las características más importantes de las mismas, y estas son las que llegarían a la parte \textbf{densa} de la red, como se estaba mencionando anteriormente.
+
+Vamos a ver de forma resumida las distintas capas que constituyen esta parte convolucional y el proceso que se realiza en las mismas desde que los pixeles de la imagen son tomados como entrada.
 
 \subsection{Capa convolucional}\label{sec:convolucional2}
 
 Estas capas realizan un proceso llamado \textbf{convolución}. Reciben la imagen como entrada y luego aplica sobre ella un \textbf{filtro} o \textbf{kernel} que nos devuelve una matriz de datos, como la imagen, solo que con una características concretas destacadas. Por ejemplo, un filtro puede ser usado para la detección de bordes de una imagen únicamente. \\
-
-Ese filtro tiene una \textbf{dimensión} (5x5, por ejemplo) lo cual hace que esos mapas de características mencionados reduzcan la cantidad de parámetros (dimensión de la matriz).\\
 
 Una capa convolucional, a su vez, puede tener más de un filtro, lo que se conoce como \textbf{canales} (channels) del mapa de características. La idea es que cada filtro detecte características específicas de la imagen (bordes, patrones, etc).
 
@@ -436,17 +572,17 @@ Una capa convolucional, a su vez, puede tener más de un filtro, lo que se conoc
 
 En la figura \ref{fig:convolucional}, tendríamos 32 filtros 5x5 diferentes, dado que obtenemos 32 matrices 24x24 a partir de una sola imagen 28x28.
 
-\subsection{Capa de reducción o Pooling}\label{sec:pooling}
+\subsection{Capa de reducción o Max-Pooling}\label{sec:pooling}
 
-Esta capa suele situarse siempre inmediatamente después de una capa convolucional, aunque también es posible realizar más de una capa pooling seguida. Su utilidad, en resumen, consiste en reducir las dimensiones de los mapas de características que se mencionaban anteriormente aún más. Irremediablemente, al realizar este proceso, se pierde información por el camino. Aunque el sentido común pueda determinar en un principio que esto es negativo, generalmente es positivo. \\
+Esta capa suele situarse siempre inmediatamente después de una capa convolucional, aunque también es posible realizar más de una capa pooling seguida. Su utilidad, en resumen, consiste en reducir las dimensiones de los mapas de características que se mencionaban anteriormente. Irremediablemente, al realizar este proceso, se pierde información por el camino. Aunque el sentido común pueda determinar en un principio que esto es negativo, generalmente es positivo. \\
 
-La disminución en el tamaño o dimensión de los mapas de características produce una reducción de sobrecarga en el cálculo en las capas venideras, haciendo viable el procesamiento de imágenes con una resolución mayor. Además, es una representación más \textbf{genérica} del problema que se trata de resolver, por lo que implícitamente reduce la tendencia al sobreajuste por parte de la red. \\
+La disminución en el tamaño o dimensión de los mapas de características produce una reducción de sobrecarga en el cálculo en las capas venideras, haciendo viable el procesamiento de imágenes en un tiempo menor. Además, es una representación más \textbf{genérica} del problema que se trata de resolver, por lo que implícitamente reduce la tendencia al sobreajuste por parte de la red. \\
 
 Hablando sobre la operación de reducción concretamente, se suele dividir la imagen en \textit{submarcos} o un conjunto de rectángulos. En cada una de estas \textit{subzonas}, se suelen utilizar la operación de \textbf{Max-Pooling}, la cual quiere decir que nos quedamos con el valor más alto, como se aprecia en la figura siguiente:
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{captures/pooling.jpg}
-	\caption{Aplicación de capa Max-Pooling a mapa de características. Imagen extraída de \cite{article:convimagen2}.}
+	\caption{Aplicación de capa \textbf{Max-Pooling} a mapa de características. Imagen extraída de \cite{article:convimagen2}.}
 	\label{fig:pooling} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:GDS}} % Uncomment to add the figure to the table of contents
 \end{figure}
@@ -470,11 +606,11 @@ Ese es el propósito de la \textbf{capa Flatten}. Explicado de forma simple, cog
 
 También es muy importante tener conocimientos con respecto a las técnicas de aprendizaje por refuerzo (RL) para desarrollar los algoritmos que veremos y utilizaremos más adelante. Comenzaremos por explicar los fundamentos del RL, los componentes que lo forman y definen un problema de este tipo, junto con algunos de sus conceptos básicos y metodología genérica, para luego centrarnos en algunas de las técnicas y estrategias más utilizadas y populares en la actualidad. \\
 
-El mundo es muy \textbf{complejo} y los retos que nos plantea también, a veces incluso más de lo que imaginamos. Cuando tratamos de llevar esos problemas al RL, nos encontramos con agentes que deben aprender en entornos con un espacio de estados y posibles acciones muy grande. \\
+%El mundo es muy \textbf{complejo} y los retos que nos plantea también, a veces incluso más de lo que imaginamos. Cuando tratamos de llevar esos problemas al RL, nos encontramos con agentes que deben aprender en entornos con un espacio de estados y posibles acciones muy grande. \\
 
 La metodología de aprendizaje es \textbf{secuencial}. En muchos de los problemas que existen hay consecuencias en las decisiones que no se manifiestan inmediatamente, se demoran en el tiempo. Esto hace que sea complicado definir cómo de buena o mala es una decisión y es uno de los principales retos del RL. \\
 
-Debemos ser conscientes de que siempre tendremos que lidiar con la \textbf{incertidumbre}, es algo inevitable. Los problemas son tan complejos que es imposible tener todos los casos posibles en cuenta de manera específica. Esa incertidumbre es la que da sentido a la \textbf{exploración}, tratando de buscar el equilibrio con la \textbf{explotación} para ofrecer respuestas de la mejor calidad posible en un rango de tiempo viable.\\
+Debemos ser conscientes de que siempre tendremos que lidiar con una \textbf{falta de información} exhaustiva y una incapacidad para recolectarla en su totalidad, es algo inevitable. Los problemas son tan complejos que es imposible tener todos los casos posibles en cuenta de manera específica. Esa incertidumbre es la que da sentido a la \textbf{exploración}, tratando de buscar el equilibrio con la \textbf{explotación} para ofrecer respuestas de la mejor calidad posible en un rango de tiempo viable.\\
 
 Explicaremos todos los conceptos y componentes que conforman los problemas a partir de un marco de trabajo matemático llamado \textbf{Procesos de Decisión de Markov (MDPs)}. Los MDPs nos permitirán modelar un problema de una forma que los agentes de RL puedan aprender a resolverlos. \cite{book:miguel} \cite{article:RLromero} \cite{book:barto}  \\ 
 
@@ -485,9 +621,9 @@ Explicaremos todos los conceptos y componentes que conforman los problemas a par
 Los dos principales componentes del RL son el \textbf{entorno} y el \textbf{agente}. El agente es un tomador de decisiones en el entorno, y por tanto, implementa una solución. Una de las diferencias más distintivas que tiene RL con otras técnicas de Machine Learning es que el agente \textbf{interactúa}, tratando de influenciar el entorno realizando \textbf{acciones}, mientras que el entorno \textbf{reacciona} ante ellas, generando nuevos \textbf{estados}. \\
 
 \begin{itemize}
-	\item El espacio de estados, el conjuntos de todos los posibles que existen, puede ser finito o infinito dependiendo del problema que sea. Cada estado estará formado por un número \textbf{finito} de variables que lo describe, siempre debe ser finito. \\
+	\item El espacio de estados, el conjuntos de todos los posibles que existen, puede ser finito o infinito dependiendo del problema que sea. Cada estado estará formado por un número \textbf{finito} de variables que lo describe. \\
 	
-	\item El espacio de acciones puede variar de un estado a otro, a ese subconjunto se denota como $A(s)$ siendo $s$ el estado del entorno en ese momento. Esto sucede debido a la existencia de problemas en los que, dado un estado, hay acciones que sencillamente no se pueden realizar en ese momento por el agente. Por ejemplo, en ajedrez no es posible mover una pieza mientras que se está en jaque, a no ser que ese movimiento revierta ese estado de amenaza por parte del oponente. El conjunto de acciones también puede ser finita o infinita, pero cada una de ellas está compuestas por una o más variables finitas, igual que los estados.
+	\item El espacio de acciones puede variar de un estado a otro. A ese subconjunto se denota como $A(s)$ siendo $s$ el estado del entorno en ese momento. Esto sucede debido a la existencia de problemas en los que, dado un estado, hay acciones que sencillamente no se pueden realizar en ese momento por el agente. Por ejemplo, en ajedrez no es posible mover una pieza mientras que se está en jaque, a no ser que ese movimiento revierta ese estado de amenaza por parte del oponente. El conjunto de acciones también puede ser finita o infinita, pero cada una de ellas está compuestas por una o más variables finitas, igual que los estados.
 \end{itemize}
 
 \begin{figure}[H]
@@ -521,7 +657,7 @@ Las funciones de transición y recompensa son las que establecen el \textbf{mode
 
 %Normalmente un entorno tiene un \textbf{objetivo} bien definido. Ese objetivo esta plasmado de forma implícita en la señales de recompensa.
 
-Las interacciones entre el agente y el entorno se produce en una serie de ciclos secuenciales, tal y como se aprecia en la figura \ref{fig:esquemaRL}. Cada uno de esos ciclos recibe el nombre de \textbf{paso} o \textbf{paso}. Es una unidad de tiempo en la que se completa cada ciclo de interacción, el cual depende del problema específico. \\
+Las interacciones entre el agente y el entorno se produce en una serie de ciclos secuenciales, tal y como se aprecia en la figura \ref{fig:esquemaRL}. Cada uno de esos ciclos recibe el nombre de \textbf{time-step} o \textbf{paso}. Es una unidad de tiempo en la que se completa cada ciclo de interacción, el cual depende del problema específico. \\
 
 En cada \textit{paso}, el agente observa el entorno, realiza una acción y recibe una nueva observación y recompensa. La experiencia recolecta estos datos precisamente; siendo el conjunto de observación, acción, recompensa y nueva observación una \textbf{tupla de experiencia} (SARS'). Más adelante hablaremos de este tema con mayor detenimiento. \\
 
@@ -693,10 +829,10 @@ A continuación, veremos una serie de funciones que, junto con la política, nos
 
 \subsection{Función de estado-valor}
 
-Uno de los principales requisitos que hay que conseguir es una forma fiable de \textbf{comparar} las políticas. Decidir entre varias cual es mejor para resolver un problema complejo no es algo sencillo. Para este cometido, se utiliza una función llamada \textbf{función de estado-valor}: 
+Uno de los principales requisitos que hay que conseguir es una forma fiable de \textbf{comparar} las políticas. Para este cometido, se utiliza una función llamada \textbf{función de estado-valor}: 
 
 \begin{equation}
-\upsilon_\pi(s)=\E\pi[G_t|S_t=s]
+\upsilon_\pi(s)=\E_\pi[G_t|S_t=s]
 \end{equation}
 
 Esta función calcula una \textbf{previsión} de la recompensa acumulada a partir de un estado($s$) bajo una política concreta($\pi$). En otras palabras, estima como de bien se va a comportar una política a partir de un estado del entorno.\\
@@ -704,7 +840,7 @@ Esta función calcula una \textbf{previsión} de la recompensa acumulada a parti
 Si detallamos la función anterior, definiendo de una forma más específica la recompensa acumulada, tenemos lo siguiente:
 
 \begin{equation}
-\upsilon_\pi(s)=\E\pi\left[\sum^\infty_{k=0}\gamma^kR_{t+k+1} | S_t=s\right]
+\upsilon_\pi(s)=\E_\pi\left[\sum^\infty_{k=0}\gamma^kR_{t+k+1} | S_t=s\right]
 \end{equation}
 
 Teniendo esta función podemos comparar políticas diferentes para un mismo problema, partiendo de un idéntico estado para ambas:
@@ -721,14 +857,14 @@ Se asume que existe una política óptima ($\pi_*$), lo cual quiere decir que no
 
 \subsection{Función de acción-valor}
 
-En lugar de comparar una previsión de recompensas acumuladas a partir de un mismo estado para dos políticas diferentes, esta \textbf{función de acción-valor} trata de valorar la realización de una acción $a$ en un estado $s$. Si tenemos una buena función que determine esto, podría ser de gran utilidad a la hora de decidir entre acciones y de esta manera \textbf{mejorar} las políticas. \\
+En lugar de comparar una previsión de recompensas acumuladas a partir de un mismo estado para dos políticas diferentes, esta \textbf{función de acción-valor} trata de valorar la realización de una acción $a$ en un estado $s$ (y continuar después aplicando $\pi$). Si tenemos una buena función que determine esto, podría ser de gran utilidad a la hora de decidir entre acciones y de esta manera \textbf{mejorar} las políticas. \\
 
 Entonces, la función de \textit{estado-valor} trata de estimar la recompensa acumulada de una política $\pi$ después de haber realizado una acción $a$ en un estado $s$ y continuar hasta el estado terminal según $\pi$:
 
 \begin{align}
 \begin{split}
-q_\pi(s,a)&=\E\pi\left[G_t|S_t=s,A_t=a\right]\\
-q_\pi(s,a)&=\E\pi\left[\sum^\infty_{k=0}\gamma^kR_{t+k+1}|S_t=s,A_t=a\right]
+q_\pi(s,a)&=\E_\pi\left[G_t|S_t=s,A_t=a\right]\\
+q_\pi(s,a)&=\E_\pi\left[\sum^\infty_{k=0}\gamma^kR_{t+k+1}|S_t=s,A_t=a\right]
 \end{split}
 \end{align}
 
@@ -740,9 +876,9 @@ La función de \textit{estado-valor} puede ser expresada \textbf{recursivamente}
 
 \begin{align}
 \begin{split}
-\upsilon_\pi(s)&=\E\pi\left[G_t|S_t=s\right] \\
-&= \E\pi\left[R_{t+1}+\gamma G_{t+1}|S_t=s\right]\\
-&= \E\pi\left[R_{t+1}+\gamma \upsilon_\pi(S_{t+1})|S_t=s\right]
+\upsilon_\pi(s)&=\E_\pi\left[G_t|S_t=s\right] \\
+&= \E_\pi\left[R_{t+1}+\gamma G_{t+1}|S_t=s\right]\\
+&= \E_\pi\left[R_{t+1}+\gamma \upsilon_\pi(S_{t+1})|S_t=s\right]
 \end{split}
 \end{align} 
 
@@ -755,10 +891,7 @@ Se puede extraer una conclusión a partir de este concepto. En una política óp
 &\upsilon_{\pi_*}(s) = max(q_{\pi_*}(s,a))\\
 &a \in A(s)
 \end{split}
-\end{align}
-
-Recordemos que $A(s)$ hace referencia al conjunto de acciones posibles en el estado $s$. 
-
+\end{align} 
 
 \subsection{Función de acción-ventaja}\label{sec:ventaja}
 
@@ -785,15 +918,19 @@ Este algoritmo es conocido como \textbf{Evaluación iterativa de política}. Con
 \upsilon_{k+1}(s)=\sum_a\pi(a|s) \sum_{s',r}p(s',r|s,a)\left[r+\gamma\upsilon_k(s')\right]
 \end{equation}
 
-La variable $k$ hace referencia a la iteración que está ejecutando. Vayamos por partes, $\upsilon_0(s)$ será la asignación inicial de estimaciones por parte de la función \textit{estado-valor} para cada estado $s \in S$ con la política que estamos evaluando, serán valores arbitrarios y 0 en caso de que el estado sea terminal para cada estado $s \in S$. \\
+La variable $k$ hace referencia a la iteración que está ejecutando. Vayamos por partes: \\
 
-$\pi(a|s)$ hace referencia a la probabilidad de ejecutar una acción $a$ en el estado $s$ por parte de la política. Para simplificar, asumamos una política determinística, por lo que el valor será directamente 1 para la acción seleccionada y 0 para el resto. \\
-
-$s'$ y $r$ hacen referencia al siguiente estado y recompensa obtenida tras realizar dicha acción por parte de la política. Como ya se ha mencionado anteriormente, una acción $a$ puede desencadenar más de una $s'$ diferente, dependiendo de si el problema es estocástico o no, por eso se habla de probabilidad de $s'$ y $r$ sabiendo el estado $s$ y acción $a$ realizada. \\
+\begin{itemize}
+	\item $\upsilon_0(s)$ será la asignación inicial de estimaciones por parte de la función \textit{estado-valor} para cada estado $s \in S$ con la política que estamos evaluando, serán valores arbitrarios y 0 en caso de que el estado sea terminal para cada estado $s \in S$. \\
+	
+	\item $\pi(a|s)$ hace referencia a la probabilidad de ejecutar una acción $a$ en el estado $s$ por parte de la política. Para simplificar, asumamos una política determinística, por lo que el valor será directamente 1 para la acción seleccionada y 0 para el resto. \\
+	
+	\item $s'$ y $r$ hacen referencia al siguiente estado y recompensa obtenida tras realizar dicha acción por parte de la política. Como ya se ha mencionado anteriormente, una acción $a$ puede desencadenar más de una $s'$ diferente, dependiendo de si el problema es estocástico o no, por eso se habla de probabilidad de $s'$ y $r$ sabiendo el estado $s$ y acción $a$ realizada. \\
+\end{itemize}
 
 Esta segunda parte calcula el valor del estado $s$ como la suma de la recompensa y el valor estimado actualmente para el siguiente estado $s'$, con su correspondiente descuento en caso de tenerlo. \\
 
-Esta función la podemos ejecutar iterativamente de tal forma que estaremos aproximando el valor de $\upsilon_\pi(s)$ a su valor real para cada estado del problema. Este valor converge en el \textbf{infinito}. En la práctica, deberemos establecer un \textbf{umbral} ($\theta$) en el que si el valor nuevo no tiene una diferencia absoluta mayor que $\theta$, se considere por aproximado correctamente y finalice. \\
+Esta función la podemos ejecutar iterativamente de tal forma que estaremos aproximando el valor de $\upsilon_\pi(s)$ a su valor real para cada estado del problema. Este valor converge con $k \rightarrow \infty$. En la práctica, deberemos establecer un \textbf{umbral} ($\theta$) en el que si el valor nuevo no tiene una diferencia absoluta mayor que $\theta$, se considere por aproximado correctamente y finalice. \\
 
 Al tenerse en cuenta ese factor de \textbf{aleatoriedad} en reacciones del entorno ante las acciones, el valor que vamos a ir convergiendo para cada estado será la recompensa acumulada esperada que obtendremos si ejecutamos muchos episodios con esa política desde ese estado. \\
 
@@ -882,7 +1019,7 @@ Cuánto mejor seamos capaces de \textbf{estimar} las recompensas futuras, a pesa
 %	\item \textbf{Función de valor}: Hace referencia a la \textbf{estimación} de recompensa acumulada que se obtiene de antemano. Por lo que es un valor que se consigue durante cada \textit{paso} del episodio y no necesitamos que finalice para conocerlo.\\
 %\end{itemize}
 
-El objetivo reside en \textbf{optimizar} las estimaciones de la función \textit{acción-valor}. Al ser la mayoría de problemas estocásticos y no saber con certeza las transiciones de estados del entorno, tener unas medias altas de estimaciones para una acción dada ayuda a \textbf{generalizar} ese conocimiento a pesar del propio ruido del entorno.
+El objetivo reside en \textbf{optimizar} las estimaciones de la función \textit{acción-valor}. Tener unas medias altas de estimaciones para una acción dada ayuda a \textbf{generalizar} ese conocimiento a pesar del propio ruido del entorno.
 
 \subsection{Método de Montecarlo}
 
@@ -891,6 +1028,8 @@ El objetivo reside en \textbf{optimizar} las estimaciones de la función \textit
 El \textbf{Método de Montecarlo} \cite{book:miguel} \cite{article:RLromero} consiste, en términos generales, en ejecutar un número considerable de episodios con la política a evaluar de tal manera que se disponga de un gran número de trayectorias posibles de estados y acciones. Después se calcularía el \textbf{promedio} de recompensas acumuladas para cada estado. \\
 
 La principal ventaja de este método es la sencillez de su implementación. Una vez finaliza un episodio, se almacena cada estado, acción, recompensa y estado siguiente obtenido como una \textbf{tupla de experiencia}. Cuando juntamos todas las tuplas de experiencia de un episodio (desde su estado inicial hasta el terminal), tenemos lo que se denomina como una \textbf{trayectoria}. \\
+
+\newpage
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.8]{captures/montecarlo.png}
@@ -929,11 +1068,11 @@ El principal requisito que debemos tener en cuenta, directamente deducible del f
 
 La principal desventaja del método de Montecarlo reside en su \textbf{baja precisión} en los problemas que superan una cierta complejidad de estados y acciones con alta incertidumbre de la transiciones de los mismos.\\
 
-La función \textit{acción-valor} se actualiza al final de cada episodio. Entonces, una acción queda diluida entre todas las de su episodio. Esto ocurre porque el valor estimado de una acción depende mucho de como continúe ese episodio específicamente, ya que de ello dependerá los valores de $G_t$ que como ya sabemos se usan para actualizar la función. \\
+La función \textit{acción-valor} se actualiza al final de cada episodio. Entonces, una acción queda diluida entre todas las de su episodio. Esto ocurre porque el valor estimado de una acción depende mucho de cómo continúe ese episodio específicamente, ya que de ello dependerá los valores de $G_t$ que como ya sabemos se usan para actualizar la función. \\
 
 Una acción también queda diluida entre las realizadas en todos los episodios, ya que para actualizar la función \textit{acción-valor} se consideran los valores de todos los episodios anteriores. \\
 
-Esto, además, hace que este algoritmo resulte poco efectivo para resolver problemas con \textbf{sparse rewards}. Es decir, recompensas escasas ofrecidas por el entorno al agente durante el proceso de aprendizaje (como es el caso de MountainCar). \cite{article:sparse}
+Esto, además, hace que este algoritmo resulte poco efectivo para resolver problemas con \textbf{sparse rewards}. Es decir, recompensas escasas ofrecidas por el entorno al agente durante el proceso de aprendizaje (como es el caso de MountainCar, donde solo se obtiene recompensa positiva si finaliza). \cite{article:sparse}
 
 En definitiva, al depender de las recompensas acumuladas que obtiene con una política que partirá siendo mala seguramente, puede hacer que tarde demasiado tiempo en converger en unas buenas estimaciones para la política mejorada. \\
 
@@ -951,7 +1090,9 @@ De esta forma, podemos ir calculando las nuevas funciones valor durante cada \te
 
 Esto hace que el sesgo en las estimaciones sea más alto que en MonteCarlo, aunque aceptable. La principal ventaja es que el algoritmo pueda converger mucho antes. \cite{article:DQN2} \\
 
-La conclusión final es que los métodos de diferencia temporal convergen más rápido que Montecarlo en términos generales, aunque el sesgo en las estimaciones sea algo mayor. El proceso de \textit{bootstrapping} que implementan es efectivo, aunque el sesgo debido al uso de estimaciones sea mayor. \\ 
+La conclusión final es que los métodos de diferencia temporal convergen más rápido que Montecarlo en términos generales. El proceso de \textit{bootstrapping} que implementan es efectivo, aunque el sesgo debido al uso de estimaciones sea mayor. \\ 
+
+\newpage
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.8]{captures/SARSA.png}
@@ -1000,7 +1141,7 @@ Tenemos una función \textit{acción-valor} que denominaremos $Q(s,a)$. Para est
 
 Para la exploración, podemos seguir utilizando $\epsilon$-greedy ($Q$) a la hora de realizar las estimaciones de recompensa con las acciones que tendría la política objetivo. \\
 
-Existe algunas variantes como \textbf{Double Q-Learning} \cite{article:DoubleQLearning}, la cual se basa en tener dos políticas objetivo en lugar de una. Es una estimación cruzada que ha mostrado mejores resultados en ciertas ocasiones, aunque no entraremos en más detalles con esta parte. \\
+%Existe algunas variantes como \textbf{Double Q-Learning} \cite{article:DoubleQLearning}, la cual se basa en tener dos políticas objetivo en lugar de una. Es una estimación cruzada que ha mostrado mejores resultados en ciertas ocasiones, aunque no entraremos en más detalles con esta parte. \\
 
 %Como conclusión final, destacar la \textbf{independencia} de los problemas a resolver con las técnicas de RL vistas en estos apartados. Definiendo cada uno de los \textbf{componentes} del problema, como vimos en el apartado \ref{sec:componentesRL}, estas técnicas ya pueden entrenar agentes directamente, dado que tiene la forma de obtener experiencia y tratarla. Es una de las grandes ventajas de RL.
 
@@ -1010,7 +1151,7 @@ Hemos visto lo más importante y necesario de las técnicas de RL; su arquitectu
 
 Con los métodos de Montecarlo, y sobretodo SARSA y Q-Learning (basado en SARSA), vimos formas más sofisticadas de utilizar el feedback del entorno para construir nuevas políticas a partir del aprendizaje por ensayo-error. Estos métodos guardaban un valor estimado por cada estado-acción diferente del entorno en una estructura tipo tabla, en eso se basaban esas funciones valor de la política. \\
 
-¿Y si en lugar de utilizar eso usamos redes neuronales para esas funciones y políticas? Si representamos las funciones como un conjunto grande de pesos y una red, estamos hablando del DRL. Las técnicas son muy parecidas a las explicadas hasta ahora, sin embargo, contamos con una nueva tecnología para estimar los valores de función que puede llegar a ser más potente. Sobre todo para abordar problemas complejos, no solo por su espacio de estados y acciones, sino por la cantidad de variables o información que pueden tener cada uno de ellos. Todo esto sin contar con que el espacio de acciones puede ser continuo, lo que directamente no puede ser abordado por una función tabla. \\
+¿Y si en lugar de utilizar eso usamos redes neuronales para esas funciones y políticas? Si representamos las funciones como un conjunto grande de pesos y una red, estamos hablando del DRL. Las técnicas son muy parecidas a las explicadas hasta ahora, sin embargo, contamos con una nueva tecnología para estimar los valores de función que puede llegar a ser más potente: el Deep Learning. Sobre todo para abordar problemas complejos, no solo por su espacio de estados y acciones, sino por la cantidad de variables o información que pueden tener cada uno de ellos. Todo esto sin contar con que el espacio de acciones puede ser continuo, lo que directamente no puede ser abordado por una función tabla. \\
 
 Vamos a ver algunas de las formas más importantes en las que se ha conseguido integrar el DL dentro del RL, para conseguir alcanzar estas ventajas respecto al RL original.
 
@@ -1018,13 +1159,13 @@ Vamos a ver algunas de las formas más importantes en las que se ha conseguido i
 
 DQN \cite{article:DQN} \cite{article:DQN2} es uno de los algoritmos más populares que hay dentro de este campo, siendo el inicio de una serie de investigaciones e innovaciones que marcaron un antes y un después en el mundo del RL. Con esta técnica fue la primera vez que se pudo crear un agente en ATARI capaz de resolverse a partir de los píxeles crudos, de la propia imagen, combinándose Q-Learning con redes neuronales CNN (apartado \ref{sec:convolucional}). \\
  
-Esto resulta muy interesante, las observaciones que el agente hacía del problema es exactamente igual a las que hace un humano; observar los píxeles de una imagen, en lugar de pensar anteriormente un formato de input específico para las observaciones del entorno, construyendo nueva experiencia a partir de ese formato de input, todo esto como resultado de integrar CNN con RL. \\
+Esto resulta muy interesante, las observaciones que el agente hacía del problema es exactamente igual a las que hace un humano; observar los píxeles de una imagen, en lugar de pensar anteriormente un formato de entrada específico para las observaciones del entorno, construyendo nueva experiencia a partir de esa entrada, todo esto como resultado de integrar CNN con RL. \\
 
 Es una estrategia \textbf{basado en valor} (\textit{value-based}). Parte de la técnica de RL Q-Learning visto en el apartado \ref{sec:qlearning}, utilizando como funciones optimizables redes neuronales, vistas en el apartado \ref{sec:deeplearning}, lo que es comúnmente conocido como \textbf{Deep Q-Learning}. El principal cambio reside en su función Q, modelándose como una \textbf{función no lineal}\\
 
 %Sabemos que para esta estrategia se tienen dos políticas diferentes; la generadora de experiencia y la objetivo. Sin embargo, esto no equivale a dos redes neuronales distintas. La arquitectura de la red neuronal como tal es la misma, lo que se cambia es el \textbf{conjunto de pesos} que define su comportamiento. Teniendo dos conjuntos de pesos diferentes, uno para cada cometido que hemos explicado. \\
 
-Las redes neuronales tienen tantas neuronas en la capa de entrada como variables una observación del estado $s$ o igual al vector de características procesadas si ha habido un procesamiento convolutivo previo, como se menciono anteriormente. Por otro lado, la capa de salida tiene tantas neuronas (\textit{outputs}) como acciones posibles del problema. Representado cada una de esas salidas $Q(s,a;\theta) \forall a \in A$. \\
+Las redes neuronales tienen tantas neuronas en la capa de entrada como variables una observación del estado $s$ o igual al vector de características procesadas si ha habido un procesamiento convolutivo previo, como se mencionó anteriormente. Por otro lado, la capa de salida tiene tantas neuronas (\textit{outputs}) como acciones posibles del problema. \\
 
 Para elegir una acción, podríamos coger la que tuviera un valor estimado más alto, aplicar una distribución de probabilidad para favorecer la exploración, o hacer $\epsilon-greedy$, etc (esta decisión sería parte de la política $\pi$). Podemos observar dicha explicación en la figura \ref{fig:RNdiscreta}.
 
@@ -1037,7 +1178,7 @@ Para elegir una acción, podríamos coger la que tuviera un valor estimado más 
 
 El símbolo $\Theta$ hace referencia al conjunto de pesos. \\
 
-Por otra parte, podemos enfrentarnos a un problema que tenga acciones continuas y, por tanto, tenga un espacio infinito de valores. Se puede adaptar para DQN incluyendo la acción como entrada de la red (aunque esto no pertenece a DQN base). Entonces, la salida sería $Q(s,a;\theta)$ para esa acción concreta. Si queremos $Q$ para otra acción, la parte de entrada de $s$ sería la misma y habría que modificar $a$. Al tratarse de acciones continuas, no podemos calcular todas las posibilidades a partir de la entrada $s$, como en el caso anterior. Esto hace que DQN no sea apropiada para resolver este tipo de problemas continuos por sí misma:
+Por otra parte, podemos enfrentarnos a un problema que tenga acciones continuas y, por tanto, tenga un espacio infinito de valores. Se puede adaptar para DQN incluyendo la acción como entrada de la red. Entonces, la salida sería $Q(s,a;\theta)$ para esa acción concreta. Si queremos $Q$ para otra acción, la parte de entrada de $s$ sería la misma y habría que modificar $a$. Al tratarse de acciones continuas, no podemos calcular todas las posibilidades a partir de la entrada $s$, como en el caso anterior. Esto hace que DQN no sea apropiada para resolver este tipo de problemas continuos por sí misma:
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{captures/RNcontinua.png}
@@ -1058,20 +1199,14 @@ Esta adaptación trata de eliminar la relación temporal entre acciones con la m
 
 Si recordamos el apartado \ref{sec:deeplearning}, las redes neuronales necesitan, entre otras cosas, una \textbf{función de error o pérdida} para posteriormente poder optimizar sus pesos con una \textbf{función de optimización} que se aproveche de esta información. \\
 
-El problema es que no sabemos la respuesta óptima (o etiqueta original cuando hablábamos de aprendizaje supervisado). Es parte del paradigma del aprendizaje por refuerzo, existe tal complejidad en el entorno que es imposible en la mayoría de ocasiones saber la respuesta óptima, y la exploración (aprendizaje ensayo-error) es la única forma de poder acercarnos o aproximarnos a la mejor respuesta posible en cada una de las situaciones que nos plantea el entorno. \\
+El problema es que no sabemos la respuesta óptima (o etiqueta original cuando hablábamos de aprendizaje supervisado) para calcular esta pérdida. Es parte del paradigma del aprendizaje por refuerzo, existe tal complejidad en el entorno que es imposible en la mayoría de ocasiones saber la respuesta óptima, y la exploración (aprendizaje ensayo-error) es la única forma de poder acercarnos o aproximarnos a la mejor respuesta posible en cada una de las situaciones que nos plantea el entorno. \\
 
-Una vez más, hay que \textbf{estimar} la respuesta óptima para poder tener una función de error para nuestra red neuronal, esto sería el entrenamiento del conjunto de pesos para nuestra política objetivo:
+Una vez más, hay que \textbf{estimar} la respuesta óptima para poder tener una función de error para nuestra red neuronal, estimando la recompensa acumulada real que esperaríamos del entorno al final del episodio, a partir de un estado, acción, siguiente estado y recompensa, como ya hemos visto. \\
 
-\begin{equation}
-Q(S_0,A_0) \leftarrow Q(S_0,A_0) + \alpha \left[R_1+\gamma max_{a\in A}Q(S_1,a)-Q(S_0,A_0)\right]
-\end{equation}
-
-Con esa formulación podemos estimar la recompensa acumulada real que esperaríamos del entorno al final del episodio, a partir de un estado, acción , siguiente estado y recompensa, como ya hemos visto. \\
-
-Las redes neuronales que se incluyen en estas técnicas de RL se componen de las mismas partes y funciones que se explicaron en el apartado \ref{sec:deeplearning}. Será necesario una \textbf{función de perdida}, por ejemplo se podría utilizar el error cuadrático (\textit{MSE}) de la siguiente forma:
+Las redes neuronales que se incluyen en estas técnicas de RL se componen de las mismas partes y funciones que se explicaron en el apartado \ref{sec:deeplearning}. La \textbf{función de perdida} podría ser el error cuadrático (\textit{MSE}) de la siguiente forma:
 
 \begin{equation}
-MSE= \E\pi[(Q(S,A)-Q(S,A;\theta))^2]
+MSE= \E_\pi[(Q(S,A)-Q(S,A;\theta))^2]
 \end{equation}
 
 La finalidad es medir la diferencia entre el valor real de Q y el obtenido por la red que se está tratando de mejorar, para luego aplicar \textbf{gradiente descendente} y optimizar así la función de error. Se obtendrá una \textbf{actualización de los pesos} en la red ($\Delta\Theta$) denotada con la siguiente forma:
@@ -1105,7 +1240,7 @@ Se trata de una variante que tiene como objetivo principal hacer que el algoritm
 \begin{itemize}
 	\item \textbf{Red Q}: Es la red que define la función $Q(S,A,\Theta)$.\\
 	
-	\item \textbf{Red objetivo}: Se trata de un estimador imparcial del error medio cuadrático de Bellman utilizado en entrenar la red Q. Esta red objetivo se sincroniza con la red Q después de un predefinido periodo de interacciones, produciéndose un acoplamiento entre las dos redes. 
+	\item \textbf{Red objetivo}: Se trata de un estimador imparcial del error medio cuadrático de Bellman utilizado en entrenar la red Q. Esta red objetivo se sincroniza con la red Q después de un predefinido periodo de interacciones, produciéndose un acoplamiento entre las dos redes. \\
 \end{itemize}
 
 En resumen, los pesos $\Theta^-$, los cuales forman la \textbf{red objetivo} ($\overline{Q}$), se actualizan con menor frecuencia a partir de los pesos ($\Theta$) (realizando copias de esos parámetros) que forman la red \textbf{red Q}. \\
@@ -1226,9 +1361,9 @@ El actor recibe un estado $s$, que a su vez provoca una acción $a$ por parte el
 
 Lo más importante es que el actor aprende teniendo en cuenta las estimaciones del crítico, el cual aprende de forma directa utilizando las encuaciones de Bellman vistas en el apartado \ref{sec:bellman}. A continuación se explica las técnicas DDPG y A2C, explicando antes A3C para que se entienda mejor éste último.\\
 
-\subsection{Proximal Policy Optimization (PPO2)}
+\subsection{Proximal Policy Optimization (PPO2)}\label{sec:PPO2}
 
-Proponen una nueva familia de métodos de \textbf{gradiente de políticas} \cite{article:PPO2} \cite{article:PPO2_1} para el aprendizaje por refuerzo, que alternan entre el muestreo de datos a través de la interacción con el entorno (experiencia) y la optimización de una \textbf{función objetivo} mediante el \textbf{gradiente estocástico ascendente}. \\
+Proponen una nueva familia de métodos de \textbf{gradiente de políticas} \cite{article:PPO2} \cite{article:PPO2_1} para el aprendizaje por refuerzo. \\
 
 Para esta técnica, se utiliza los valores de ventaja (apartado \ref{sec:ventaja}). La política antigua se ejecuta durante un periodo T (menos de un episodio) en la que se estima esos valores de ventaja. Cuando finaliza, optimiza los pesos de la política en épocas organizadas en \textit{mini-batches} y finalmente se sustituye esta política nueva por la antigua. \\
 
@@ -1238,7 +1373,7 @@ Para describir este proceso se debe tener claro unos términos antes. Primero de
 r_t(\Theta)=\frac{\pi_\Theta(A_t|S_t)}{\pi_{\Theta_{old}}(A_t|S_t)}
 \end{equation}
 
-Sirve para considerar como de grande ha sido una actualización en el conjunto de pesos de una política. Cuanto más se aleje $r_t(\Theta)$ del valor 1, más grande será dicho cambio en los parámetros, ya que si introducimos en ese ratio la propia política antigua (sin actualización) obtenemos lo siguiente: \\
+Sirve para considerar cómo de grande ha sido una actualización en el conjunto de pesos de una política. Cuanto más se aleje $r_t(\Theta)$ del valor 1, más grande será dicho cambio en los parámetros, ya que si introducimos en ese ratio la propia política antigua (sin actualización) obtenemos lo siguiente: \\
 
 \begin{equation}
 r_t(\Theta_{old})=\frac{\pi_{\Theta_{old}}(A_t|S_t)}{\pi_{\Theta_{old}}(A_t|S_t)}=1
@@ -1257,7 +1392,7 @@ Esta función es usada en técnicas basada en política como \textit{Trust Regio
 Por ello, se plantea una función novedosa dentro de esta familia de algoritmos, que en parte se basa en la explicada anteriormente: \\
 
 \begin{equation}
-L^{CLIP}(\Theta)=\hat{\E t}\left[min(r_t(\Theta)\hat{A_t},clip(r_t(\Theta),1-\epsilon,1+\epsilon)\hat{A_t})\right]
+L^{CLIP}(\Theta)=\hat{\E_ t}\left[min(r_t(\Theta)\hat{A_t},clip(r_t(\Theta),1-\epsilon,1+\epsilon)\hat{A_t})\right]
 \end{equation}
 
 Siendo $\epsilon$ un hiperparámetro, digamos $\epsilon=0.2$. A esto se le conoce como \textbf{Clipped Surrogate Objective} o \textbf{Objetivo sustituto recortado}. La motivación de esta propuesta viene dada por varias razones.\\
@@ -1475,6 +1610,8 @@ A3C \cite{article:A2C} \cite{article:A3C} es útil para resolver problemas con a
 
 Consiste en tener $n$ agentes diferentes en entornos iguales del problema, cada uno con su propia política y función valor, propio de una arquitectura actor-critic. Llamaremos a cada uno de estos agentes \textit{trabajadores}:
 
+\newpage
+
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.7]{captures/A3C.png}
 	\caption{Esquema de algoritmo A3C.}
@@ -1507,7 +1644,7 @@ Existen otras muchas variantes de este algoritmo: Actualización en un paso (SAR
 
 \subsection{Adventage Actor-Critic (A2C)}
 
-A2C \cite{article:A2C} es, en resumen, una versión \textbf{síncrona} a partir de A3C. Según Miguel Morales \cite{book:miguel}, uno de lo cambios que incluye es la utilización de una sola red neuronal y varios conjuntos de pesos para cada actor-crítico por \textbf{fusionarlo} todo en una sola red:
+A2C \cite{article:A2C} es, en resumen, una versión \textbf{síncrona} a partir de A3C. Según \cite{book:miguel}, uno de lo cambios que incluye es la utilización de una sola red neuronal y varios conjuntos de pesos para cada actor-crítico por \textbf{fusionarlo} todo en una sola red:
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{captures/A2Cred.png}
@@ -1516,7 +1653,7 @@ A2C \cite{article:A2C} es, en resumen, una versión \textbf{síncrona} a partir 
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-De esta forma, los pesos en las diferentes capas de la red es compartido y utilizado al mismo tiempo tanto por la parte actor como por el crítico, ofreciendo las dos salidas al mismo tiempo. Esto sería utilizado en la red global del mismo modo que se mencionaba en A3C y puede ser particularmente beneficioso cuando se aprende a partir de imágenes ya que la extracción de características se hace una sola vez y puede ser utilizado por el actor y el crítico al mismo tiempo (es útil para el problema de Super Mario Bros que veremos más adelante en el apartado \ref{sec:}). \\
+De esta forma, los pesos en las diferentes capas de la red es compartido y utilizado al mismo tiempo tanto por la parte actor como por el crítico, ofreciendo las dos salidas al mismo tiempo. Esto sería utilizado en la red global del mismo modo que se mencionaba en A3C y puede ser particularmente beneficioso cuando se aprende a partir de imágenes ya que la extracción de características se hace una sola vez y puede ser utilizado por el actor y el crítico al mismo tiempo (es útil para el problema de Super Mario Bros que veremos más adelante en el apartado \ref{sec:mario}). \\
 
 En este algoritmo también se tiene a un conjunto de \textit{trabajadores} los cuales se ejecutan en el mismo entorno. La diferencia reside en que se espera a que todos los \textit{trabajadores} terminen sus ejecuciones antes de realizar una \textbf{única actualización} de la red global cada vez a partir de todos estos. \\
 
@@ -1555,9 +1692,9 @@ Por último, veremos el resultado final. La eficacia del funcionamiento de los a
 
 Las técnicas DRL vistas en el capítulo anterior serán usadas e ilustradas de las librerías de \textbf{OpenAI}. Se trata de un laboratorio de investigación con sede en San Francisco, California. Su misión y línea de trabajo general consiste en utilizar la inteligencia artificial en beneficio de la humanidad. No solamente por ellos, sino por cualquiera, ya que brindan sus algoritmos, técnicas e implementaciones de código abierto a cualquiera que tenga la voluntad y la curiosidad para realizar sus propias investigaciones. \cite{article:openAI}. \\
 
-Podemos ver los avances que han obtenido en su página web \cite{article:openAI2}, siendo en general sobre inteligencia artificial, pero sobretodo relacionada con aprendizaje por refuerzo y redes neuronales.\\
+Podemos ver los avances que han obtenido en su página web \cite{article:openAI2}, siendo en general sobre inteligencia artificial, pero sobre todo relacionada con aprendizaje por refuerzo y redes neuronales.\\
 
-Es una de las últimas propuestas para crear una estandarización de las implementaciones de algoritmos DRL. Sin embargo, no es la única que existe, es difícil decidir cuál es la mejor librería de todas las posibles. Se pueden encontrar otras alternativas como \textit{RLlib}, \textit{Stable Baselines}, \textit{TersorForce}, \textit{KerasRL}... Entre otras cuantas más. \\
+Es una de las últimas propuestas para crear una estandarización de las implementaciones de algoritmos DRL. Sin embargo, no es la única que existe, es difícil decidir cuál es la mejor librería de todas las posibles. Se pueden encontrar otras alternativas como \textit{RLlib} \cite{article:RLlib}, \textit{Stable Baselines} \cite{article:stablebaselines}, \textit{TersorForce} \cite{article:tensorforce}, \textit{KerasRL} \cite{article:kerasRL}... Entre otras cuantas más. \\
 
 Uno de los principales motivos por los que se ha elegido a \textit{OpenAI baselines} es su comunidad activa, la documentación y detalles de los algoritmos que implementa y la incorporación de ejemplos sencillos con la finalidad de facilitar el entendimiento de uso a los más nuevos. \\
 
@@ -1687,7 +1824,7 @@ En concreto, nosotros vamos a utilizar unos entornos predefinidos, de nuevo, por
 
 Hay una gran diversidad de entornos, algunos son muy simples, otros más complejos; algunos no son fieles al mundo real tratando de hacerlos más simples, y otros tratan de simular la realidad lo mejor posible. \\
 
-En definitiva, vamos a trabajar con dos entornos, uno simple y otro algo más complejo, con los que probar y analizar las técnicas mencionadas en los apartados anteriores. \cite{article:gym} \cite{article:entornos}
+En este trabajo, vamos a trabajar con dos entornos, uno simple y otro algo más complejo, con los que probar y analizar las técnicas mencionadas en los apartados anteriores. \cite{article:gym} \cite{article:entornos}
 
 \section{MountainCar-v0}\label{sec:mountaincar}
 
@@ -1772,7 +1909,7 @@ Se accedió a las librerías de OpenAI, concretamente a las del archivo \textit{
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Por lo obtenido en la figura \ref{fig:entradamario}, da la sensación de que se trata una imagen con 3 canales de color (RGB) normalizados a valores entre 0 y 1 (en lugar a 0 y 255 que corresponde a un byte). \\
+Por lo obtenido en la figura \ref{fig:entradamario}, vemos que se trata una imagen con 3 canales de color (RGB) normalizados a valores entre 0 y 1 (en lugar a 0 y 255 que corresponde a un byte). \\
 
 Si observamos el código de gym-retro \cite{article:retroobservations}, existe una definición de las \textbf{observaciones} o estados del entorno. Pueden ser imágenes RGB o un volcado de RAM, parece que por defecto se utiliza imágenes RGB como se estaba comentando. \\
 
@@ -1804,9 +1941,9 @@ Las acciones son discretas, aunque algunas de ellas se obtienen combinando más 
 
 En este videojuego, los saltos pueden ser más prolongados o menos. Esto se consigue dejando pulsado el botón de salto (A) durante más tiempo. El tiempo se encuentra discretizado ($t$). Entonces, en este entorno tener la acción A establecida en más de un \textit{paso} consecutivo, equivale a un salto prolongado. \\
 
-El juego original funciona a 25 FPS's, lo cual significa que cada segundo de juego tenemos 25 frames o inputs. Estos frames van a ser muy similares entre ellos, tanto en estados,recompensas, o acción a realizar. Esto retrasa mucho el entrenamiento. Para simplificar este proceso, se realiza la omisión de frames estocásticos donde cada n-simo frame se utiliza como estado y las acciones son iguales a las anteriores con una probabilidad $p$ predefinida, para favorecer esas prolongaciones en los saltos, por ejemplo. Es una forma de tener menos datos con los que trabajar al mismo tiempo que no se compromete la eficacia del proceso de entrenamiento.\\
+El juego original funciona a 25 FPS's, lo cual significa que cada segundo de juego tenemos 25 frames o inputs. Estos frames van a ser muy similares entre ellos, tanto en estados, recompensas, o acción a realizar. Esto retrasa mucho el entrenamiento. Para simplificar este proceso, se realiza la omisión de frames estocásticos donde cada n-simo frame se utiliza como estado y las acciones son iguales a las anteriores con una probabilidad $p$ predefinida, para favorecer esas prolongaciones en los saltos, por ejemplo. Es una forma de tener menos datos con los que trabajar al mismo tiempo que no se compromete la eficacia del proceso de entrenamiento.\\
 
-En cuanto a las \textbf{recompensas}, la función de recompensa acumulada es: 
+En cuanto a las \textbf{recompensas}, la función de recompensa acumulada que se incluye con el entorno de \textit{gym-retro} es: 
 
 \begin{equation}
 R=V+T+D+S
@@ -1835,13 +1972,13 @@ Existen otras variantes del entorno de Super Mario Bros en Gym que pueden interp
 
 Tener a disposición una mayor cantidad de recursos para poder realizar una mayor cantidad de entrenamientos y pruebas de agentes en una menor cantidad de tiempo es un factor muy beneficioso para este proyecto. \\
 
-Por ello, se tomó la decisión de utilizar \textbf{infraestructura de la nube}. Tras un análisis del mercado, se ha decidido utilizar \textbf{Google Cloud} para montar una máquina virtual que pudiéramos utilizar para entrenar y guardar agentes en los entornos explicados.\\
+Por ello, se tomó la decisión de utilizar \textbf{infraestructura de la nube}. Tras un análisis del mercado, se ha decidido utilizar \textbf{Google Cloud} para montar una máquina virtual que pudiéramos utilizar para entrenar y guardar agentes en los entornos explicados, ha sido principalmente comparada con \textbf{Amazon Web Services} (AWS).\\
 
-Existen un buen número de plataformas que nos ofrecen una gran diversidad de servicios en la nube de buena calidad. Los usuarios solo deben de preocuparse de usarlo (y pagar lo que corresponda), dejando el resto de ámbitos a la propia empresa que abastece. \\
+Existen un buen número de plataformas que nos ofrecen una gran diversidad de servicios en la nube de buena calidad. Los usuarios solo deben preocuparse de usarlo (y pagar lo que corresponda), dejando el resto de ámbitos a la propia empresa que abastece. \\
 
 Estos ámbitos son la administración de recursos, disponibilidad, integridad de los datos, etc. En muchos aspectos estarán, como organización, mejor preparados para dar los servicios. Por ejemplo, en cuestión de seguridad, con casi total certeza, serán más robustos y estarán mejor preparados que lo que puede estar un usuario de forma individual. \\
 
-De forma general y resumida, podemos decir que \textbf{Google Cloud Platform} ofrece una mejor \textbf{potencia de procesamiento}, mientras que \textbf{Amazon Web Services} (AWS) destaca más en la \textbf{capacidad de memoria}. Para nuestro proyecto interesa que el servicio de procesamiento sea lo mejor posible, ya que para los entrenamientos que realizaremos serán esenciales. \\
+De forma general y resumida, ambos proveedores son muy buenas opciones, además de contar con una amplia documentación y comunidad por parte de ambos. Podemos decir que el principal inconveniente de \textbf{Amazon Web Services} (AWS) es el coste, siendo difícil de calcular su estructura de precios y administrar esos gastos de forma efectiva. \textbf{Google Cloud Platform} se especializa en ofertas de alto rendimiento como Big Data, análisis y aprendizaje automático, lo cual es deseable para nuestro interés. \\
 
 Otro de los puntos fuertes de Google Cloud es la escalabilidad y equilibrio de carga que ofrece, que permite ajustar la infraestructura de una forma más exacta a nuestras necesidades. Los precios de Google son más competitivos, aunque ofrece menos servicios que AWS. En este caso, interesa mejores precios y menos servicios siempre que los necesarios se encuentren. \\
 
@@ -1858,10 +1995,23 @@ Entrenamos los modelos y obtenemos los logs en la máquina virtual. Después, se
 	\caption{Esquema de metodología de trabajo entre mi equipo personal y la máquina virtual creada}
 	\label{fig:formaTrabajo} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure} 
+\end{figure}
+
+\section{Planificación de experimentación} 
+
+Como ya se ha mencionado, se trabajará con los entornos de \textit{MountainCar-v0} y \textit{Super Mario Bros} en el presente trabajo. En el entono \textit{MountainCar-v0} realizaremos pruebas con los algoritmos DQN, DDPG, PPO2 y A2C propuestos por \textit{OpenAI baselines} y \textit{stable-baselines} en caso de DDPG. En cuanto a \textit{Super Mario Bros}, se realizarán pruebas con DQN, PPO2 y A2C. \\
+
+Primero se realizarán todas las pruebas en \textit{MountainCar-v0} dado que es un entorno más simple, aunque en el futuro veremos que presenta sus propias dificultades. Para DDPG usaremos la variante continua del problema (\textit{MountainCarContinuous-v0}), dado que utiliza la adaptación de espacio de acciones continuas para la parte crítica (basada en DQN). Para este entorno ha sido posible repetir las mismas estrategias con semillas diferentes (el entrenamiento no consume demasiado tiempo para este problema), con la finalidad de estudiar su aleatoriedad, se tratará de plasmar la influencia de este factor en los diferentes algoritmos. \\ 
+
+Una vez se ha considerado el problema resuelto, se repetirá el proceso con \textit{Super Mario Bros}, aunque aumentando mucho el número de interacciones para los entrenamientos con esos algoritmos, dado que el problema es más complejo y lleva mayor tiempo para optimizarse. \\
+
+Los criterios que se tienen en cuanta a la hora de definir cuál es el mejor modelo y/o algoritmo en cada entorno vienen dados principalmente por la media de valores de recompensas obtenidas por episodio del agente, junto con el tiempo que ha tardado en entrenarse previamente. \\
+
+Para validar su buen comportamiento, a parte de los datos mencionados, se estudiarán otros aspectos como la media de duración de cada episodio (implícito en la recompensa en caso de \textit{MountainCar-v0}), datos de exploración, así como unos vídeos demostrativos del comportamiento de estos agentes, pudiendo comprobarse de forma visual. \\
+
 
 \chapterimage{grafica.png}
-\chapter{Experimentación: Resultados Obtenidos}
+\chapter{Experimentación, Resultados y Discusión}
 
 En este capítulo, vamos a mostrar y discutir sobre los resultados que hemos obtenido de los algoritmos, entornos de gym y entorno de trabajo que hemos explicado en este proyecto. \\
 
@@ -1893,11 +2043,13 @@ A continuación se muestra en una tabla los resultados más relevantes obtenidos
 		\rowcolor[HTML]{FFCCC9} 
 		\multicolumn{1}{|l|}{\cellcolor[HTML]{C7DCB4}\textbf{A2C}}                    & \textbf{-200}                                                                                                                  & \textbf{3}                                                                           & \textbf{12500}                                                                                                           & \textbf{5965}                                     \\ \hline
 	\end{tabular}
+	\caption{Resumen de resultados obtenidos en \textit{MountainCar-v0}}
+	\label{table:resultadosMountain}
 \end{table}
 
 Recordemos que el algoritmo DDPG funciona en \textit{MountainCarContinuous-v0} y que la función de recompensa y por tanto su rango de valores es diferente a DQN, PPO2 y A2C. En cuanto a PPO2 y A2C, solo se ha mostrado un resultado, porque en todos los experimentos ha ocurrido exactamente lo mismo; una recompensa de -200 (no alcanzar la meta nunca).\\
 
-Los modelos más relevantes han sido grabados y subidos a \textit{Youtube} (\url{https://www.youtube.com/channel/UChB02d0pWUenxhGThUB5IFQ}). A continuación, se muestran los enlaces de los vídeos para cada modelo:
+Los modelos más relevantes han sido grabados y subidos a \textit{Youtube} (ver el canal en \url{https://www.youtube.com/channel/UChB02d0pWUenxhGThUB5IFQ}). A continuación, se muestran los enlaces de los vídeos para cada modelo:
 
 \begin{table}[H]
 	\begin{tabular}{|
@@ -1910,6 +2062,8 @@ Los modelos más relevantes han sido grabados y subidos a \textit{Youtube} (\url
 		\textbf{PPO2}                                                    & 2,5 millones                                                                                                        & \url{https://www.youtube.com/watch?v=azSbhDxXEno}                                                            \\ \hline
 		\textbf{A2C}                                                     & 2,5 millones                                                                                                        & \url{https://www.youtube.com/watch?v=ve4az81c_ek}                                                            \\ \hline
 	\end{tabular}
+	\caption{Enlaces a vídeos de Youtube mostrando resultados de los modelos en \textit{MountainCar-v0}}
+	\label{table:videosMountain}
 \end{table}
 
 \subsection{DQN}
@@ -1940,7 +2094,9 @@ La mayoría de modelos no alcanzan valores malos, siendo lo común encontrarnos 
 
 ¿Por qué ocurre esto? A pesar de la apariencia, MountainCar es un problema complejo. La función de recompensa solo ofrece un valor positivo cuando alcanza la meta, siendo valores negativos en el resto de casos, esto es conocido como \textbf{sparse reward} (recompensa escasa o dispersa) y es un problema bastante frecuente en los problemas de aprendizaje por refuerzo. \cite{article:sparse} \\
 
-Esto hace que sea muy complicado para el algoritmo lograr conectar series de acciones que sean beneficiosas para una recompensa acumulada futura. Si esa escasez de recompensas positivas es intratable por el algoritmo, resultaría en un agente que nunca puede alcanzar el objetivo y aprender a representar una concatenación de acciones buena para el problema. Una solución posible a este inconveniente es entrenar con RL redes neuronales ya eficaces en cierta medida, en lugar de partir de cero. De hecho, es lo que hacen con AlphaGo \cite{book:alphago}, por ejemplo, entrenando a partir de modelos ya funcionales mediante aprendizaje supervisado de partidas de humanos. \\
+Esto hace que sea muy complicado para el algoritmo lograr conectar series de acciones que sean beneficiosas para una recompensa acumulada futura. Si esa escasez de recompensas positivas es intratable por el algoritmo, resultaría en un agente que nunca puede alcanzar el objetivo y aprender a representar una concatenación de acciones buena para el problema. \\
+
+Una solución posible a este inconveniente es entrenar con RL redes neuronales ya eficaces en cierta medida, en lugar de partir de cero. De hecho, es lo que hacen con AlphaGo \cite{book:alphago}, por ejemplo, entrenando a partir de modelos ya funcionales mediante aprendizaje supervisado de partidas de humanos. \\
 
 Otra solución podría ser elaborar otra función de recompensa que no tuviera este problema, lo que se traduce en un \textbf{cambio de definición} de ese problema. Proponer una función diferente puede influir y mucho en ese proceso de aprendizaje y cómo el agente consigue optimizarse. \\
 
@@ -1953,15 +2109,17 @@ Tener unas recompensas tan dispersas puede hacer que la exploración del agente 
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure} 
 
-La mayor parte de la exploración por parte del agente se produce en los primeros 1100 episodios del entrenamiento. Empezando con un 92\% del tiempo empleado en explorar y decrece linealmente a un ritmo alto. A los 1300 episodios ya solo emplea un 2\% del tiempo en explorar, hasta el final del entrenamiento se mantiene con esa dinámica. El resto de agentes entrenados siguen este patrón de exploración con DQN. \\
+En los logs que registra el algoritmo de DQN desarrollado por \textit{OpenAI baselines} guarda datos cada vez que realiza una acción diferente a la dictada como óptima por su política actual ($\epsilon-greedy$). Entonces, se tiene acceso al porcentaje de tiempo empleado explorando por parte de dicho algoritmo. \\
+
+La mayor parte de la exploración por parte del agente se produce en los primeros 1100 episodios del entrenamiento. Empezando con un 92\% del tiempo empleado en explorar y decrece linealmente a un ritmo alto. A los 1300 episodios ya solo emplea un 2\% del tiempo en explorar, hasta el final del entrenamiento se mantiene con esa dinámica. El resto de agentes entrenados siguen este patrón de exploración con DQN. Lo que ocurre es que, con el hiperparámetro $\epsilon$ fijo, al cabo del tiempo ya no hay ``novedades'' que explorar. \\
 
 Esta es la principal razón por la que DQN es capaz de lidiar con \textit{MountainCar-v0} a pesar del \textit{sparse reward}. Es un problema en la que la exploración aleatoria en grandes cantidades se premia, y mucho, ya que alcanzar el objetivo es imprescindible para el aprendizaje. \cite{article:sparse} \\
 
 Como conclusión final, los agentes suelen alcanzar su mejor media de recompensas antes de los 2000 episodios con unos valores de entre -110 y -140, por lo que se puede concluir que esta técnica es capaz de resolver el problema de \textit{MountainCar-v0} tal y como define el problema Gym, aunque no ofrece las mejores soluciones posibles ni logra su objetivo el cien por cien de las ocasiones (excepto en casos extraordinarios como el de la semilla 113).\\
 
-Quizás con una reformulación de la función de recompensa los entrenamientos podrían ser más estables y predecibles, dependiendo menos de la exploración. \\
+Quizás con una reformulación de la función de recompensa los entrenamientos podrían ser más estables y predecibles, dependiendo menos de la exploración concreta que se produce a partir de la semilla. \\
 
-El entrenamiento de la semilla 113 ha sido un caso extraordinario, alcanzando su mejores validaciones y convergencia a partir de los 5000 episodios con una recompensa de -100 y siendo capaz de mantenerse a ese nivel. Sin embargo, no es lo habitual. Si mostramos un resumen de todos los entrenamientos en una misma gráfica podemos observar la influencia de la aleatoriedad en la exploración:
+La semilla 113, como decíamos, ha alcanzado sus mejores validaciones y convergencia a partir de los 5000 episodios con una recompensa de -100 y siendo capaz de mantenerse a ese nivel. Sin embargo, no es lo habitual. Si mostramos un resumen de estos entrenamientos (semilla 3, 13 y 113) en una misma gráfica, podemos observar la influencia de la aleatoriedad en la exploración:
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.2]{mountain/mountain-dqn-media.png}
@@ -1970,11 +2128,9 @@ El entrenamiento de la semilla 113 ha sido un caso extraordinario, alcanzando su
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure} 
 
-Esta gráfica ha sido realizada a partir de los \textit{pasos} dado que, como se mencionó anteriormente, si es el mismo valor en todos los modelos, cosa que no ocurre con los episodios. \\
+Esta gráfica ha sido realizada a partir de los \textit{pasos} dado que, como se mencionó anteriormente, sí es el mismo valor en todos los modelos, cosa que no ocurre con los episodios. \\
 
 El tono más claro muestra la desviación estándar de los datos. El tono más oscuro el error en la estimación de la media. En otras palabras, la desviación estándar dividida por la raíz cuadrada del número de semillas que tenemos. También incluye un suavizado para que la gráfica sea mejor visible. \\
-
-La forma más simple de interpretarlo para que se entienda lo que se acaba de explicar; cuanto más estrecha sea las áreas sombreadas alrededor de la línea, más coincide el progreso en ese punto para los modelos diferentes expuestos. \\
 
 Vemos la enorme variabilidad que pueden tener DQN para \textit{MountainCar-v0}, sobretodo pasados los 2000 episodios más o menos. Aún así puede lidiar con el problema y llegar a resolverlo. Además, utilizar una política de uso diferente de la función Q para generar experiencia y actualizarla puede influir positivamente en este sentido (figura \ref{fig:qlearning}).
 
@@ -1984,7 +2140,7 @@ En DDPG, se han conseguido resultados mucho más \textbf{estables} que en DQN al
 
 Si comparamos el vídeo de DDPG con el vídeo del mejor modelo DQN, vemos que ambos consiguen siempre resolver el problema. No obstante, si nos fijamos en el comportamiento de ambos, vemos que DDPG tiene una forma de resolverlo más limpia que DQN. \\
 
-DDPG ha aprendido mejor el concepto de momentum para resolver el problema. Si nos fijamos en DQN, hay veces que comienza el episodio moviéndose hacia la derecha, un primer movimiento totalmente innecesario, mientras que DDPG siempre hace el mismo movimiento y de forma prácticamente perfecta.\\
+DDPG ha aprendido mejor el concepto de momentum para resolver el problema. DQN a veces comienza el episodio moviéndose hacia la derecha, un primer movimiento totalmente innecesario, mientras que DDPG siempre hace el mismo movimiento y de forma prácticamente perfecta.\\
 
 Los tiempos de ejecución para este problema son muy similares a los de DQN, quizás un poco más altos en general, lo cual tiene sentido dado que DDPG integra una parte crítica basada en DQN con adaptación a acciones continuas. Las recompensas obtenidas durante los entrenamientos han sido:
 
@@ -2004,15 +2160,15 @@ Como se puede apreciar en la figura \ref{fig:mountainDDPG}, los modelos converge
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Siguen un patrón en el progreso de aprendizaje bastante claro independientemente de la semilla que se utilice. Como se puede observar en la figura \ref{fig:mountainDDPGresumen}, lidia mucho mejor con el \textit{sparse reward} que DQN, ya que no depende tanto de la aleatoriedad realizada en cada una de las semillas, aunque la exploración sea muy importante. 
+Siguen un patrón en el progreso de aprendizaje bastante claro independientemente de la semilla que se utilice. Como se puede observar en la figura \ref{fig:mountainDDPGresumen}, lidia mucho mejor con el \textit{sparse reward} que DQN, ya que no depende tanto de la aleatoriedad realizada en cada una de las semillas, aunque la exploración sea muy importante. \\
 
-DDPG tiene una buena estrategia de exploración (sección \ref{sec:ddpg}), introduciendo el ruido directamente en los pesos de la red neuronal que se está tratando de optimizar en lugar de las acciones ($\epsilon-greedy$, por ejemplo), quizás esto favorezca esa menor dependencia de la aleatoriedad en sus entrenamientos. Esto reafirma que la \textbf{exploración} para problemas con escasez de recompensas es imprescindible para obtener buenos resultados. 
+DDPG tiene una buena estrategia de exploración (sección \ref{sec:ddpg}), introduciendo el ruido directamente en los pesos de la red neuronal que se está tratando de optimizar en lugar de las acciones ($\epsilon-greedy$, por ejemplo), quizás esto favorezca esa menor dependencia de la aleatoriedad en sus entrenamientos. Esto reafirma que la \textbf{exploración} para problemas con escasez de recompensas es imprescindible para obtener buenos resultados. \\
 
-Por último, mencionar que el problema de \textit{MountainCar-v0} no necesita tantos pasos de entrenamiento para conseguir buenas soluciones siempre que utilicemos el algoritmo adecuado para ello. En DDPG con unos 300.000 pasos habría sido suficiente.
+Por último, mencionar que el problema de \textit{MountainCar-v0} no necesita tantos pasos de entrenamiento para conseguir buenas soluciones siempre que utilicemos el algoritmo adecuado para ello. En DDPG con unos 300.000 pasos habría sido suficiente.\\
 
 \subsection{PPO2 y A2C}
 
-Lamentablemente, estos algoritmos no han conseguido ningún tipo de resultados positivos \cite{article:sparse}. Simple y llanamente, no han logrado alcanzar la meta ni una sola vez durante sus entrenamientos, realizando episodios de duración máxima, 200 pasos. \\
+Lamentablemente, estos algoritmos no han conseguido ningún tipo de resultados positivos \cite{article:sparse}. Simple y llanamente, no han logrado alcanzar la meta ni una sola vez durante sus entrenamientos, realizando episodios de duración máxima, con 200 pasos. \\
 
 ¿Esto quiere decir que son malos algoritmos? En realidad no, es solo que no funciona para la definición de este problema. El \textit{sparse reward} hace que en este caso sea inviable encontrar una solución del problema. \\
 
@@ -2022,7 +2178,7 @@ PPO2 , al utilizar épocas múltiples en \textit{mini-lotes} debe garantizar que
 
 Un dato bastante interesante es el tiempo de de ejecución de PPO2, es realmente rápido, aunque no obtenga los resultados esperados. Como ya se mencionó en la sección \ref{sec:PPO2}, el algoritmo es mucho más sencillo que otros de su familia como TRPO. \\
 
-Aunque no se hayan obtenido los resultados esperados, los logs contienen información que es interesante de cara a analizar el funcionamiento del algoritmo:
+Aunque no se hayan obtenido los resultados esperados, los logs contienen información que es interesante de cara a analizar el funcionamiento del algoritmo. La entropía, aunque no se menciona en el apartado \ref{sec:PPO2}, es un bonus que se añade con el objetivo de generalizar mejor \cite{article:PPO2}, y que en el algoritmo de \textit{OpenAI baselines} incluye un registro del mismo.
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.3]{mountain/entropia_A2CyPPO2.png}
@@ -2031,7 +2187,7 @@ Aunque no se hayan obtenido los resultados esperados, los logs contienen informa
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-La entropía es una medida que nos sirve para definir el grado de aleatoriedad de una política. Como ya sabemos, una política devuelve directamente una distribución de probabilidades de las acciones discretas o un valor real con cierta desviación en caso de acciones continuas. Entonces, dependiendo de esta entropía podemos deducir la exploración de estos agentes. En PPO2 comienza muy alta al principio y va decreciendo al final, mientras que A2C se mantiene alto durante todo el entrenamiento, quizás por el promedio de pesos que hace antes de actualizar la red global. \\
+La entropía es una medida que nos sirve para definir el grado de aleatoriedad de una política. Como ya sabemos, una política devuelve directamente una distribución de probabilidades de las acciones discretas o un valor real con cierta desviación en caso de acciones continuas. Entonces, dependiendo de esta entropía podemos deducir la exploración de estos agentes. En PPO2 comienza muy alta al principio y va decreciendo al final, mientras que A2C se mantiene alto durante todo el entrenamiento, aún así al hacerlo desde su política óptima no es una exploración buena para alcanzar las escasas recompensas como habíamos comentado anteriormente. \\
 
 Si comparamos los vídeos mostrados de ambos algoritmos, a pesar de que ninguno obtiene resultados positivos, podemos notar que el comportamiento de ambos es diferente. A2C, al tener mayor entropía, vemos que muestra comportamientos diferentes dependiendo de cada ejecución. PPO2 tiende a realizar siempre el mismo comportamiento. \\
 
@@ -2056,7 +2212,13 @@ Tanto PPO2 como A2C quedan descartados para la definición del problema actual d
 
 Para los entrenamientos de Super Mario Bros, se han utilizado redes CNNs debido al tratamiento directo de frames del videojuego como input. Para ello usamos la red llamada ``cnn'' de los propios \textit{baselines}. \cite{article:redesbaselines} \\
 
-En cuanto a las técnicas utilizadas, se van a usar los algoritmos DQN, PPO2 y A2C. Se descarta DDPG por problemas al intentar utilizarlo en el entorno, ya que este funciona con \textit{stable-baselines}. \\
+En cuanto a las técnicas utilizadas, se van a usar los algoritmos DQN, PPO2 y A2C. Se descarta DDPG por varios motivos: \\
+
+\begin{itemize}
+	\item Los métodos basados en valor como DQN no ha mostrado buenos resultados y además de demora demasiado en tiempo para este problema (se hablará de ello más adelante). DDPG pese a ser un algoritmo actor-crítico, su parte crítica esta basada en DQN para acciones continuas. Se considera que DDPG, pese al éxito ofrecido en \textit{MountainCarContinuous-v0} va a tener peores resultados y el tiempo de ejecución va a ser demasiado elevado. \\
+	
+	\item Se han encontrado problemas al intentar utilizarlo en el entorno, ya que funciona con \textit{stable-baselines} el cual no es compatible con gym-retro (habría que buscar otras alternativas). \\
+\end{itemize}
 
 Este es un problema mucho más complejo, como ya se ha mencionado en otras ocasiones. Por ello, es muy razonable esperar una mayor necesidad de interacciones con el entorno para que el aprendizaje en los algoritmos pueda converger en una buena solución del problema. \\
 
@@ -2076,21 +2238,25 @@ Tras estas primeras comprobaciones, se realizaron pruebas para cada uno de los a
 		\rowcolor[HTML]{FFFFFF} 
 		\multicolumn{1}{|l|}{\cellcolor[HTML]{C7DCB4}\textbf{A2C}}                    & 1941.55                                                                                                           & 84                                                                                   & 23100                                                                                                              & 1-1                                                                                                                & \url{https://www.youtube.com/watch?v=VkRKye5PxjM&t=5s}                                \\ \hline
 	\end{tabular}
+	\caption{Resumen de resultados obtenidos y enlaces a vídeos en \textit{Super Mario Bros} con entrenamientos de 10 millones de pasos}
+	\label{table:resultadosMario1}
 \end{table}
+
+El primer dato interesante que se deduce de esta tabla es que PPO2 y A2C en esta ocasión funcionan mejor que DQN, justo al contrario que para \textit{MountainCar-v0}. ¿Por qué ocurre esto? El principal motivo, es que la función de recompensa (ver sección \ref{sec:mario}) no tiene problemas de \textit{sparse reward}, el agente tiene disponibles desde el comienzo de cada episodio fuentes de recompensas a explotar, por lo que su aprendizaje puede ser guiado y optimizado sin alcanzar la meta del nivel, perfecto para una política de gradientes.\\
 
 Lamentablemente, no ha sido posible poder grabar el vídeo de ejecución del algoritmo DQN para \textit{Super Mario Bros}.\footnote{Hay un problema con gym retro y DQN a la hora de cargar los modelos entrenados que no se ha podido solucionar, existe un problema similar con atari reportado (\url{https://github.com/openai/baselines/issues/12})} Aunque, por suerte, es el algoritmo de menor interés dado que ofrece resultados muy pobres. \\
 
 Si se observan los vídeos mostrados en la tabla anterior, vemos que en el caso de PPO2 para el nivel 1-1 consigue resolverlo una vez en la esquina superior izquierda. Para A2C, consigue resolver el nivel 2 veces, en la esquina superior izquierda y la esquina inferior derecha. \\
 
-Lo más interesante, es que una vez superan el nivel, el entorno cambia al nivel siguiente (2-1), con el cual el agente no ha sido entrenado. Pese a fracasar, nos podemos dar cuenta de que se maneja bastante bien en ese nuevo nivel. Esto es señal de que ha conseguido entender ciertos conceptos, como los enemigos, obstáculos y demás. Está logrando en cierta medida \textbf{generalizar} en lugar de aprenderse una secuencia concreta de acciones para el nivel concreto con el que entrena, lo cual es muy deseable.
+Lo más interesante, es que una vez superan el nivel, el entorno cambia al nivel siguiente (1-2), con el cual el agente no ha sido entrenado. Pese a fracasar, nos podemos dar cuenta de que se maneja bastante bien en ese nuevo nivel. Esto es señal de que ha conseguido entender ciertos conceptos, como los enemigos, obstáculos y demás. Está logrando en cierta medida \textbf{generalizar} en lugar de aprenderse una secuencia concreta de acciones para el nivel concreto con el que entrena, lo cual es muy deseable.\\
 
 Para el caso de PPO2 en el nivel 3-1, lo más interesante es el tiempo de ejecución, el cual se dispara a más del doble pese a seguir siendo esos 10 millones de pasos. No obstante, centraremos el análisis en el nivel 1-1 a partir de ahora. 
-
-En este caso, no nos encontramos ante un problema de \textit{sparse reward} como nos ocurría con \textit{MountainCar-v0}, el entorno ofrece fuentes de recompensa a explotar desde el comienzo del episodio.
 
 \subsection{DQN}
 
 Como primera conclusión, DQN es un algoritmo lento relativamente a otras técnicas, tardando algo más de 9 horas en realizar esas 10 millones de interacciones. Además, una cosa muy interesante que se pudo observar es que aprovecha peor los recursos de la máquina virtual que se tiene configurada.
+
+\newpage
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{mario/porcentajes_CPU.png}
@@ -2099,13 +2265,15 @@ Como primera conclusión, DQN es un algoritmo lento relativamente a otras técni
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Recordemos que A2C utiliza varios \textit{trabajadores} y que PPO2 puede organizar mini-lotes por iteración independientes y ejecutarlos en paralelo, por lo que tiene sentido que puedan aprovechar los recursos disponibles de una forma más eficiente.
+Recordemos que A2C utiliza varios \textit{trabajadores} y que PPO2 puede organizar mini-lotes por iteración independientes y ejecutarlos en paralelo, por lo que tiene sentido que puedan aprovechar los recursos disponibles de una forma más eficiente. \\
 
-En cuanto a la GPU ocurre algo similar. Google Cloud no tiene por defecto una monitorización de este uso pero se ha revisado desde el comando \textit{nvidia-smi} ejecutado en la máquina directamente. DQN no pasa del uso del 30\% de la tarjeta gráfica, mientras que PPO2 y A2C suelen tener picos muy frecuentes de un 60\% o 70\%.
+En cuanto a la GPU ocurre algo similar. Google Cloud no tiene por defecto una monitorización de este uso pero se ha revisado desde el comando \textit{nvidia-smi} ejecutado en la máquina directamente. DQN no pasa del uso del 30\% de la tarjeta gráfica, mientras que PPO2 y A2C suelen tener picos muy frecuentes de un 50\% o 60\%. \\
 
 Además, para este entorno de Super Mario, no consigue una buena recompensa si lo comparamos a PPO2 y A2C, obteniendo apenas la cuarta parte de puntos que las otras dos técnicas para ese número de interacciones. \\
 
 A continuación, se muestra el progreso del algoritmo durante su entrenamiento:
+
+\newpage
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.25]{mario/DQNrecompensas.png}
@@ -2129,7 +2297,7 @@ Hay que tener en consideración la existencia de una \textbf{limitación} de tie
 
 \subsection{A2C y PPO2}
 
-Tanto A2C como PPO2 han mostrado mejores resultados que DQN y más rápido, alcanzando unas recompensas medias más altas (ver tabla anterior) y con unos tiempos de unas 6 horas y media para A2C y algo más de 7 horas para PPO2 (en el nivel 1-1). \\
+Tanto A2C como PPO2 han mostrado mejores resultados que DQN y más rápido, alcanzando unas recompensas medias más altas (ver tabla \ref{table:resultadosMario1}) y con unos tiempos de unas 6 horas y media para A2C y algo más de 7 horas para PPO2 (en el nivel 1-1). \\
 
 Se muestran los resultados de ambas técnicas juntas por la similitud de los resultados obtenidos, los cuales incitan a una comparación directa entre ambos.
 
@@ -2157,7 +2325,9 @@ PPO2 realiza unos episodios más prolongados que A2C durante prácticamente todo
 
 Al comienzo del entrenamiento, ambos algoritmos presentan episodios muy largos, esto llama mucho la atención. El origen de esto, es que las políticas se encuentran tan iniciales, que aún no conocen la dinámica del juego. Esto provoca que no avancen y cueste mucho comenzar a dar resultados, generando una secuencia de acciones que no le permite al agente progresar. Probablemente al principio finalizaba los episodios cuando se agotaba el tiempo o, tras tanto tiempo realizando acciones prácticamente aleatorias, se topaba con un enemigo y moría. \\ 
 
-Lo más interesante es que las interacciones por episodio tienden a acotarse a medida que la recompensa obtenida es mejor. a continuación se muestran dos figuras, la primera es solo A2C y la segunda A2C y PPO2, para que se pueda apreciar mejor:
+Lo más interesante es que las interacciones por episodio tienden a acotarse a medida que la recompensa obtenida es mejor. A continuación se muestran dos figuras, la primera es solo A2C y la segunda A2C y PPO2, para que se pueda apreciar mejor:
+
+\newpage
 
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.25]{mario/A2Cepisodios.png}
@@ -2190,51 +2360,59 @@ Si observamos los valores de entropía de ambos modelos:
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Vemos que, en general, A2C presenta unos valores de entropía mayores que PPO2. Si volvemos a fijarnos en los vídeos del comportamiento de ambos agentes para el nivel 1-1 (mirar enlaces de la tabla), nos damos cuenta de que los agentes pueden quedarse ``atascados'' a veces en un punto concreto. Ninguna función de recompensa es perfecta, si tiende a ir hacia la derecha siempre habrá veces que eso no le ayude (como en la parte que hay muchas monedas en pantalla). La exploración es muy importante incluso en fases más avanzadas del modelo para evitar que caiga en estos bucles de comportamiento o que, en caso de caer, puedan salir más fácilmente (moviéndose a la izquierda de vez en cuando, por ejemplo).
+Vemos que, en general, A2C presenta unos valores de entropía mayores que PPO2. Si volvemos a fijarnos en los vídeos del comportamiento de ambos agentes para el nivel 1-1 (mirar enlaces de la tabla \ref{table:resultadosMario1}), nos damos cuenta de que los agentes pueden quedarse ``atascados'' a veces en un punto concreto. Ninguna función de recompensa es perfecta, si tiende a ir hacia la derecha siempre habrá veces que eso no le ayude (como en la parte que hay muchas monedas en pantalla). La exploración es muy importante incluso en fases más avanzadas del modelo para evitar que caiga en estos bucles de comportamiento o que, en caso de caer, puedan salir más fácilmente (moviéndose a la izquierda de vez en cuando, por ejemplo). \\
 
-\subsection{Desarrollo de PPO2}
+Mediante el valor de recompensa devuelto \textbf{no podemos saber} a primera vista si el agente ha resuelto el nivel o no. En \textit{MountainCar-v0} sabíamos que con una recompensa mayor que -200, ese episodio concreto había sido resuelto, pero este caso no es igual. \\
+
+Una recompensa más alta, aun siendo más deseable, no significa de forma unívoca que ese agente sea mejor que otro, al menos no con diferencias tan ligeras como las que se producen en estos agentes PPO2 y A2C.
+
+\subsection{Ampliación con PPO2}
 
 Según experimentos ya realizados con PPO2 y A2C (página 7 de \cite{article:PPO2}), en la mayoría de problemas mostrados tiende a ser mejor PPO2. Teniendo en cuenta la similitud de los entrenamientos mostrados hasta ahora, se tiene en consideración dichos experimentos para decidir realizar pruebas más ambiciosas con este algoritmo. \\
 
-%poner tabla con los dos entrenamientos de PPO2
+Se realizaron dos experimentos muy grandes con 100 millones de interacciones en PPO2 para \textit{Super Mario Bros}:
 
-Entonces, se realizó un experimento de 100 millones de interacciones. Tardó un total de \textbf{85 horas, 25 minutos y 10 segundos} en realizar todo este entrenamiento. Empleando un total de pasos 10 veces superior al anterior experimento, se obtiene una recompensa de \textbf{4423 puntos} de máxima en los valores medios obtenidos por el agente.
+\begin{table}[H]
+	\begin{tabular}{l|l|l|l|l|p{0.3\linewidth}|}
+		\cline{2-6}
+		\rowcolor[HTML]{C7DCB4} 
+		\multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textbf{}}                        & \multicolumn{1}{c|}{\cellcolor[HTML]{C7DCB4}\textbf{\begin{tabular}[c]{@{}c@{}}Media \\ recompensa\end{tabular}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C7DCB4}{\color[HTML]{000000} \textbf{Semilla}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C7DCB4}\textbf{\begin{tabular}[c]{@{}c@{}}Tiempo \\ (segundos)\end{tabular}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C7DCB4}\textbf{\begin{tabular}[c]{@{}c@{}}Nivel\\ (mundo-fase)\end{tabular}}} & {\color[HTML]{000000} \textbf{URL}} \\ \hline
+		\rowcolor[HTML]{FFFFFF} 
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{C7DCB4}}                                & 4423                                                                                                              & 113                                                                                  & 307510                                                                                                             & 1-1                                                                                                                & \url{https://www.youtube.com/watch?v=EIaZJ3vcbT4}                                \\ \cline{2-6} 
+		\rowcolor[HTML]{C3D7FA} 
+		\multicolumn{1}{|l|}{\multirow{-2}{*}{\cellcolor[HTML]{C7DCB4}\textbf{PPO2}}} & \textbf{6310}                                                                                                     & \textbf{32}                                                                          & \textbf{255594}                                                                                                    & \textbf{1-1}                                                                                                       & \url{https://www.youtube.com/watch?v=8G5jYFmpdbg}                       \\ \hline
+	\end{tabular}
+	\caption{Resumen de resultados obtenidos con PPO2 en \textit{Super Mario Bros} con 100 millones de interacciones en entrenamiento.}
+	\label{table:resultadosMario2}
+\end{table}
 
-%Poner tabla de dos experimentos de POO2 con 100 millones de iteraciones.
+Los resultados han sido positivos, las medias de recompensas en los episodios han acabado por ser más altas que en los casos anteriores. Para la semilla 113 tardó un total de {85 horas, 25 minutos y 10 segundos}, mientras que para la semilla 32 tardó un total de \textbf{70 horas, 59 minutos y 54 segundos}. \\
+
+Si observamos los vídeos de los enlaces mostrados en la tabla \ref{table:resultadosMario2}, vemos que para la semilla 113 el comportamiento es muy determinista y que Mario suele caer en el mismo agujero siempre. Quizás en ese entrenamiento cayó en un óptimo local del cual le estaba costando mucho trabajo salir. \\
+
+En cuanto a la semilla 32, se obtuvo el \textbf{mejor modelo} hasta el momento, consigue resolver el primer nivel siempre, y además de una forma muy eficiente. En cuanto llega al segundo nivel (con el cual no ha entrenado), vemos que el comportamiento es espléndido a pesar de que la gama de colores específicos de ese nivel es diferente, junto con la propia estructura del nivel y aparece un nuevo enemigo (las tortugas). Aun así, parece que sabe reconocerlas como enemigo y las trata como tal a la hora de realizar sus acciones, ha conseguido una buena \textbf{generalización} de conocimientos sobre el entorno. 
 
 \begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mario/definitivoRecompensas.png}
+	\centering\includegraphics[scale=0.25]{mario/PPO2definitivoreward.png}
 	\caption{Media de recompensa durante entrenamiento de 100 millones de interacciones con PPO2 en \textit{SuperMarioBros-Nes}.}
 	\label{fig:marioPPO22recompensas} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-Hay que tener en cuenta que el valor 0,1 del eje x equivale a toda la gráfica que veíamos en la figura \ref{fig:mariorecompensas}. En esa figura parecía que los valores de recompensa se estaban comenzando a estabilizar. Es cuestión de relatividad con la escala, en realidad si se prolonga mucho en el tiempo (pasos), nos damos cuenta de que el algoritmo apenas estaba comenzando a dar sus primeros frutos. \\
+Hay que tener en cuenta que la décima porción de esta gráfica en el eje x equivale a la gráfica entera en la Figura \ref{fig:mariorecompensas}, dado que los entrenamientos tienen 10 veces más interacciones en este caso. Para las 10 millones de interacciones parecía que los valores de recompensa se estaban comenzando a estabilizar, que no podían mejorar muchos más. Es cuestión de relatividad por el periodo de entrenamiento y la escala, si se prolonga mucho el número de pasos de esos entrenamientos, vemos en la Figura \ref{fig:marioPPO22recompensas} que el algoritmo apenas está comenzando a dar sus primeros frutos para esos primeros 10 millones de pasos. \\
 
-Se produce una mejora bastante pronunciada sobre los 17 millones de pasos. En general, hay mejoras muy notables hasta los 40 millones, después parece estabilizarse más y tener mejoras más lentas y a un ritmo constante, aunque de nuevo podría depender de la escala. \\
+Vemos que ambos algoritmos tienen un comienzo muy similar. Sin embargo, tras los 17 millones de pasos aproximadamente, la semilla 113 comienza a obtener valores de recompensas más altos que la semilla 32. Tras los 23 millones de pasos más o menos, se cambian las tornas, parece que la semilla 113 cae en un óptimo local como comentabamos en el vídeo y la semilla 32 continua mejorando. \\
+
+Veamos los valores de entropía por parte de ambas políticas:
 
 \begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mario/definitivoEpisodios.png}
-	\caption{Media de duración de episodios (pasos) durante entrenamiento de 100 millones de interacciones con PPO2 en \textit{SuperMarioBros-Nes}.}
+	\centering\includegraphics[scale=0.25]{mario/entropiaPPO2definitivo.png}
+	\caption{Valores de entropía durante entrenamiento de 100 millones de interacciones con PPO2 en \textit{SuperMarioBros-Nes} (gráfica suavizada).}
 	\label{fig:marioPPO22episodios} % Unique label used for referencing the figure in-text
 	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
 \end{figure}
 
-En cuanto a la duración de los episodios, vemos que existe esa tendencia de la que se estaba hablando. Cuanto más progresa el modelo existen menos variaciones en la duración de sus episodios. Además, existe una correlación directa con la recompensa que se obtiene por parte del agente. Todo esto nos da a entender que la función de recompensa está bien diseñada para el aprendizaje del modelo. \\
-
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.25]{mario/definitivoNube.png}
-	\caption{Nube de puntos entre media de recompensas y duración de episodios (pasos) durante entrenamiento de 10 millones de interacciones con A2C y PPO2 en \textit{SuperMarioBros-Nes}.}
-	\label{fig:marioPPO22nube} % Unique label used for referencing the figure in-text
-	%\addcontentsline{toc}{figure}{Figure \ref{fig:sigmoide}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Esa correlación tan clara que se puede observar indica que la obtención de recompensas más altas favorece a que los episodios sean más largos y que, por tanto, progrese más en el nivel que antes. \\
-
-Al observar el comportamiento del agente, tanto en los vídeos mostrados hasta ahora como en estos pequeños experimentos. se evidenció que el agente, además, aprende el nivel por partes, poco a poco. Entonces, en cada intento sabe llegar hasta cierto punto, y a partir de este el entorno le es desconocido y se equivoca.
-
-\subsection{Desarrollo de A2C}
-
+Como podemos observar, en términos generales la semilla 32 tuvo una mayor entropía en su política que la semilla 113. Esto puede estar relacionado con el hecho de que la semilla 32 no cayese en ese óptimo local y pudiera seguir progresando.
 
 %Documentar si pruebo el agente en otro entorno para ver lo que pasa. 
 %%citecitecite
@@ -2538,33 +2716,33 @@ Al observar el comportamiento del agente, tanto en los vídeos mostrados hasta a
 %	PART 4
 %----------------------------------------------------------------------------------------
 
-\part{Posibles mejoras y conclusiones}
+\part{Conclusiones y Trabajo Futuro}
 
 \chapterimage{conclusiones.jpg}
 \chapter{Conclusiones finales}
 
 \section{Posibles mejoras}
 
-A continuación, se plantea unas mejoras que se han ido pensado conforme se desarrollaba el presente proyecto. Me hubiera gustado incluir algunas de estas mejoras desde su inicio, pero lamentablemente los límites de tiempo y recursos de computación lo han hecho imposible:
+A continuación, se plantea unas posibles mejoras que se han ido pensado conforme se desarrollaba el presente proyecto: \\
 
 \begin{itemize}
-	\item A pesar de haber leído documentación e indagado sobre ello, no ha sido posible llevar a cabo una investigación de algunos de los agentes más punteros en este sector tales como \textbf{AlphaGo} y \textbf{AlphaStar}, mencionados en varias ocasiones a lo largo de la documentación. \\
+	\item Explicar de una forma abstracta y general la arquitectura de agentes punteros en este sector como son los casos de AlphaGo y AlphaStar, mencionados en varias ocasiones en la documentación. Estos modelos de DeepMind son muy interesantes y dan una buena visión de hasta donde puede llegar el DRL y hasta donde podría llegar en el futuro, en las referencias de esta documentación se puede acceder a información muy interesante al respecto de como han sido construidos y su funcionamiento. \\
 	
-	\item Existen otras técnicas que no han sido probadas, algunas de ellas incluso mencionadas. En este trabajo se han descrito las técnicas más frecuentes, conocidas y utilizadas debido a su mejor rendimiento general frente al resto. Sin embargo, esto no significa que otras técnicas como TRPO, ACER, ACKTR, VPG y otros tantos más no puedan ser la mejor solución para ciertos problemas. Se podría estudiar estos algoritmos y experimentar con los mismos. \\
+	\item Existen otras técnicas a parte de las vistas en este trabajo tales como TRPO, ACER, ACKTR, VPG y más, algunas de ellas mencionadas en alguna ocasión incluso. No se han realizado experimentos con ellas para no ser demasiado exhaustivo, previsto en la planificación del presente trabajo, pero el procedimiento a grandes rasgos sería el mismo. \\
 	
-	\item \textit{MountainCar-v0} es interesante de estudiar debido a su problema de \textit{sparse reward}, mientras que \textit{Super Mario Bros} tiene una complejidad de acciones y estados mucho mayor. Cada problema tiene sus características particulares, sería interesante plantear \textbf{más entornos} y problemas para ver como se defienden las técnicas expuestas. \\
+	\item \textit{MountainCar-v0} es interesante de estudiar debido a su problema de \textit{sparse reward}, mientras que \textit{Super Mario Bros} tiene una complejidad de acciones y estados mucho mayor. Cada problema tiene sus características particulares. Una propuesta posible sería planificar y elaborar experimentos con otros entornos que pudieran resultar interesantes. \\
 	
-	\item Desarrollar y modificar la implementación de \textit{OpenAI gym} originales para \textit{MountainCar-v0} con la finalidad de tratar de mejorar su definición de función de recompensa, tratando de mitigar el problema de escasez de recompensas positivas, al mismo tiempo que se estudia de una forma más detallada la \textit{influencia directa} de esta función a la mejora del rendimiento en el aprendizaje de los algoritmos DRL. \\
+	\item Desarrollar y modificar la implementación de \textit{OpenAI gym} originales para \textit{MountainCar-v0} con la finalidad de tratar de mejorar su definición de función de recompensa, tratando de mitigar el problema de escasez de recompensas positivas, al mismo tiempo que se estudia de una forma más detallada la \textit{influencia directa} de esta función a la mejora del rendimiento en el aprendizaje de los algoritmos DRL, no sería muy tedioso de incluir en el análisis de llevarse a cabo. \\
 	
-	\item Realizar más experimentos en general y estudiar más aspectos del aprendizaje. Por falta de recursos y tiempo ha sido imposible estudiar cosas tales como modificar la tasa de descuento ($\gamma$) que viene predefinidos para los entornos y algoritmos de los \textit{baselines} y estudiar de forma empírica hasta que punto estos hiperparámetros pueden modificar el comportamiento final del modelo. También se incluye aquí cambios en las capas de las redes neuronales utilizadas, ruido en los parámetros, etc.
+	\item Hemos visto cómo la semilla puede influir y mucho en los resultados obtenidos, por ejemplo en DQN para \textit{MountainCar-v0}. Convendría analizar mejor que influencia tienen estas semillas, así como otros hiperparámetros, tales como la tasa de descuento ($\gamma$), capas de las redes neuronales, ruido, etc.
 	
 \end{itemize}
 
 \section{Conclusiones}
 
-Cuando se comenzó este proyecto, no sabía lo que suponía el aprendizaje por refuerzo profundo más allá de una definición de dos frases. Ahora, me doy cuenta de que conozco menos de este campo de lo que realmente suponía al comienzo. Aún así, hemos podido aprender muchos conceptos, ideas, algoritmos y otras muchas cosas al mismo tiempo que hemos ido siendo conscientes de problemas y retos que estas técnicas presentan. El mundo del DRL es mucho mayor de lo que podía alcanzar a imaginar en un principio. \\
+Cuando se comenzó este proyecto, no sabía lo que suponía el aprendizaje por refuerzo profundo más allá de una definición de dos frases. He podido aprender muchos conceptos, ideas, algoritmos y otras muchas cosas al mismo tiempo que he ido siendo consciente de problemas y retos que estas técnicas presentan. Estoy muy contento de poder haber aprendido todos estos conocimientos y me permite ver que el mundo del DRL es mucho mayor de lo que podía alcanzar a imaginar en un principio, y aún quedan muchas cosas por descubrir, aprender e investigar. \\
 
-Hasta ahora hemos podido entender, desarrollar y probar algunas técnicas de aprendizaje por refuerzo profundo. Es posible que a estas alturas hayas podido llegar a pensar, ¿qué utilidad tiene esto? ¿De que sirve crear un agente capaz de jugar muy bien a un juego? \\
+Hasta ahora hemos podido entender, desarrollar y probar algunas técnicas de aprendizaje por refuerzo profundo. Es posible que a estas alturas hayas podido llegar a pensar, ¿qué utilidad tiene esto? ¿De que sirve crear un agente capaz de jugar muy bien a Super Mario Bros? \\
 
 Quizás es cierto que resolver videojuegos o juegos competitivos en general no aporta nada útil a la humanidad en sí mismo. Sin embargo, hay que entender que, la curiosidad es lo que nos ha permitido avanzar siempre. Las investigaciones y avances tecnológicos que nacen de querer resolver estos problemas pueden conducirnos a cosas más interesantes y ambiciosas en el futuro, escalando a partir de los avances que se van produciendo. \\
 
@@ -2604,7 +2782,7 @@ El DRL aún está en pleno desarrollo, al igual que la Inteligencia Artificial e
 \usechapterimagefalse
 \chapter{Configuración en la nube}\label{sec:googlecloud}
 
-Mi tutor, Juan Gómez Romero, me proporcionó 50 dólares en esta plataforma para que pudiera montar y utilizar una máquina virtual a mi gusto, en función de mis necesidades. A continuación, voy a explicar como monté esa máquina virtual que he estado utilizando para realizar la experimentación de este proyecto. \\
+%Mi tutor, Juan Gómez Romero, me proporcionó 50 dólares en esta plataforma para que pudiera montar y utilizar una máquina virtual a mi gusto, en función de mis necesidades. A continuación, voy a explicar como monté esa máquina virtual que he estado utilizando para realizar la experimentación de este proyecto. \\
 
 Hay varios factores a tener en cuenta y solucionar. En primer lugar, decidir la región para el servicio de infraestructura. Aprender a utilizar el cliente de Google Cloud Platform (en el Máster había usado otras plataformas como Microsoft Azure, por lo que no tenía pleno dominio). También hay que tener en cuenta la \textbf{configuración} de la máquina para que funcionase los \textit{baselines}, \textit{Gym}, etc. Puede presentar diferencias con la configuración realizada en local en mi ordenador personal. Hay que configurar los drivers y las librerías necesarias para hacer uso de la GPU de la máquina. \\
 
@@ -2944,7 +3122,7 @@ Obtendremos 3 archivos: \\
 	\end{verbatim}
 \end{itemize}
 
-Como el contenido y columnas exactas que tienen los archivos depende tanto del entorno como del algoritmo que estamos utilizando por parte de \textit{baselines}, en la experimentación (apartado \ref{sec:expmountaincar}) se hace uso de estos datos de una forma más específica.
+Como el contenido y columnas exactas que tienen los archivos depende tanto del entorno como del algoritmo que estamos utilizando por parte de \textit{baselines}, en la experimentación se hace uso de estos datos de una forma más específica.
 
 %Importante explicar como he usado los archivos de log para pintar las gráficas
 \section{Visualizar la información de los logs}\label{sec:visualizarlogs}
@@ -3074,7 +3252,7 @@ Para obtener la salida por pantalla en un archivo, equivalente al \textit{log.tx
 
 No obstante, no había una forma clara de poder conseguir la información equivalente del archivo \textit{progress.csv}. La librería no ofrece una forma clara de poder rescatar estos datos durante su aprendizaje.
 
-\section{Cargar un modelo}
+\section{Cargar un modelo entrenado}
 
 Para cargar los modelos entrenados en el equipo personal y probarlos se fabricó otra implementación a parte: \\
 
